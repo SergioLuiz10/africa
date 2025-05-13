@@ -31,7 +31,7 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
       address: 'Address',
       addressText: 'Av. das Nações, 123 - São Paulo, Brazil',
       phone: 'Phone',
-      phoneText: '+55 (11) 1234-5678',
+      phoneText: '++55 (71) 993305723',
       emailContact: 'Email',
       emailText: 'contact@africa360.org'
     }
