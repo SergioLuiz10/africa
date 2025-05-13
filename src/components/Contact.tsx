@@ -29,7 +29,7 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
       message: 'Message',
       send: 'Send Message',
       address: 'Address',
-      addressText: 'Av. das Nações, 123 - São Paulo, Brazil',
+      addressText: 'Avenida da França, 393 2º andar Hub, Av. da França, 393 - 2º andar Hub - Comércio, Salvador - BA, 40010-000',
       phone: 'Phone',
       phoneText: '++55 (71) 993305723',
       emailContact: 'Email',
