@@ -24,7 +24,8 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-brown-800">
+    <section id="home" className="relative min-h-screen flex items-center bg-brown-800"
+    style={{backgroundImage: "url("}}>
       <div className="absolute inset-0 bg-pattern opacity-10"></div>
       
       <div className="container mx-auto px-4 relative z-10 py-20">

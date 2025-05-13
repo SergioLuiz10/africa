@@ -19,7 +19,7 @@ const Gallery: React.FC<GalleryProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   const images = [
-    'https://images.pexels.com/photos/4577801/pexels-photo-4577801.jpeg',
+    '',
     'https://images.pexels.com/photos/4577394/pexels-photo-4577394.jpeg',
     'https://images.pexels.com/photos/4577395/pexels-photo-4577395.jpeg',
     'https://images.pexels.com/photos/4577396/pexels-photo-4577396.jpeg',
