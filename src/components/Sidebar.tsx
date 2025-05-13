@@ -1,267 +1,108 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import LanguageToggle from './LanguageToggle';
+import { Globe, ChevronRight } from 'lucide-react';
 
 interface SidebarProps {
-  currentLanguage: string;
-  toggleLanguage: () => void;
+  language: string;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ currentLanguage, toggleLanguage }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const Sidebar: React.FC<SidebarProps> = ({ language }) => {
   const [activeSection, setActiveSection] = useState('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-const translations = {
-  pt: {
-    home: 'Quem Somos',
-    about: 'Projeto',
-    programs: 'Delá',
-    impact: 'Favela',
-    mentorship: 'CGBN',
-    contact: 'kindezi BAL',
-    collect: 'Clipping',
-    sponsorships: 'Patrocínio',
-    manifest: 'Manifesto'
-  },
-  en: {
-    home: 'Home',
-    about: 'Project',
-    programs: 'Delá',
-    impact: 'Favela',
-    mentorship: 'CGBN',
-    contact: 'kindezi BAL',
-    collect: 'Clipping',
-    sponsorships: 'Sponsorships',
-    manifest: 'Manifest'
-  }
-};
+  const content = {
+    pt: {
+      menuItems: [
+        { id: 'manifesto', label: 'Manifesto' },
+        { id: 'about', label: 'Quem Somos' },
+        { id: 'project', label: 'Projeto' },
+        { id: 'dela', label: 'Dela' },
+        { id: 'favela', label: 'Favela' },
+        { id: 'cgbn', label: 'CGBN' },
+        { id: 'kindezi', label: 'kindezi BAL' },
+        { id: 'clipping', label: 'Clipping' },
+        { id: 'sponsorship', label: 'Patrocínio' }
+      ]
+    },
+    en: {
+      menuItems: [
+        { id: 'manifest', label: 'Manifest' },
+        { id: 'about', label: 'About Us' },
+        { id: 'project', label: 'Project' },
+        { id: 'dela', label: 'Dela' },
+        { id: 'favela', label: 'Favela' },
+        { id: 'cgbn', label: 'CGBN' },
+        { id: 'kindezi', label: 'kindezi BAL' },
+        { id: 'clipping', label: 'Clipping' },
+        { id: 'sponsorship', label: 'Sponsorship' }
+      ]
+    }
+  };
 
-  const t = translations[currentLanguage as keyof typeof translations];
+  const t = content[language as keyof typeof content];
 
-  // Monitorar qual seção está ativa baseado no scroll
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'programs', 'impact', 'mentorship', 'contact'];
-      
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            setActiveSection(section);
-            break;
-          }
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < 100 && sectionTop > -300) {
+          setActiveSection(section.id);
         }
-      }
+      });
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Sidebar para desktop
-  const desktopSidebar = (
-    <div className="fixed top-0 left-0 h-full z-50 w-24 bg-brown-900 flex flex-col items-center">
-      <div className="w-full flex flex-col items-center">
-        {/* Logo */}
-        <div className="pt-8 pb-10">
-          <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center">
-            <span className="text-white font-bold text-lg">A</span>
-          </div>
-        </div>
-
-        {/* Links de navegação vertical */}
-        <nav className="flex-1 w-full">
-          <div className="flex flex-col items-center space-y-6">
-            <NavItem href="#home" section="home" activeSection={activeSection} text={t.home} />
-            <NavItem href="#about" section="about" activeSection={activeSection} text={t.about} />
-            <NavItem href="#programs" section="programs" activeSection={activeSection} text={t.programs} />
-            <NavItem href="#impact" section="impact" activeSection={activeSection} text={t.impact} />
-            <NavItem href="#mentorship" section="mentorship" activeSection={activeSection} text={t.mentorship} />
-            <NavItem href="#contact" section="contact" activeSection={activeSection} text={t.contact} />
-            <NavItem href="#collect" section="collect" activeSection={activeSection} text={t.collect} />
-            <NavItem href="#sponsorships" section="sponsorships" activeSection={activeSection} text={t.sponsorships} />
-            <NavItem href="#manifest" section="manifest" activeSection={activeSection} text={t.manifest} />
-
-          </div>
-        </nav>
-
-        {/* Language toggle no fundo */}
-        <div className="py-8">
-          <LanguageToggle currentLanguage={currentLanguage} toggleLanguage={toggleLanguage} />
-        </div>
-      </div>
-    </div>
-  );
-
-  // Botão de menu móvel e sidebar para mobile
-  const mobileSidebar = (
-    <>
-      {/* Botão de menu móvel */}
-      <div className="fixed top-4 left-4 z-50 md:hidden">
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="bg-brown-800 p-2 rounded-full shadow-md"
-        >
-          {isMobileMenuOpen ? <X size={24} className="text-white" /> : <Menu size={24} className="text-white" />}
-        </button>
-      </div>
-
-      
-      {isMobileMenuOpen && (
-        <>
-          <div className="fixed inset-0 bg-black/30 z-40 md:hidden" onClick={() => setIsMobileMenuOpen(false)}></div>
-          <div 
-            className="fixed top-0 left-0 h-full w-64 bg-brown-900 shadow-lg z-50"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex flex-col h-full">
-              
-              <div className="p-6 flex items-center justify-between">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">A</span>
-                  </div>
-                  <span className="ml-3 text-lg font-medium text-white">África 360</span>
-                </div>
-                <button
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-white"
-                >
-                  <X size={24} />
-                </button>
-              </div>
-
-              
-              <nav className="flex-1 py-6">
-                <div className="flex flex-col px-6 space-y-4">
-                  <MobileNavItem 
-                    href="#home" 
-                    section="home" 
-                    activeSection={activeSection} 
-                    text={t.home} 
-                    onClick={() => setIsMobileMenuOpen(false)} 
-                  />
-                  <MobileNavItem 
-                    href="#about" 
-                    section="about" 
-                    activeSection={activeSection} 
-                    text={t.about} 
-                    onClick={() => setIsMobileMenuOpen(false)} 
-                  />
-                  <MobileNavItem 
-                    href="#programs" 
-                    section="programs" 
-                    activeSection={activeSection} 
-                    text={t.programs} 
-                    onClick={() => setIsMobileMenuOpen(false)} 
-                  />
-                  <MobileNavItem 
-                    href="#impact" 
-                    section="impact" 
-                    activeSection={activeSection} 
-                    text={t.impact} 
-                    onClick={() => setIsMobileMenuOpen(false)} 
-                  />
-                  <MobileNavItem 
-                    href="#mentorship" 
-                    section="mentorship" 
-                    activeSection={activeSection} 
-                    text={t.mentorship} 
-                    onClick={() => setIsMobileMenuOpen(false)} 
-                  />
-                  <MobileNavItem 
-                    href="#contact" 
-                    section="contact" 
-                    activeSection={activeSection} 
-                    text={t.contact} 
-                    onClick={() => setIsMobileMenuOpen(false)} 
-                  />
-                </div>
-              </nav>
-
-              
-              <div className="p-6 border-t border-brown-700">
-                <LanguageToggle currentLanguage={currentLanguage} toggleLanguage={toggleLanguage} />
-              </div>
-            </div>
-          </div>
-        </>
-      )}
-    </>
-  );
-
   return (
     <>
-      
-      <div className="hidden md:block">
-        {desktopSidebar}
-      </div>
-
-      
-      <div className="md:hidden">
-        {mobileSidebar}
-      </div>
-
-     
-      <div className="hidden md:block ml-24 transition-all duration-300"></div>
-    </>
-  );
-};
-
-
-interface NavItemProps {
-  href: string;
-  section: string;
-  activeSection: string;
-  text: string;
-}
-
-const NavItem: React.FC<NavItemProps> = ({ href, section, activeSection, text }) => {
-  const isActive = section === activeSection;
-  
-  return (
-    <a 
-      href={href} 
-      className="group flex flex-col items-center w-full py-2 relative"
-    >
-      {isActive && <div className="absolute left-0 w-1 h-10 bg-orange-500 rounded-r-full"></div>}
-      <div 
-        className={`w-2 h-2 rounded-full mb-1 ${isActive ? 'bg-orange-500' : 'bg-brown-600 group-hover:bg-brown-500'}`}
-      ></div>
-      <span 
-        className={`text-xs ${isActive ? 'font-medium text-orange-500' : 'text-brown-400 group-hover:text-brown-300'}`}
+      {/* Mobile menu button */}
+      <button 
+        className="lg:hidden fixed top-4 left-4 z-50 bg-orange-500 text-white p-2 rounded-md"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
-        {text}
-      </span>
-    </a>
-  );
-};
+        <ChevronRight className={`w-6 h-6 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-180' : ''}`} />
+      </button>
 
-// Componente de item de navegação para mobile
-interface MobileNavItemProps {
-  href: string;
-  section: string;
-  activeSection: string;
-  text: string;
-  onClick: () => void;
-}
+      {/* Sidebar */}
+      <aside 
+        className={`
+          fixed top-0 left-0 w-64 h-screen overflow-y-auto bg-[#1A0900] text-white py-8 z-40
+          transition-transform duration-300
+          ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} 
+          lg:translate-x-0 lg:relative
+        `}
+      >
+        <div className="flex items-center justify-center mb-12 px-4">
+          <Globe className="w-10 h-10 text-orange-500" />
+          <h1 className="text-2xl font-bold ml-2">AfricaTrip</h1>
+        </div>
 
-const MobileNavItem: React.FC<MobileNavItemProps> = ({ href, section, activeSection, text, onClick }) => {
-  const isActive = section === activeSection;
-  
-  return (
-    <a 
-      href={href} 
-      onClick={onClick}
-      className={`py-2 relative pl-4 ${
-        isActive 
-          ? 'text-orange-500 font-medium border-l-2 border-orange-500' 
-          : 'text-brown-300 border-l-2 border-transparent hover:border-brown-700 hover:text-brown-200'
-      }`}
-    >
-      {text}
-    </a>
+        <nav>
+          <ul className="space-y-1">
+            {t.menuItems.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={`#${item.id}`}
+                  className={`
+                    flex items-center pl-8 py-3 pr-4 hover:bg-orange-900/30 transition-colors duration-300
+                    ${activeSection === item.id ? 'text-orange-500 border-l-4 border-orange-500 pl-7' : ''}
+                  `}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  <span className="mr-2 w-2 h-2 rounded-full bg-orange-500 opacity-70"></span>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </>
   );
 };
 
