@@ -11,24 +11,30 @@ const Sidebar: React.FC<SidebarProps> = ({ currentLanguage, toggleLanguage }) =>
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const translations = {
-    pt: {
-      home: 'Início',
-      about: 'Sobre',
-      programs: 'Programas',
-      impact: 'Impacto',
-      mentorship: 'Mentoria',
-      contact: 'Contato',
-    },
-    en: {
-      home: 'Home',
-      about: 'About',
-      programs: 'Programs',
-      impact: 'Impact',
-      mentorship: 'Mentorship',
-      contact: 'Contact',
-    }
-  };
+const translations = {
+  pt: {
+    home: 'Quem Somos',
+    about: 'Projeto',
+    programs: 'Delá',
+    impact: 'Favela',
+    mentorship: 'CGBN',
+    contact: 'kindezi BAL',
+    collect: 'Clipping',
+    sponsorships: 'Patrocínio',
+    manifest: 'Manifesto'
+  },
+  en: {
+    home: 'Home',
+    about: 'Project',
+    programs: 'Delá',
+    impact: 'Favela',
+    mentorship: 'CGBN',
+    contact: 'kindezi BAL',
+    collect: 'Clipping',
+    sponsorships: 'Sponsorships',
+    manifest: 'Manifest'
+  }
+};
 
   const t = translations[currentLanguage as keyof typeof translations];
 
@@ -73,6 +79,10 @@ const Sidebar: React.FC<SidebarProps> = ({ currentLanguage, toggleLanguage }) =>
             <NavItem href="#impact" section="impact" activeSection={activeSection} text={t.impact} />
             <NavItem href="#mentorship" section="mentorship" activeSection={activeSection} text={t.mentorship} />
             <NavItem href="#contact" section="contact" activeSection={activeSection} text={t.contact} />
+            <NavItem href="#collect" section="collect" activeSection={activeSection} text={t.collect} />
+            <NavItem href="#sponsorships" section="sponsorships" activeSection={activeSection} text={t.sponsorships} />
+            <NavItem href="#manifest" section="manifest" activeSection={activeSection} text={t.manifest} />
+
           </div>
         </nav>
 

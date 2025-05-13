@@ -23,19 +23,10 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-<<<<<<< HEAD
     <section id="home" className="relative min-h-screen flex items-center bg-brown-800"
     style={{backgroundImage: "url("}}>
       <div className="absolute inset-0 bg-pattern opacity-10"></div>
       
-=======
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
-    >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-
->>>>>>> f8b275fcf10d8093712b7d88fe47fec9f4018f79
       <div className="container mx-auto px-4 relative z-10 py-20">
         <div className="max-w-3xl mx-auto text-center">
           <img
