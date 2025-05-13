@@ -28,36 +28,39 @@ const About: React.FC<AboutProps> = ({ language }) => {
     }
   };
 
-  const t = content[language as keyof typeof content];
+  // Use o idioma especificado se existir, caso contrário use português como padrão
+  const defaultLanguage = 'pt';
+  const selectedLanguage = Object.keys(content).includes(language) ? language : defaultLanguage;
+  const t = content[selectedLanguage as keyof typeof content];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-amber-900">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">{t.title}</h2>
-          <p className="text-xl text-gray-600 leading-relaxed">{t.description}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-amber-50">{t.title}</h2>
+          <p className="text-xl text-amber-100 leading-relaxed">{t.description}</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-10 mt-16">
           {/* Mission */}
-          <div className="bg-orange-50 rounded-xl p-8 shadow-sm transition-transform hover:transform hover:scale-105">
+          <div className="bg-amber-100 rounded-xl p-8 shadow-sm border border-amber-300 transition-transform hover:transform hover:scale-105">
             <h3 className="text-2xl font-bold mb-4 text-orange-600">{t.mission}</h3>
-            <p className="text-gray-700">{t.missionText}</p>
+            <p className="text-amber-900">{t.missionText}</p>
           </div>
 
           {/* Vision */}
-          <div className="bg-blue-50 rounded-xl p-8 shadow-sm transition-transform hover:transform hover:scale-105">
-            <h3 className="text-2xl font-bold mb-4 text-blue-600">{t.vision}</h3>
-            <p className="text-gray-700">{t.visionText}</p>
+          <div className="bg-amber-200 rounded-xl p-8 shadow-sm border border-amber-300 transition-transform hover:transform hover:scale-105">
+            <h3 className="text-2xl font-bold mb-4 text-orange-600">{t.vision}</h3>
+            <p className="text-amber-900">{t.visionText}</p>
           </div>
 
           {/* Values */}
-          <div className="bg-green-50 rounded-xl p-8 shadow-sm transition-transform hover:transform hover:scale-105">
-            <h3 className="text-2xl font-bold mb-4 text-green-600">{t.values}</h3>
-            <ul className="space-y-2 text-gray-700">
+          <div className="bg-amber-100 rounded-xl p-8 shadow-sm border border-amber-300 transition-transform hover:transform hover:scale-105">
+            <h3 className="text-2xl font-bold mb-4 text-orange-600">{t.values}</h3>
+            <ul className="space-y-2 text-amber-900">
               {t.valuesList.map((value, index) => (
                 <li key={index} className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
                   {value}
                 </li>
               ))}
