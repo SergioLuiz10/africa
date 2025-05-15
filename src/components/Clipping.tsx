@@ -8,120 +8,154 @@ interface ClippingProps {
 const Clipping: React.FC<ClippingProps> = ({ language }) => {
   const [activeFilter, setActiveFilter] = useState('all');
   
-  const content = {
-    pt: {
-      title: 'Clipping',
-      subtitle: 'Cobertura de mídia e notícias sobre nossas iniciativas',
-      search: 'Buscar artigos...',
-      filters: {
-        all: 'Todos',
-        press: 'Imprensa',
-        blogs: 'Blogs',
-        videos: 'Vídeos',
-        podcasts: 'Podcasts'
-      },
-      articles: [
-        {
-          title: 'África: Redescoberta através do turismo responsável',
-          source: 'Revista Viagem & Turismo',
-          date: '15/06/2023',
-          excerpt: 'A AfricaTrip está revolucionando o turismo no continente africano com seu modelo de negócio que beneficia diretamente as comunidades locais...',
-          type: 'press',
-          link: '#'
-        },
-        {
-          title: 'Projeto Kindezi BAL preserva literatura africana para futuras gerações',
-          source: 'Portal de Cultura',
-          date: '28/03/2023',
-          excerpt: 'A biblioteca de arte e literatura africana tem se tornado um importante centro cultural, atraindo pesquisadores e amantes da cultura africana...',
-          type: 'press',
-          link: '#'
-        },
-        {
-          title: 'Conheça o turismo de base comunitária das favelas africanas',
-          source: 'Blog Destinos Incríveis',
-          date: '04/02/2023',
-          excerpt: 'A iniciativa Favela está transformando a percepção sobre as comunidades urbanas africanas e gerando renda para os moradores locais...',
-          type: 'blogs',
-          link: '#'
-        },
-        {
-          title: 'Artesãs africanas encontram mercado global através do projeto Dela',
-          source: 'Canal Economia Criativa',
-          date: '19/11/2022',
-          excerpt: 'O projeto Dela está conectando artesãs de comunidades tradicionais africanas com o mercado global, preservando técnicas ancestrais...',
-          type: 'videos',
-          link: '#'
-        },
-        {
-          title: 'Biodiversidade africana: O trabalho do CGBN para preservação',
-          source: 'Podcast Ciência & Meio Ambiente',
-          date: '07/09/2022',
-          excerpt: 'Neste episódio, conversamos com os pesquisadores do Centro Global de Biodiversidade Natural sobre os desafios de conservação na África...',
-          type: 'podcasts',
-          link: '#'
-        }
-      ],
-      readMore: 'Leia mais',
-      noResults: 'Nenhum artigo encontrado com esses filtros.'
+ const content = {
+  pt: {
+    title: 'Clipping',
+    subtitle: 'Cobertura de mídia e notícias sobre nossas iniciativas',
+    search: 'Buscar artigos...',
+    filters: {
+      all: 'Todos',
+      press: 'Imprensa',
+      blogs: 'Blogs',
+      videos: 'Vídeos',
+      podcasts: 'Podcasts'
     },
-    en: {
-      title: 'Clipping',
-      subtitle: 'Media coverage and news about our initiatives',
-      search: 'Search articles...',
-      filters: {
-        all: 'All',
-        press: 'Press',
-        blogs: 'Blogs',
-        videos: 'Videos',
-        podcasts: 'Podcasts'
+    articles: [
+      {
+        title: 'Shopping Bela Vista recebe a 2ª edição da roda de conversa "De onde viemos, para onde vamos?"',
+        source: 'Lícia Fábio',
+        date: '13/05/2024',
+        excerpt: 'Evento promove reflexões sobre ancestralidade e afroempreendedorismo no Novembro Negro.',
+        type: 'press',
+        link: 'https://www.liciafabio.com.br/shopping-bela-vista-recebe-a-2a-edicao-da-roda-de-conversa-de-onde-viemos-para-onde-vamos/'
       },
-      articles: [
-        {
-          title: 'Africa: Rediscovered through responsible tourism',
-          source: 'Travel & Tourism Magazine',
-          date: '06/15/2023',
-          excerpt: 'AfricaTrip is revolutionizing tourism on the African continent with its business model that directly benefits local communities...',
-          type: 'press',
-          link: '#'
-        },
-        {
-          title: 'Kindezi BAL project preserves African literature for future generations',
-          source: 'Culture Portal',
-          date: '03/28/2023',
-          excerpt: 'The African art and literature library has become an important cultural center, attracting researchers and lovers of African culture...',
-          type: 'press',
-          link: '#'
-        },
-        {
-          title: 'Discover community-based tourism in African favelas',
-          source: 'Amazing Destinations Blog',
-          date: '02/04/2023',
-          excerpt: 'The Favela initiative is transforming the perception of African urban communities and generating income for local residents...',
-          type: 'blogs',
-          link: '#'
-        },
-        {
-          title: 'African artisans find global market through Dela project',
-          source: 'Creative Economy Channel',
-          date: '11/19/2022',
-          excerpt: 'The Dela project is connecting artisans from traditional African communities with the global market, preserving ancestral techniques...',
-          type: 'videos',
-          link: '#'
-        },
-        {
-          title: 'African biodiversity: CGBN\'s work for preservation',
-          source: 'Science & Environment Podcast',
-          date: '09/07/2022',
-          excerpt: 'In this episode, we talk with researchers from the Global Center for Natural Biodiversity about conservation challenges in Africa...',
-          type: 'podcasts',
-          link: '#'
-        }
-      ],
-      readMore: 'Read more',
-      noResults: 'No articles found with these filters.'
-    }
-  };
+      {
+        title: 'Roda de Conversa: "De onde viemos, para onde vamos?"',
+        source: 'Salvador Notícias',
+        date: '10/01/2025',
+        excerpt: 'Discussão sobre identidade negra e futuro dos negócios afrocentrados em Salvador.',
+        type: 'press',
+        link: 'https://www.salvadornoticias.com/2025/01/roda-de-conversa-de-onde-viemos-para.html'
+      },
+      {
+        title: 'Shopping Bela Vista segue com exposição "Pessoas Negras, Negócios Potentes"',
+        source: 'Revista Yacht',
+        date: '20/11/2024',
+        excerpt: 'Mostra celebra o afroempreendedorismo com rodas de conversa e homenagens.',
+        type: 'press',
+        link: 'https://www.revistayacht.com.br/shopping-bela-vista-segue-com-exposicao-pessoas-negras-negocios-potentes-e-traz-serie-de-rodas-de-conversas/'
+      },
+      {
+        title: 'Shopping Bela Vista promove programação especial no Novembro Negro',
+        source: 'Shopping Bela Vista',
+        date: '19/11/2024',
+        excerpt: 'Atividades culturais celebram a Consciência Negra com foco em empreendedorismo e cultura.',
+        type: 'press',
+        link: 'https://www.shoppingbelavista.com.br/noticias/2024/11/19/novembro-negro-shopping-bela-vista-promove-programacao-especial-para-celebrar-a-consciencia-negra.html'
+      },
+      {
+        title: 'Exposição celebra afroempreendedorismo em Salvador',
+        source: 'Africanize Oficial',
+        date: '21/11/2024',
+        excerpt: 'Projeto "Pessoas Negras, Negócios Potentes" homenageia líderes e marcas negras.',
+        type: 'press',
+        link: 'https://www.africanizeoficial.com.br/exposicao-pessoas-negras-negocios-potentes-celebra-afroempreendedorismo-em-salvador'
+      },
+      {
+        title: 'Shopping segue com exposição de afroempreendedores',
+        source: 'Jornal Massa',
+        date: '22/11/2024',
+        excerpt: 'Empreendedores negros ganham visibilidade em mostra realizada no Shopping Bela Vista.',
+        type: 'press',
+        link: 'https://jornalmassa.com.br/cidades/shopping-segue-com-exposicao-pessoas-negras-negocios-potentes-1276821'
+      },
+      {
+        title: 'Curso de auxiliar de enfermagem veterinária no Bairro da Paz',
+        source: 'ANF - Agência de Notícias das Favelas',
+        date: '05/03/2025',
+        excerpt: 'Iniciativa oferece formação gratuita para jovens negros da periferia de Salvador.',
+        type: 'press',
+        link: 'https://www.anf.org.br/bairro-da-paz-tera-curso-de-auxiliar-de-enfermagem-veterinaria-para-jovens-negros/'
+      }
+    ],
+    readMore: 'Leia mais',
+    noResults: 'Nenhum artigo encontrado com esses filtros.'
+  },
+
+  en: {
+    title: 'Clipping',
+    subtitle: 'Media coverage and news about our initiatives',
+    search: 'Search articles...',
+    filters: {
+      all: 'All',
+      press: 'Press',
+      blogs: 'Blogs',
+      videos: 'Videos',
+      podcasts: 'Podcasts'
+    },
+    articles: [
+      {
+        title: 'Bela Vista Mall hosts the 2nd edition of the talk "Where do we come from, where are we going?"',
+        source: 'Lícia Fábio',
+        date: '2024-05-13',
+        excerpt: 'Event promotes reflection on ancestry and Black entrepreneurship during Black Awareness Month.',
+        type: 'press',
+        link: 'https://www.liciafabio.com.br/shopping-bela-vista-recebe-a-2a-edicao-da-roda-de-conversa-de-onde-viemos-para-onde-vamos/'
+      },
+      {
+        title: 'Discussion Circle: "Where do we come from, where are we going?"',
+        source: 'Salvador Notícias',
+        date: '2025-01-10',
+        excerpt: 'Debate on Black identity and Afro-centered business in Salvador.',
+        type: 'press',
+        link: 'https://www.salvadornoticias.com/2025/01/roda-de-conversa-de-onde-viemos-para.html'
+      },
+      {
+        title: 'Bela Vista continues with exhibition "Black People, Powerful Businesses"',
+        source: 'Revista Yacht',
+        date: '2024-11-20',
+        excerpt: 'Show honors Black entrepreneurship with discussions and celebrations.',
+        type: 'press',
+        link: 'https://www.revistayacht.com.br/shopping-bela-vista-segue-com-exposicao-pessoas-negras-negocios-potentes-e-traz-serie-de-rodas-de-conversas/'
+      },
+      {
+        title: 'Black Awareness Month at Bela Vista Mall features special events',
+        source: 'Shopping Bela Vista',
+        date: '2024-11-19',
+        excerpt: 'Cultural activities celebrate Black identity, entrepreneurship, and legacy.',
+        type: 'press',
+        link: 'https://www.shoppingbelavista.com.br/noticias/2024/11/19/novembro-negro-shopping-bela-vista-promove-programacao-especial-para-celebrar-a-consciencia-negra.html'
+      },
+      {
+        title: 'Exhibition celebrates Black entrepreneurship in Salvador',
+        source: 'Africanize Oficial',
+        date: '2024-11-21',
+        excerpt: '"Black People, Powerful Businesses" pays tribute to Black leaders and brands.',
+        type: 'press',
+        link: 'https://www.africanizeoficial.com.br/exposicao-pessoas-negras-negocios-potentes-celebra-afroempreendedorismo-em-salvador'
+      },
+      {
+        title: 'Mall honors Black entrepreneurs in special exhibition',
+        source: 'Jornal Massa',
+        date: '2024-11-22',
+        excerpt: 'Afro-entrepreneurs gain visibility in a major public exhibit in Salvador.',
+        type: 'press',
+        link: 'https://jornalmassa.com.br/cidades/shopping-segue-com-exposicao-pessoas-negras-negocios-potentes-1276821'
+      },
+      {
+        title: 'Veterinary nursing assistant course for young Black people in Bairro da Paz',
+        source: 'ANF News Agency',
+        date: '2025-03-05',
+        excerpt: 'Free training program targets youth from Salvador\'s periphery.',
+        type: 'press',
+        link: 'https://www.anf.org.br/bairro-da-paz-tera-curso-de-auxiliar-de-enfermagem-veterinaria-para-jovens-negros/'
+      }
+    ],
+    readMore: 'Read more',
+    noResults: 'No articles found with these filters.'
+  }
+};
+
 
   const t = content[language as keyof typeof content];
   

@@ -1,36 +1,21 @@
 import React from 'react';
-import { AtSign, Phone, MapPin, Globe, ExternalLink } from 'lucide-react';
+import { AtSign, Phone, MapPin } from 'lucide-react';
 
 interface DelaProps {
-  language: string;
+  language: 'pt' | 'en';
 }
 
 const Dela: React.FC<DelaProps> = ({ language }) => {
   const content = {
     pt: {
-      title: 'Dela',
-      subtitle: 'Promovendo o artesanato local e empoderando mulheres africanas',
-      intro: 'Dela é um projeto de artesanato que trabalha com mulheres artesãs em várias comunidades africanas, preservando técnicas tradicionais e criando oportunidades econômicas sustentáveis.',
-      mission: 'Nossa missão é preservar o rico patrimônio cultural africano através do artesanato, enquanto criamos oportunidades econômicas para mulheres em comunidades tradicionais.',
-      impact: {
-        title: 'Nosso Impacto',
-        stats: [
-          { value: '200+', label: 'Artesãs apoiadas' },
-          { value: '15', label: 'Comunidades' },
-          { value: '5', label: 'Países africanos' },
-          { value: '1000+', label: 'Produtos criados' }
-        ]
-      },
-      crafts: {
-        title: 'Artesanato',
-        types: [
-          { name: 'Tecelagem', description: 'Técnicas tradicionais de tecelagem produzindo tecidos vibrantes' },
-          { name: 'Cerâmica', description: 'Cerâmica artesanal utilizando técnicas transmitidas por gerações' },
-          { name: 'Cestaria', description: 'Cestos intrincadamente tecidos usando materiais naturais locais' },
-          { name: 'Joalheria', description: 'Jóias feitas à mão com influências culturais distintas' }
-        ]
-      },
-      visit: 'Visite a loja',
+      title: 'DeLá',
+      subtitle: 'Ecossistema de impulsão para afroempreendedores',
+      intro: 'A DeLá é uma empresa que nasce do compromisso com o fortalecimento econômico da população negra. Mais do que uma marca, é um ecossistema de impulsão para afroempreendedores, criado com propósito, visão global e respeito às raízes.',
+      mission: 'Com foco na capacitação e internacionalização de negócios liderados por pessoas negras, a DeLá promove iniciativas que conectam empreendedores a oportunidades reais, tanto no Brasil quanto em países da diáspora africana.',
+      approach: 'A atuação da DeLá se baseia na valorização da ancestralidade como força propulsora de inovação. É por meio da escuta ativa, da formação crítica e do estímulo à liderança preta que a empresa transforma ideias em movimentos, negócios em legados e histórias em potência econômica.',
+      vision: 'Acreditamos que internacionalizar um negócio é também internacionalizar uma narrativa. Por isso, a DeLá constrói pontes de acesso, diálogo e crescimento, reconhecendo o lugar do afroempreendedor no centro da mudança.',
+      project: 'O Africa 360, projeto estruturado pela DeLá, é uma das principais ações desse compromisso — um programa que conecta, forma e inspira afroempreendedores a expandirem seus negócios em conexão com o continente africano e a diáspora.',
+      conclusion: 'Com estratégia, afeto e visão de futuro, a DeLá transforma trajetórias negras em referências globais.',
       contact: {
         title: 'Entre em contato',
         email: 'dela@africatrip.com',
@@ -39,29 +24,14 @@ const Dela: React.FC<DelaProps> = ({ language }) => {
       }
     },
     en: {
-      title: 'Dela',
-      subtitle: 'Promoting local craftsmanship and empowering African women',
-      intro: 'Dela is a craft project working with women artisans in various African communities, preserving traditional techniques and creating sustainable economic opportunities.',
-      mission: 'Our mission is to preserve Africa\'s rich cultural heritage through craftsmanship while creating economic opportunities for women in traditional communities.',
-      impact: {
-        title: 'Our Impact',
-        stats: [
-          { value: '200+', label: 'Artisans supported' },
-          { value: '15', label: 'Communities' },
-          { value: '5', label: 'African countries' },
-          { value: '1000+', label: 'Products created' }
-        ]
-      },
-      crafts: {
-        title: 'Craftsmanship',
-        types: [
-          { name: 'Weaving', description: 'Traditional weaving techniques producing vibrant textiles' },
-          { name: 'Pottery', description: 'Handcrafted pottery using techniques passed down through generations' },
-          { name: 'Basketry', description: 'Intricately woven baskets using local natural materials' },
-          { name: 'Jewelry', description: 'Handmade jewelry with distinct cultural influences' }
-        ]
-      },
-      visit: 'Visit the store',
+      title: 'DeLá',
+      subtitle: 'Empowerment ecosystem for Afro-entrepreneurs',
+      intro: 'DeLá is a company born from a commitment to the economic empowerment of Black communities. More than a brand, it is an empowerment ecosystem for Afro-entrepreneurs, created with purpose, global vision, and deep respect for ancestral roots.',
+      mission: 'With a focus on the training and internationalization of Black-led businesses, DeLá promotes initiatives that connect entrepreneurs with real opportunities in both Brazil and African diaspora countries.',
+      approach: 'DeLá’s approach is grounded in valuing ancestry as a driving force for innovation. Through active listening, critical education, and Black leadership development, the company turns ideas into movements, businesses into legacies, and stories into economic power.',
+      vision: 'We believe that internationalizing a business also means internationalizing a narrative. That’s why DeLá builds bridges of access, dialogue, and growth, placing Afro-entrepreneurs at the center of change.',
+      project: 'Africa 360, a program structured by DeLá, is one of the main initiatives of this commitment — a project that connects, trains, and inspires Afro-entrepreneurs to expand their businesses in connection with the African continent and the diaspora.',
+      conclusion: 'With strategy, care, and a future-focused vision, DeLá turns Black trajectories into global references.',
       contact: {
         title: 'Get in touch',
         email: 'dela@africatrip.com',
@@ -71,7 +41,7 @@ const Dela: React.FC<DelaProps> = ({ language }) => {
     }
   };
 
-  const t = content[language as keyof typeof content];
+  const t = content[language];
 
   return (
     <section id="dela" className="py-20 bg-white">
@@ -81,39 +51,24 @@ const Dela: React.FC<DelaProps> = ({ language }) => {
           <p className="text-xl text-gray-600">{t.subtitle}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
           <div>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
               {t.intro}
             </p>
+
             <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500 mb-8">
               <p className="text-lg italic text-gray-700">
                 {t.mission}
               </p>
             </div>
-            
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900">{t.impact.title}</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {t.impact.stats.map((stat, index) => (
-                  <div key={index} className="bg-white p-4 rounded-lg shadow-md text-center">
-                    <p className="text-3xl font-bold text-orange-500">{stat.value}</p>
-                    <p className="text-sm text-gray-600">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="text-center mt-8">
-              <a 
-                href="#" 
-                className="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-full transition-colors duration-300"
-              >
-                {t.visit} <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
-            </div>
+
+            <p className="text-lg text-gray-700 mb-6">{t.approach}</p>
+            <p className="text-lg text-gray-700 mb-6">{t.vision}</p>
+            <p className="text-lg text-gray-700 mb-6">{t.project}</p>
+            <p className="text-lg text-gray-700">{t.conclusion}</p>
           </div>
-          
+
           <div>
             <div className="rounded-xl overflow-hidden shadow-lg mb-8">
               <img 
@@ -122,19 +77,7 @@ const Dela: React.FC<DelaProps> = ({ language }) => {
                 className="w-full h-auto"
               />
             </div>
-            
-            <div className="bg-gray-50 rounded-xl p-6 shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-gray-900">{t.crafts.title}</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {t.crafts.types.map((craft, index) => (
-                  <div key={index} className="bg-white p-4 rounded-lg border border-gray-100">
-                    <h4 className="font-bold text-gray-900 mb-1">{craft.name}</h4>
-                    <p className="text-sm text-gray-600">{craft.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
+
             <div className="mt-8 bg-orange-500 rounded-xl p-6 text-white">
               <h3 className="text-xl font-bold mb-4">{t.contact.title}</h3>
               <div className="space-y-3">
