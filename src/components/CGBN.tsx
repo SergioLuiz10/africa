@@ -6,130 +6,132 @@ interface CGBNProps {
 }
 
 const CGBN: React.FC<CGBNProps> = ({ language }) => {
-  const content = {
-    pt: {
-      title: 'CGBN',
-      subtitle: 'Centro Global de Biodiversidade Natural',
-      intro: 'O Centro Global de Biodiversidade Natural (CGBN) é nossa iniciativa dedicada à preservação dos ecossistemas africanos através da pesquisa, educação e turismo sustentável.',
-      mission: 'Promover a conservação da biodiversidade africana através da pesquisa científica, educação ambiental e práticas de turismo que protejam os ecossistemas naturais.',
-      areas: {
-        title: 'Áreas de atuação',
-        list: [
-          {
-            title: 'Pesquisa científica',
-            description: 'Realizamos e apoiamos pesquisas sobre biodiversidade, ecologia e conservação',
-            icon: <Globe className="w-8 h-8 text-green-600" />
-          },
-          {
-            title: 'Educação ambiental',
-            description: 'Programas educativos para comunidades locais, escolas e visitantes',
-            icon: <Leaf className="w-8 h-8 text-green-600" />
-          },
-          {
-            title: 'Conservação de habitats',
-            description: 'Projetos de proteção e restauração de ecossistemas naturais',
-            icon: <TreePine className="w-8 h-8 text-green-600" />
-          },
-          {
-            title: 'Ecoturismo',
-            description: 'Experiências turísticas que financiam a conservação e educação',
-            icon: <Wind className="w-8 h-8 text-green-600" />
-          }
-        ]
-      },
-      ecosystems: {
-        title: 'Ecossistemas protegidos',
-        list: [
-          {
-            name: 'Savanas',
-            description: 'Vastas planícies abertas que abrigam grandes mamíferos e uma diversidade surpreendente de espécies',
-            image: 'https://images.pexels.com/photos/259417/pexels-photo-259417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
-          },
-          {
-            name: 'Florestas tropicais',
-            description: 'Densas florestas com extraordinária biodiversidade e espécies endêmicas',
-            image: 'https://images.pexels.com/photos/2739664/pexels-photo-2739664.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
-          },
-          {
-            name: 'Zonas úmidas',
-            description: 'Pântanos, deltas e lagos que são habitat essencial para aves aquáticas e muitas outras espécies',
-            image: 'https://images.pexels.com/photos/60217/pexels-photo-60217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
-          }
-        ]
-      },
-      projects: {
-        title: 'Projetos atuais',
-        list: [
-          'Monitoramento de populações de elefantes em parques nacionais',
-          'Reflorestamento de áreas degradadas em margens de rios',
-          'Programas de conservação comunitária com povos indígenas',
-          'Pesquisa sobre impactos das mudanças climáticas na biodiversidade local'
-        ]
-      },
-      join: 'Participe como voluntário'
+ const content = {
+  pt: {
+    title: 'CGBW',
+    subtitle: 'Circle Global Business Women',
+    intro: 'O Circle Global Business Women (CGBW) é uma rede internacional de mulheres de negócios comprometida com o fortalecimento da presença feminina negra no cenário econômico global. Fundada no continente africano, a iniciativa atua como ponte entre mulheres líderes da África e da diáspora, promovendo parcerias estratégicas, capacitação, intercâmbio de experiências e oportunidades reais de expansão de negócios.',
+    mission: 'Empoderar mulheres empreendedoras por meio do acesso a conhecimento, mercado, conexões internacionais e visibilidade global.',
+    areas: {
+      title: 'Áreas de atuação',
+      list: [
+        {
+          title: 'Conexões estratégicas',
+          description: 'Promoção de parcerias entre líderes africanas e da diáspora para fomentar negócios globais',
+          icon: <Globe className="w-8 h-8 text-green-600" />
+        },
+        {
+          title: 'Capacitação',
+          description: 'Formações e mentorias voltadas ao desenvolvimento de competências empreendedoras',
+          icon: <Leaf className="w-8 h-8 text-green-600" />
+        },
+        {
+          title: 'Expansão de mercado',
+          description: 'Criação de oportunidades concretas para internacionalização de negócios liderados por mulheres negras',
+          icon: <TreePine className="w-8 h-8 text-green-600" />
+        },
+        {
+          title: 'Visibilidade e liderança',
+          description: 'Eventos e ações para destacar a atuação de mulheres negras no cenário econômico global',
+          icon: <Wind className="w-8 h-8 text-green-600" />
+        }
+      ]
     },
-    en: {
-      title: 'CGBN',
-      subtitle: 'Global Center for Natural Biodiversity',
-      intro: 'The Global Center for Natural Biodiversity (GCNB) is our initiative dedicated to preserving African ecosystems through research, education, and sustainable tourism.',
-      mission: 'To promote the conservation of African biodiversity through scientific research, environmental education, and tourism practices that protect natural ecosystems.',
-      areas: {
-        title: 'Areas of action',
-        list: [
-          {
-            title: 'Scientific research',
-            description: 'We conduct and support research on biodiversity, ecology, and conservation',
-            icon: <Globe className="w-8 h-8 text-green-600" />
-          },
-          {
-            title: 'Environmental education',
-            description: 'Educational programs for local communities, schools, and visitors',
-            icon: <Leaf className="w-8 h-8 text-green-600" />
-          },
-          {
-            title: 'Habitat conservation',
-            description: 'Projects for protection and restoration of natural ecosystems',
-            icon: <TreePine className="w-8 h-8 text-green-600" />
-          },
-          {
-            title: 'Ecotourism',
-            description: 'Tourism experiences that fund conservation and education',
-            icon: <Wind className="w-8 h-8 text-green-600" />
-          }
-        ]
-      },
-      ecosystems: {
-        title: 'Protected ecosystems',
-        list: [
-          {
-            name: 'Savannas',
-            description: 'Vast open plains that host large mammals and a surprising diversity of species',
-            image: 'https://images.pexels.com/photos/259417/pexels-photo-259417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
-          },
-          {
-            name: 'Rainforests',
-            description: 'Dense forests with extraordinary biodiversity and endemic species',
-            image: 'https://images.pexels.com/photos/2739664/pexels-photo-2739664.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
-          },
-          {
-            name: 'Wetlands',
-            description: 'Swamps, deltas, and lakes that are essential habitat for water birds and many other species',
-            image: 'https://images.pexels.com/photos/60217/pexels-photo-60217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
-          }
-        ]
-      },
-      projects: {
-        title: 'Current projects',
-        list: [
-          'Monitoring elephant populations in national parks',
-          'Reforestation of degraded areas along riverbanks',
-          'Community conservation programs with indigenous peoples',
-          'Research on climate change impacts on local biodiversity'
-        ]
-      },
-      join: 'Join as a volunteer'
-    }
-  };
+    ecosystems: {
+      title: 'Impacto internacional',
+      list: [
+        {
+          name: 'Brasil',
+          description: 'Fortalecimento do afroempreendedorismo e expansão da rede na América Latina',
+          image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+        },
+        {
+          name: 'África',
+          description: 'Território originário da rede, onde se concentram ações de liderança e inovação',
+          image: 'https://images.pexels.com/photos/4353813/pexels-photo-4353813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+        },
+        {
+          name: 'Diáspora',
+          description: 'Presença ativa em diversos países, conectando mulheres negras globalmente',
+          image: 'https://images.pexels.com/photos/3064070/pexels-photo-3064070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+        }
+      ]
+    },
+    projects: {
+      title: 'Ações em destaque',
+      list: [
+        'Encontros e fóruns de lideranças femininas negras',
+        'Mentorias com empresárias de diferentes países',
+        'Eventos internacionais de visibilidade econômica',
+        'Programas de intercâmbio e capacitação global'
+      ]
+    },
+    join: 'Junte-se à rede como associada'
+  },
+  en: {
+    title: 'CGBW',
+    subtitle: 'Circle Global Business Women',
+    intro: 'Circle Global Business Women (CGBW) is an international network of businesswomen committed to strengthening the presence of Black women in the global economic landscape. Founded on the African continent, the initiative acts as a bridge between women leaders in Africa and the diaspora, fostering strategic partnerships, training, experience exchange, and real business expansion opportunities.',
+    mission: 'To empower women entrepreneurs through access to knowledge, markets, international connections, and global visibility.',
+    areas: {
+      title: 'Areas of action',
+      list: [
+        {
+          title: 'Strategic connections',
+          description: 'Fostering partnerships between African and diaspora leaders to support global business growth',
+          icon: <Globe className="w-8 h-8 text-green-600" />
+        },
+        {
+          title: 'Training & mentorship',
+          description: 'Programs focused on developing entrepreneurial skills and leadership',
+          icon: <Leaf className="w-8 h-8 text-green-600" />
+        },
+        {
+          title: 'Market expansion',
+          description: 'Creating real opportunities for the internationalization of Black women-led businesses',
+          icon: <TreePine className="w-8 h-8 text-green-600" />
+        },
+        {
+          title: 'Visibility & leadership',
+          description: 'Events and campaigns to highlight Black women’s leadership in global economics',
+          icon: <Wind className="w-8 h-8 text-green-600" />
+        }
+      ]
+    },
+    ecosystems: {
+      title: 'International impact',
+      list: [
+        {
+          name: 'Brazil',
+          description: 'Strengthening Black women entrepreneurship and expanding the network in Latin America',
+          image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+        },
+        {
+          name: 'Africa',
+          description: 'Birthplace of the network, focusing on leadership and innovation actions',
+          image: 'https://images.pexels.com/photos/4353813/pexels-photo-4353813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+        },
+        {
+          name: 'Diaspora',
+          description: 'Active presence in several countries, connecting Black women globally',
+          image: 'https://images.pexels.com/photos/3064070/pexels-photo-3064070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+        }
+      ]
+    },
+    projects: {
+      title: 'Featured initiatives',
+      list: [
+        'Leadership forums for Black women',
+        'Mentorship programs with international entrepreneurs',
+        'Global visibility economic events',
+        'Training and international exchange programs'
+      ]
+    },
+    join: 'Join the network as a member'
+  }
+};
+
+  
 
   const t = content[language as keyof typeof content];
 

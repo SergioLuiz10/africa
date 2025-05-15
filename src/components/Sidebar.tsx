@@ -17,7 +17,7 @@ const Sidebar: React.FC<SidebarProps> = ({ language }) => {
         { id: 'project', label: 'Projeto' },
         { id: 'dela', label: 'Dela' },
         { id: 'favela', label: 'Favela' },
-        { id: 'cgbn', label: 'CGBN' },
+        { id: 'CGBW', label: 'CGBW' },
         { id: 'kindezi', label: 'kindezi BAL' },
         { id: 'clipping', label: 'Clipping' },
         { id: 'sponsorship', label: 'Patrocínio' }
@@ -30,7 +30,7 @@ const Sidebar: React.FC<SidebarProps> = ({ language }) => {
         { id: 'project', label: 'Project' },
         { id: 'dela', label: 'Dela' },
         { id: 'favela', label: 'Favela' },
-        { id: 'cgbn', label: 'CGBN' },
+        { id: 'CGBW', label: 'CGBW' },
         { id: 'kindezi', label: 'kindezi BAL' },
         { id: 'clipping', label: 'Clipping' },
         { id: 'sponsorship', label: 'Sponsorship' }

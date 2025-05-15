@@ -5,28 +5,40 @@ interface AboutProps {
 }
 
 const About: React.FC<AboutProps> = ({ language }) => {
-  const content = {
-    pt: {
-      title: 'Sobre o Projeto África 360',
-      description: 'O África 360 é uma iniciativa inovadora que busca apresentar o continente africano em sua totalidade, revelando sua diversidade cultural, riqueza natural e potencial de desenvolvimento.',
-      mission: 'Nossa Missão',
-      missionText: 'Promover uma visão abrangente e autêntica da África, desmistificando estereótipos e celebrando a riqueza cultural do continente através de programas educacionais, culturais e de desenvolvimento sustentável.',
-      vision: 'Nossa Visão',
-      visionText: 'Construir pontes entre a África e o mundo, facilitando intercâmbios culturais e econômicos que contribuam para o desenvolvimento sustentável do continente africano.',
-      values: 'Nossos Valores',
-      valuesList: ['Autenticidade', 'Respeito Cultural', 'Sustentabilidade', 'Inovação', 'Colaboração']
-    },
-    en: {
-      title: 'About Project Africa 360',
-      description: 'Africa 360 is an innovative initiative that seeks to present the African continent in its entirety, revealing its cultural diversity, natural richness, and development potential.',
-      mission: 'Our Mission',
-      missionText: 'To promote a comprehensive and authentic vision of Africa, demystifying stereotypes and celebrating the cultural richness of the continent through educational, cultural, and sustainable development programs.',
-      vision: 'Our Vision',
-      visionText: 'To build bridges between Africa and the world, facilitating cultural and economic exchanges that contribute to the sustainable development of the African continent.',
-      values: 'Our Values',
-      valuesList: ['Authenticity', 'Cultural Respect', 'Sustainability', 'Innovation', 'Collaboration']
-    }
-  };
+const content = {
+  pt: {
+    title: 'Sobre o Projeto África 360',
+    description: 'O Africa 360 é uma plataforma de intercâmbio, formação e reconexão criada para impulsionar o afroempreendedorismo brasileiro por meio da inovação, da ancestralidade e da conexão global.',
+    mission: 'Nossa Missão',
+    missionText: 'Fortalecer a presença negra no ecossistema de inovação, conectando cultura, negócios e tecnologia em experiências transformadoras entre o Brasil e o continente africano.',
+    vision: 'Nossa Visão',
+    visionText: 'Ser uma ponte entre passado e futuro, entre Brasil e África, formando uma comunidade negra global vibrante, colaborativa e com propósito.',
+    values: 'Nossos Valores',
+    valuesList: [
+      'Ancestralidade',
+      'Inovação',
+      'Pertencimento',
+      'Transformação Social',
+      'Conexão Global'
+    ]
+  },
+  en: {
+    title: 'About Africa 360 Project',
+    description: 'Africa 360 is a platform for exchange, training, and reconnection created to boost Brazilian Black entrepreneurship through innovation, ancestry, and global connection.',
+    mission: 'Our Mission',
+    missionText: 'To strengthen the Black presence in the innovation ecosystem by connecting culture, business, and technology in transformative experiences between Brazil and the African continent.',
+    vision: 'Our Vision',
+    visionText: 'To be a bridge between past and future, between Brazil and Africa, building a global Black community that is vibrant, collaborative, and purposeful.',
+    values: 'Our Values',
+    valuesList: [
+      'Ancestry',
+      'Innovation',
+      'Belonging',
+      'Social Transformation',
+      'Global Connection'
+    ]
+  }
+};
 
   // Use o idioma especificado se existir, caso contrário use português como padrão
   const defaultLanguage = 'pt';
