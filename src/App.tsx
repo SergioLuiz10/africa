@@ -21,19 +21,25 @@ import KindeziBAL from './components/KindeziBAL';
 import Clipping from './components/Clipping';
 import Sponsorship from './components/Sponsorship';
 
+import marca from './assets/imagem1.jpg';
+
 function App() {
   const [language, setLanguage] = useState<'en' | 'pt'>('en');
 
   return (
-    <div className="bg-white min-h-screen flex">
-      {/* Sidebar fixa */}
-      <div className="fixed top-0 left-0 h-full w-64 z-40">
-        <Sidebar language={language} />
-      </div>
+    <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden relative">
+      {/* Marca d'água fixa */}
+      <div
+        className="fixed inset-0 bg-no-repeat bg-center bg-contain bg-fixed opacity-5 pointer-events-none z-0"
+   style={{ backgroundImage: `url(${marca})` }}
+      ></div>
 
-      {/* Conteúdo principal com margem para o menu fixo */}
-      <main className="flex-1 ml-64">
-        {/* Botão de troca de idioma fixo no topo */}
+      {/* Sidebar (responsiva) */}
+      <Sidebar language={language} />
+
+      {/* Conteúdo principal */}
+      <main className="sm:ml-64 w-full max-w-full relative z-10">
+        {/* Botão de idioma */}
         <div className="fixed top-4 right-4 z-50">
           <LanguageToggle
             currentLanguage={language}
@@ -41,7 +47,7 @@ function App() {
           />
         </div>
 
-        {/* Seções com IDs para navegação via Sidebar */}
+        {/* Seções */}
         <section id="hero"><Hero language={language} /></section>
         <section id="manifesto"><Manifesto language={language} /></section>
         <section id="about"><About language={language} /></section>
@@ -52,8 +58,6 @@ function App() {
         <section id="kindezi"><KindeziBAL language={language} /></section>
         <section id="clipping"><Clipping language={language} /></section>
         <section id="sponsorship"><Sponsorship language={language} /></section>
-
-        {/* Conteúdo adicional */}
         <Destinations language={language} />
         <Experiences language={language} />
         <Gallery language={language} />
@@ -68,4 +72,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;
