@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Globe, Users, Lightbulb } from 'lucide-react';
+import { Heart, MessageCircle, Users, Brain } from 'lucide-react';
 
 interface ProgramsProps {
   language: string;
@@ -8,54 +8,54 @@ interface ProgramsProps {
 const Programs: React.FC<ProgramsProps> = ({ language }) => {
   const content = {
     pt: {
-      title: 'Nossos Programas',
-      subtitle: 'Conheça as iniciativas que compõem o Projeto África 360',
-      programs: [
+      title: 'Programas',
+      subtitle: 'Dignidade Menstrual',
+      blocks: [
         {
-          icon: <BookOpen className="w-12 h-12 text-orange-600" />,
-          title: 'Educação Cultural',
-          description: 'Programas educacionais que promovem o conhecimento sobre a história, cultura e tradições africanas.',
+          icon: <Heart className="w-12 h-12 text-orange-600" />,
+          title: 'Saúde e Informação',
+          description: 'Plataforma com vídeos, artigos e consultas sobre saúde menstrual, nutrição e bem-estar feminino.'
         },
         {
-          icon: <Globe className="w-12 h-12 text-orange-600" />,
-          title: 'Turismo Sustentável',
-          description: 'Iniciativas que fomentam o turismo responsável e sustentável em diversos países africanos.',
+          icon: <MessageCircle className="w-12 h-12 text-orange-600" />,
+          title: 'Acolhimento e Orientação',
+          description: 'Chats ao vivo e fóruns com especialistas para tirar dúvidas e combater tabus.'
+        },
+        {
+          icon: <Brain className="w-12 h-12 text-orange-600" />,
+          title: 'Tecnologia a Favor',
+          description: 'IA personalizada, rastreamento do ciclo, desafios gamificados e recomendações inteligentes.'
         },
         {
           icon: <Users className="w-12 h-12 text-orange-600" />,
-          title: 'Intercâmbio Cultural',
-          description: 'Programas de intercâmbio que conectam pessoas de diferentes partes do mundo com comunidades africanas.',
-        },
-        {
-          icon: <Lightbulb className="w-12 h-12 text-orange-600" />,
-          title: 'Inovação e Desenvolvimento',
-          description: 'Apoio a projetos inovadores que contribuem para o desenvolvimento socioeconômico das comunidades africanas.',
+          title: 'Empreendedorismo e Renda',
+          description: 'Capacitação para produção e venda de absorventes ecológicos, com cursos e mentorias.'
         }
       ]
     },
     en: {
-      title: 'Our Programs',
-      subtitle: 'Discover the initiatives that make up Project Africa 360',
-      programs: [
+      title: 'Programs',
+      subtitle: 'Menstrual Dignity',
+      blocks: [
         {
-          icon: <BookOpen className="w-12 h-12 text-orange-600" />,
-          title: 'Cultural Education',
-          description: 'Educational programs that promote knowledge about African history, culture, and traditions.',
+          icon: <Heart className="w-12 h-12 text-orange-600" />,
+          title: 'Health & Education',
+          description: 'Platform with videos, articles, and teleconsultations on menstrual health and nutrition.'
         },
         {
-          icon: <Globe className="w-12 h-12 text-orange-600" />,
-          title: 'Sustainable Tourism',
-          description: 'Initiatives that promote responsible and sustainable tourism in various African countries.',
+          icon: <MessageCircle className="w-12 h-12 text-orange-600" />,
+          title: 'Support & Guidance',
+          description: 'Live chats and forums with experts to clarify doubts and break taboos.'
+        },
+        {
+          icon: <Brain className="w-12 h-12 text-orange-600" />,
+          title: 'Technology for Good',
+          description: 'AI-based content, cycle tracker, gamified challenges, and personalized learning.'
         },
         {
           icon: <Users className="w-12 h-12 text-orange-600" />,
-          title: 'Cultural Exchange',
-          description: 'Exchange programs that connect people from different parts of the world with African communities.',
-        },
-        {
-          icon: <Lightbulb className="w-12 h-12 text-orange-600" />,
-          title: 'Innovation and Development',
-          description: 'Support for innovative projects that contribute to the socioeconomic development of African communities.',
+          title: 'Entrepreneurship & Income',
+          description: 'Training for producing eco-friendly pads and support for menstrual business ideas.'
         }
       ]
     }
@@ -68,11 +68,11 @@ const Programs: React.FC<ProgramsProps> = ({ language }) => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-amber-50">{t.title}</h2>
-          <p className="text-xl text-amber-100">{t.subtitle}</p>
+          <p className="text-xl text-orange-200">{t.subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {t.programs.map((program, index) => (
+          {t.blocks.map((program, index) => (
             <div 
               key={index} 
               className="bg-amber-100 rounded-xl p-8 shadow-sm border border-amber-300 transition-transform hover:transform hover:scale-105"

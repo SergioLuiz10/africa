@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Award, Gift, Users, Star, Check } from 'lucide-react';
+import { Briefcase, Award, Gift, Users, Star } from 'lucide-react';
 
 interface SponsorshipProps {
   language: string;
@@ -36,57 +36,17 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
           }
         ]
       },
-      opportunities: {
-        title: 'Oportunidades de patrocínio',
-        list: [
-          {
-            name: 'Patrocinador Platinum',
-            price: 'A partir de R$ 50.000',
-            featured: true,
-            benefits: [
-              'Logo em posição de destaque em todos os materiais',
-              'Menção em todas as comunicações oficiais',
-              'Participação em eventos especiais',
-              'Acesso exclusivo a relatórios de impacto',
-              'Conteúdo personalizado para suas redes sociais',
-              'Tour VIP para executivos e convidados'
-            ]
-          },
-          {
-            name: 'Patrocinador Gold',
-            price: 'A partir de R$ 25.000',
-            benefits: [
-              'Logo em posição secundária em todos os materiais',
-              'Menção em comunicações selecionadas',
-              'Convites para eventos especiais',
-              'Relatórios trimestrais de impacto',
-              'Conteúdo para redes sociais'
-            ]
-          },
-          {
-            name: 'Patrocinador Silver',
-            price: 'A partir de R$ 10.000',
-            benefits: [
-              'Logo em seção de patrocinadores',
-              'Menção em newsletter mensal',
-              'Convites para eventos anuais',
-              'Relatório anual de impacto'
-            ]
-          }
-        ]
-      },
       projects: {
         title: 'Projetos para patrocínio',
-        list: [
-          'Centro Global de Biodiversidade Natural (CGBN)',
-          'Biblioteca de Arte e Literatura Africana (Kindezi BAL)',
-          'Programa de Turismo Comunitário (Favela)',
-          'Projeto de Artesanato Dela',
-          'Iniciativas educacionais e culturais'
-        ]
+     list: [
+    'CGBW',
+    'kindezi BAL',
+    'Favela Tech',
+    'DeLa',
+    'Manifesto'
+    ]
       },
-      contact: 'Entre em contato para discutir oportunidades',
-      brochure: 'Baixar apresentação completa'
+      contact: 'Entre em contato para discutir oportunidades'
     },
     en: {
       title: 'Sponsorship',
@@ -117,57 +77,17 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
           }
         ]
       },
-      opportunities: {
-        title: 'Sponsorship opportunities',
-        list: [
-          {
-            name: 'Platinum Sponsor',
-            price: 'Starting from $10,000',
-            featured: true,
-            benefits: [
-              'Logo in prominent position on all materials',
-              'Mention in all official communications',
-              'Participation in special events',
-              'Exclusive access to impact reports',
-              'Customized content for your social media',
-              'VIP tour for executives and guests'
-            ]
-          },
-          {
-            name: 'Gold Sponsor',
-            price: 'Starting from $5,000',
-            benefits: [
-              'Logo in secondary position on all materials',
-              'Mention in selected communications',
-              'Invitations to special events',
-              'Quarterly impact reports',
-              'Content for social media'
-            ]
-          },
-          {
-            name: 'Silver Sponsor',
-            price: 'Starting from $2,000',
-            benefits: [
-              'Logo in sponsors section',
-              'Mention in monthly newsletter',
-              'Invitations to annual events',
-              'Annual impact report'
-            ]
-          }
-        ]
-      },
       projects: {
         title: 'Projects for sponsorship',
-        list: [
-          'Global Center for Natural Biodiversity (GCNB)',
-          'African Art and Literature Library (Kindezi BAL)',
-          'Community Tourism Program (Favela)',
-          'Dela Craft Project',
-          'Educational and cultural initiatives'
-        ]
+    list: [
+    'CGBW',
+    'kindezi BAL',
+    'Favela Tech',
+    'DeLa',
+    'Manifesto'
+  ]
       },
-      contact: 'Contact us to discuss opportunities',
-      brochure: 'Download complete presentation'
+      contact: 'Contact us to discuss opportunities'
     }
   };
 
@@ -192,7 +112,7 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
           <h3 className="text-2xl font-bold mb-10 text-center text-gray-900">{t.why.title}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.why.reasons.map((reason, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
               >
@@ -206,48 +126,17 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
           </div>
         </div>
 
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-10 text-center text-gray-900">{t.opportunities.title}</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {t.opportunities.list.map((tier, index) => (
-              <div 
-                key={index}
-                className={`
-                  rounded-xl p-8 transition-all duration-300 transform hover:-translate-y-2
-                  ${tier.featured 
-                    ? 'bg-orange-500 text-white shadow-lg ring-4 ring-orange-200 relative z-10 scale-105 my-4 md:my-0' 
-                    : 'bg-white text-gray-900 shadow-md'}
-                `}
-              >
-                <h4 className="text-2xl font-bold mb-2">{tier.name}</h4>
-                <p className={`text-xl font-bold mb-6 ${tier.featured ? 'text-white' : 'text-orange-500'}`}>
-                  {tier.price}
-                </p>
-                
-                <ul className="space-y-3 mb-8">
-                  {tier.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-start">
-                      <Check className={`w-5 h-5 mr-2 shrink-0 ${tier.featured ? 'text-white' : 'text-orange-500'}`} />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div className="grid md:grid-cols-5 gap-8 items-center mb-16">
           <div className="md:col-span-2">
             <div className="rounded-xl overflow-hidden shadow-lg">
-              <img 
-                src="https://images.pexels.com/photos/3184422/pexels-photo-3184422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" 
-                alt="Sponsorship" 
+              <img
+                src="https://images.pexels.com/photos/3184422/pexels-photo-3184422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+                alt="Sponsorship"
                 className="w-full h-auto"
               />
             </div>
           </div>
-          
+
           <div className="md:col-span-3">
             <h3 className="text-2xl font-bold mb-6 text-gray-900">{t.projects.title}</h3>
             <ul className="space-y-3 mb-8">
@@ -261,18 +150,12 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
               ))}
             </ul>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <a 
-                href="#contact" 
+            <div className="flex">
+              <a
+                href="#contact"
                 className="flex-1 py-3 px-6 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center transition-colors duration-300"
               >
                 {t.contact}
-              </a>
-              <a 
-                href="#" 
-                className="flex-1 py-3 px-6 border border-orange-500 text-orange-500 hover:bg-orange-50 rounded-lg text-center transition-colors duration-300"
-              >
-                {t.brochure}
               </a>
             </div>
           </div>

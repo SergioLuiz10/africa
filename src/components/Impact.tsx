@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Building2, LineChart, Globe2 } from 'lucide-react';
+import { Users, HeartHandshake, School, Globe2 } from 'lucide-react';
 
 interface ImpactProps {
   language: string;
@@ -8,54 +8,54 @@ interface ImpactProps {
 const Impact: React.FC<ImpactProps> = ({ language }) => {
   const content = {
     pt: {
-      title: 'Impacto do Projeto',
-      subtitle: 'Transformando realidades através do empreendedorismo',
+      title: 'Nosso Impacto',
+      subtitle: 'Promovendo dignidade, cultura e autonomia em territórios africanos',
       stats: [
         {
           icon: <Users className="w-8 h-8 text-orange-600" />,
-          value: '25+',
-          label: 'Empreendedores Capacitados'
+          value: '3.000+',
+          label: 'Jovens beneficiadas com educação menstrual'
         },
         {
-          icon: <Building2 className="w-8 h-8 text-orange-600" />,
-          value: '50+',
-          label: 'Parcerias com Empresas Africanas'
+          icon: <HeartHandshake className="w-8 h-8 text-orange-600" />,
+          value: '80+',
+          label: 'Mulheres formadas em empreendedorismo menstrual'
         },
         {
-          icon: <LineChart className="w-8 h-8 text-orange-600" />,
-          value: '60%',
-          label: 'Aumento Médio no Faturamento'
+          icon: <School className="w-8 h-8 text-orange-600" />,
+          value: '20+',
+          label: 'Rodas de conversa e ações culturais realizadas'
         },
         {
           icon: <Globe2 className="w-8 h-8 text-orange-600" />,
-          value: '$20M',
-          label: 'Investimentos Estimados'
+          value: '6 países',
+          label: 'Alcance da plataforma em comunidades africanas'
         }
       ]
     },
     en: {
-      title: 'Project Impact',
-      subtitle: 'Transforming realities through entrepreneurship',
+      title: 'Our Impact',
+      subtitle: 'Promoting dignity, culture, and autonomy across African communities',
       stats: [
         {
           icon: <Users className="w-8 h-8 text-orange-600" />,
-          value: '25+',
-          label: 'Trained Entrepreneurs'
+          value: '3,000+',
+          label: 'Young women impacted by menstrual education'
         },
         {
-          icon: <Building2 className="w-8 h-8 text-orange-600" />,
-          value: '50+',
-          label: 'African Company Partnerships'
+          icon: <HeartHandshake className="w-8 h-8 text-orange-600" />,
+          value: '80+',
+          label: 'Women trained in menstrual entrepreneurship'
         },
         {
-          icon: <LineChart className="w-8 h-8 text-orange-600" />,
-          value: '60%',
-          label: 'Average Revenue Increase'
+          icon: <School className="w-8 h-8 text-orange-600" />,
+          value: '20+',
+          label: 'Cultural conversations and community events'
         },
         {
           icon: <Globe2 className="w-8 h-8 text-orange-600" />,
-          value: '$20M',
-          label: 'Estimated Investments'
+          value: '6 countries',
+          label: 'Platform reach across African regions'
         }
       ]
     }

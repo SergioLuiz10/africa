@@ -43,20 +43,16 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
       title: 'Impacto internacional',
       list: [
         {
-          name: 'Brasil',
-          description: 'Fortalecimento do afroempreendedorismo e expansão da rede na América Latina',
+          name: 'Dijara Santos ',
+          description: ' presidenta do CGBW no Brasil ',
           image: imagemdela2,
         },
         {
-          name: 'America',
-          description: 'Território originário da rede, onde se concentram ações de liderança e inovação',
+          name: 'Lucia Stanislas',
+          description: 'presidente na américa do CGBW',
           image: americacgbw,
         },
-        {
-          name: 'Diáspora',
-          description: 'Presença ativa em diversos países, conectando mulheres negras globalmente',
-          image: 'https://images.pexels.com/photos/3064070/pexels-photo-3064070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
-        }
+       
       ]
     },
     projects: {

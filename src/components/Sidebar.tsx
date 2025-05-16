@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logoleal from '../assets/logoleao.png'
+import logoleal from '../assets/logoleao.png';
 
 interface SidebarProps {
   language: 'en' | 'pt';
@@ -21,12 +21,15 @@ const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
         { id: 'cgbn', label: 'CGBW' },
         { id: 'kindezi', label: 'kindezi BAL' },
         { id: 'clipping', label: 'Clipping' },
-        { id: 'sponsorship', label: 'Patrocínio' }
+        { id: 'gallery', label: 'Galeria de Momentos' },
+        { id: 'programs', label: 'Programas' },
+        { id: 'sponsorship', label: 'Patrocínio' },
+        { id: 'partners', label: 'Parceiros' }
       ]
     },
     en: {
       menuItems: [
-        { id: 'manifesto', label: 'Manifest' },
+        { id: 'manifest', label: 'Manifest' },
         { id: 'about', label: 'About Us' },
         { id: 'project', label: 'Project' },
         { id: 'dela', label: 'DeLa' },
@@ -34,7 +37,10 @@ const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
         { id: 'cgbn', label: 'CGBW' },
         { id: 'kindezi', label: 'kindezi BAL' },
         { id: 'clipping', label: 'Clipping' },
-        { id: 'sponsorship', label: 'Sponsorship' }
+        { id: 'gallery', label: 'Moments Gallery' },
+        { id: 'programs', label: 'Programs' },
+        { id: 'sponsorship', label: 'Sponsorship' },
+        { id: 'partners', label: 'Partners' }
       ]
     }
   };
@@ -58,7 +64,14 @@ const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
 
   return (
     <>
-      {/* Sidebar */}
+      {/* Backdrop para fechar no mobile */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
+          onClick={onClose}
+        />
+      )}
+
       <aside
         className={`
           fixed top-0 left-0 w-64 h-screen overflow-y-auto bg-[#1A0900] text-white py-8 z-40
@@ -67,7 +80,6 @@ const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
           lg:translate-x-0 lg:fixed
         `}
       >
-        {/* Logo personalizada */}
         <div className="flex items-center justify-center mb-12 px-4">
           <img
             src={logoleal}
