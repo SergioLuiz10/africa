@@ -66,67 +66,63 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
     },
     join: 'Junte-se à rede como associada'
   },
-  en: {
-    title: 'CGBW',
-    subtitle: 'Circle Global Business Women',
-    intro: 'Circle Global Business Women (CGBW) is an international network of businesswomen committed to strengthening the presence of Black women in the global economic landscape. Founded on the African continent, the initiative acts as a bridge between women leaders in Africa and the diaspora, fostering strategic partnerships, training, experience exchange, and real business expansion opportunities.',
-    mission: 'To empower women entrepreneurs through access to knowledge, markets, international connections, and global visibility.',
-    areas: {
-      title: 'Areas of action',
-      list: [
-        {
-          title: 'Strategic connections',
-          description: 'Fostering partnerships between African and diaspora leaders to support global business growth',
-          icon: <Globe className="w-8 h-8 text-green-600" />
-        },
-        {
-          title: 'Training & mentorship',
-          description: 'Programs focused on developing entrepreneurial skills and leadership',
-          icon: <Leaf className="w-8 h-8 text-green-600" />
-        },
-        {
-          title: 'Market expansion',
-          description: 'Creating real opportunities for the internationalization of Black women-led businesses',
-          icon: <TreePine className="w-8 h-8 text-green-600" />
-        },
-        {
-          title: 'Visibility & leadership',
-          description: 'Events and campaigns to highlight Black women’s leadership in global economics',
-          icon: <Wind className="w-8 h-8 text-green-600" />
-        }
-      ]
-    },
-    ecosystems: {
-      title: 'International impact',
-      list: [
-        {
-          name: 'Brazil',
-          description: 'Strengthening Black women entrepreneurship and expanding the network in Latin America',
-          image: imagemdela2,
-        },
-        {
-          name: 'America',
-          description: 'Birthplace of the network, focusing on leadership and innovation actions',
-          image: americacgbw,
-        },
-        {
-          name: 'Diaspora',
-          description: 'Active presence in several countries, connecting Black women globally',
-          image: 'https://images.pexels.com/photos/3064070/pexels-photo-3064070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
-        }
-      ]
-    },
-    projects: {
-      title: 'Featured initiatives',
-      list: [
-        'Leadership forums for Black women',
-        'Mentorship programs with international entrepreneurs',
-        'Global visibility economic events',
-        'Training and international exchange programs'
-      ]
-    },
-    join: 'Join the network as a member'
-  }
+en: {
+  title: 'CGBW',
+  subtitle: 'Circle Global Business Women',
+  intro: 'The Circle Global Business Women (CGBW) is an international network of businesswomen committed to strengthening the presence of Black women in the global economic landscape. Founded on the African continent, the initiative acts as a bridge between women leaders in Africa and the diaspora, promoting strategic partnerships, training, experience exchange, and real business expansion opportunities.',
+  mission: 'To empower entrepreneurial women through access to knowledge, markets, international connections, and global visibility.',
+  areas: {
+    title: 'Areas of activity',
+    list: [
+      {
+        title: 'Strategic connections',
+        description: 'Promotion of partnerships between African and diaspora leaders to foster global business',
+        icon: <Globe className="w-8 h-8 text-green-600" />
+      },
+      {
+        title: 'Training',
+        description: 'Training and mentoring focused on the development of entrepreneurial skills',
+        icon: <Leaf className="w-8 h-8 text-green-600" />
+      },
+      {
+        title: 'Market expansion',
+        description: 'Creation of concrete opportunities for internationalization of Black women-led businesses',
+        icon: <TreePine className="w-8 h-8 text-green-600" />
+      },
+      {
+        title: 'Visibility and leadership',
+        description: 'Events and actions to highlight the role of Black women in the global economic landscape',
+        icon: <Wind className="w-8 h-8 text-green-600" />
+      }
+    ]
+  },
+  ecosystems: {
+    title: 'International impact',
+    list: [
+      {
+        name: 'Dijara Santos',
+        description: 'CGBW President in Brazil',
+        image: imagemdela2,
+      },
+      {
+        name: 'Lucia Stanislas',
+        description: 'CGBW President in America',
+        image: americacgbw,
+      }
+    ]
+  },
+  projects: {
+    title: 'Featured actions',
+    list: [
+      'Meetings and forums of Black women leaders',
+      'Mentoring with businesswomen from different countries',
+      'International events for economic visibility',
+      'Global training and exchange programs'
+    ]
+  },
+  join: 'Join the network as a member'
+}
+
 };
 
   
