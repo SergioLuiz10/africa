@@ -8,6 +8,7 @@ import {
   Globe
 } from 'lucide-react';
 import logo from '../assets/logo.png';
+import backgroundImage from '../assets/Apresentação-África360_v3.png'; // 
 
 interface HeroProps {
   language: 'en' | 'pt';
@@ -37,10 +38,15 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-[#3b1d10]">
-      {/* Padrão de fundo (opcional) */}
-      <div className="absolute inset-0 bg-pattern opacity-10"></div>
-
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundColor: '#3b1d10',
+        backgroundBlendMode: 'overlay',
+      }}
+    >
       {/* Menu de idioma e redes sociais */}
       <div className="fixed top-0 right-0 z-50 p-4 flex items-center gap-4 bg-[#3b1d10]/80 backdrop-blur-sm rounded-bl-lg">
         <button
