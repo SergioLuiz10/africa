@@ -10,40 +10,46 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
   const [activeSection, setActiveSection] = useState('home');
 
-  const content = {
-    pt: {
-      menuItems: [
-        { id: 'manifesto', label: 'Manifesto' },
-        { id: 'about', label: 'Quem Somos' },
-        { id: 'project', label: 'Projeto' },
-        { id: 'dela', label: 'DeLa' },
-        { id: 'favela', label: 'Favela Tech' },
-        { id: 'cgbn', label: 'CGBW' },
-        { id: 'kindezi', label: 'kindezi BAL' },
-        { id: 'clipping', label: 'Clipping' },
-        { id: 'gallery', label: 'Galeria de Momentos' },
-        { id: 'programs', label: 'Programas' },
-        { id: 'sponsorship', label: 'Patrocínio' },
-        { id: 'partners', label: 'Parceiros' }
-      ]
-    },
-    en: {
-      menuItems: [
-        { id: 'manifest', label: 'Manifest' },
-        { id: 'about', label: 'About Us' },
-        { id: 'project', label: 'Project' },
-        { id: 'dela', label: 'DeLa' },
-        { id: 'favela', label: 'Favela Tech' },
-        { id: 'cgbn', label: 'CGBW' },
-        { id: 'kindezi', label: 'kindezi BAL' },
-        { id: 'clipping', label: 'Clipping' },
-        { id: 'gallery', label: 'Moments Gallery' },
-        { id: 'programs', label: 'Programs' },
-        { id: 'sponsorship', label: 'Sponsorship' },
-        { id: 'partners', label: 'Partners' }
-      ]
-    }
-  };
+const content = {
+  pt: {
+    menuItems: [
+      { id: 'manifesto', label: 'Manifesto' },
+      { id: 'about', label: 'Quem Somos' },
+      { id: 'project', label: 'Projeto' },
+      { id: 'dela', label: 'DeLa' },
+      { id: 'favela', label: 'Favela Tech' },
+      { id: 'cgbn', label: 'CGBW' },
+      { id: 'kindezi', label: 'kindezi BAL' },
+      { id: 'clipping', label: 'Clipping' },
+      { id: 'sponsorship', label: 'Patrocínio' },
+      { id: 'gallery', label: 'Galeria de Momentos' },
+      { id: 'programs', label: 'Programas' },
+      { id: 'partners', label: 'Parceiros' },
+      { id: 'impact', label: 'Impacto' },
+      { id: 'mentorship', label: 'Mentorias' },
+      { id: 'contact', label: 'Contato' }
+    ]
+  },
+  en: {
+    menuItems: [
+      { id: 'manifest', label: 'Manifest' },
+      { id: 'about', label: 'About Us' },
+      { id: 'project', label: 'Project' },
+      { id: 'dela', label: 'DeLa' },
+      { id: 'favela', label: 'Favela Tech' },
+      { id: 'cgbn', label: 'CGBW' },
+      { id: 'kindezi', label: 'kindezi BAL' },
+      { id: 'clipping', label: 'Clipping' },
+      { id: 'sponsorship', label: 'Sponsorship' },
+      { id: 'gallery', label: 'Moments Gallery' },
+      { id: 'programs', label: 'Programs' },
+      { id: 'partners', label: 'Partners' },
+      { id: 'impact', label: 'Impact' },
+      { id: 'mentorship', label: 'Mentorships' },
+      { id: 'contact', label: 'Contact' }
+    ]
+  }
+};
 
   const t = content[language];
 
