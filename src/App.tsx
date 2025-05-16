@@ -9,7 +9,6 @@ import Impact from './components/Impact';
 import Mentorship from './components/Mentorship';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import LanguageToggle from './components/LanguageToggle';
 import Manifesto from './components/Manifesto';
 import Project from './components/Project';
 import Dela from './components/Dela';
@@ -27,7 +26,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden flex relative">
-      
       {/* Botão mobile para abrir/fechar sidebar */}
       <button
         className="lg:hidden fixed top-4 left-4 z-50 bg-orange-500 text-white p-2 rounded-md"
@@ -52,16 +50,10 @@ function App() {
 
       {/* Conteúdo principal */}
       <main className="flex-1 w-full relative z-10 ml-0 lg:ml-64">
-        {/* Troca de idioma */}
-        <div className="fixed top-4 right-4 z-50">
-          <LanguageToggle
-            currentLanguage={language}
-            toggleLanguage={() => setLanguage(language === 'en' ? 'pt' : 'en')}
-          />
-        </div>
-
         {/* Seções */}
-        <section id="hero"><Hero language={language} /></section>
+        <section id="hero">
+          <Hero language={language} onLanguageChange={setLanguage} />
+        </section>
         <section id="manifesto"><Manifesto language={language} /></section>
         <section id="about"><About language={language} /></section>
         <section id="project"><Project language={language} /></section>
