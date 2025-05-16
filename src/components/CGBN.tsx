@@ -1,5 +1,7 @@
 import React from 'react';
 import { Leaf, Droplet, Wind, Globe, TreePine } from 'lucide-react';
+import imagemdela2 from '../assets/imagemdela2.jpg'
+import americacgbw from '../assets/americacgbw.jpg'
 
 interface CGBNProps {
   language: string;
@@ -43,12 +45,12 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
         {
           name: 'Brasil',
           description: 'Fortalecimento do afroempreendedorismo e expansão da rede na América Latina',
-          image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+          image: imagemdela2,
         },
         {
-          name: 'África',
+          name: 'America',
           description: 'Território originário da rede, onde se concentram ações de liderança e inovação',
-          image: 'https://images.pexels.com/photos/4353813/pexels-photo-4353813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+          image: americacgbw,
         },
         {
           name: 'Diáspora',
@@ -104,12 +106,12 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
         {
           name: 'Brazil',
           description: 'Strengthening Black women entrepreneurship and expanding the network in Latin America',
-          image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+          image: imagemdela2,
         },
         {
-          name: 'Africa',
+          name: 'America',
           description: 'Birthplace of the network, focusing on leadership and innovation actions',
-          image: 'https://images.pexels.com/photos/4353813/pexels-photo-4353813.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750'
+          image: americacgbw,
         },
         {
           name: 'Diaspora',

@@ -8,7 +8,7 @@ import Gallery from './components/Gallery';
 import Programs from './components/Programs';
 import Partners from './components/Partners';
 import Impact from './components/Impact';
-import Membership from './components/Mentorship';
+import Mentorship from './components/Mentorship';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LanguageToggle from './components/LanguageToggle';
@@ -25,21 +25,35 @@ import marca from './assets/imagem1.jpg';
 
 function App() {
   const [language, setLanguage] = useState<'en' | 'pt'>('en');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden relative">
-      {/* Marca d'água fixa */}
+    <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden flex relative">
+      {/* Botão mobile para abrir sidebar */}
+      <button
+        className="lg:hidden fixed top-4 left-4 z-50 bg-orange-500 text-white p-2 rounded-md"
+        onClick={() => setIsSidebarOpen(true)}
+        aria-label="Abrir menu"
+      >
+        ☰
+      </button>
+
+      {/* Sidebar, mobile e desktop */}
+      <Sidebar
+        language={language}
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+      />
+
+      {/* Marca d'água */}
       <div
         className="fixed inset-0 bg-no-repeat bg-center bg-contain bg-fixed opacity-5 pointer-events-none z-0"
-   style={{ backgroundImage: `url(${marca})` }}
-      ></div>
-
-      {/* Sidebar (responsiva) */}
-      <Sidebar language={language} />
+        style={{ backgroundImage: `url(${marca})` }}
+      />
 
       {/* Conteúdo principal */}
-      <main className="sm:ml-64 w-full max-w-full relative z-10">
-        {/* Botão de idioma */}
+      <main className="flex-1 w-full relative z-10 ml-0 lg:ml-64">
+        {/* Botão de troca de idioma */}
         <div className="fixed top-4 right-4 z-50">
           <LanguageToggle
             currentLanguage={language}
@@ -58,18 +72,18 @@ function App() {
         <section id="kindezi"><KindeziBAL language={language} /></section>
         <section id="clipping"><Clipping language={language} /></section>
         <section id="sponsorship"><Sponsorship language={language} /></section>
-        <Destinations language={language} />
-        <Experiences language={language} />
-        <Gallery language={language} />
-        <Programs language={language} />
-        <Partners language={language} />
-        <Impact language={language} />
-        <Membership language={language} />
-        <Contact language={language} />
+        <section id="destinations"><Destinations language={language} /></section>
+        <section id="experiences"><Experiences language={language} /></section>
+        <section id="gallery"><Gallery language={language} /></section>
+        <section id="programs"><Programs language={language} /></section>
+        <section id="partners"><Partners language={language} /></section>
+        <section id="impact"><Impact language={language} /></section>
+        <section id="mentorship"><Mentorship language={language} /></section>
+        <section id="contact"><Contact language={language} /></section>
         <Footer language={language} />
       </main>
     </div>
   );
 }
 
-export default App;
+export default App;

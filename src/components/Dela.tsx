@@ -1,5 +1,6 @@
 import React from 'react';
 import { AtSign, Phone, MapPin } from 'lucide-react';
+import imagemdela from '../assets/imagemdela.jpg'
 
 interface DelaProps {
   language: 'pt' | 'en';
@@ -72,7 +73,7 @@ const Dela: React.FC<DelaProps> = ({ language }) => {
           <div>
             <div className="rounded-xl overflow-hidden shadow-lg mb-8">
               <img 
-                src="https://images.pexels.com/photos/7656665/pexels-photo-7656665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" 
+                src={imagemdela} 
                 alt="African women artisans" 
                 className="w-full h-auto"
               />

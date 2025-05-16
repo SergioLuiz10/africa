@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import logo from '../assets/logoAfrica.png';
+import logo from '../assets/logo.png';
 
 interface HeroProps {
   language: string;

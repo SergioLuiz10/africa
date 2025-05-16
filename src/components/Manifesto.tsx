@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ScrollText, Quote, ExternalLink } from 'lucide-react';
+import imagemManifesto from '../assets/imagemmanifesto.jpg'
 
 interface ManifestoProps {
   language: string;
@@ -134,7 +135,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
 
             <div className="rounded-xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
               <img 
-                src="https://images.pexels.com/photos/3933881/pexels-photo-3933881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" 
+                src={imagemManifesto} 
                 alt="African landscape" 
                 className="w-full h-auto"
               />
