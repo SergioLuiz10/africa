@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Globe, ChevronRight } from 'lucide-react';
+import logoleal from '../assets/logoleao.png'
 
 interface SidebarProps {
   language: 'en' | 'pt';
@@ -67,9 +67,13 @@ const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
           lg:translate-x-0 lg:fixed
         `}
       >
+        {/* Logo personalizada */}
         <div className="flex items-center justify-center mb-12 px-4">
-          <Globe className="w-10 h-10 text-orange-500" />
-          <h1 className="text-2xl font-bold ml-2">AfricaTrip</h1>
+          <img
+            src={logoleal}
+            alt="Logo"
+            className="h-12 object-contain"
+          />
         </div>
 
         <nav>
