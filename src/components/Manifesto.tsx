@@ -135,4 +135,4 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
   );
 };
 
-export default Manifesto;
+export default  Manifesto;
