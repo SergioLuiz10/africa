@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Newspaper, Calendar, ExternalLink } from 'lucide-react';
+import video1 from '../assets/video1.mp4';
+import video2 from '../assets/video2.mp4';
+import video3 from '../assets/video3.mp4';
 
 interface ClippingProps {
   language: string;
@@ -14,8 +17,7 @@ const Clipping: React.FC<ClippingProps> = ({ language }) => {
       subtitle: 'Cobertura de mídia e notícias sobre nossas iniciativas',
       filters: {
         blogs: 'Blogs',
-        videos: 'Vídeos',
-        podcasts: 'Podcasts'
+        videos: 'Vídeos'
       },
       articles: [
         {
@@ -73,6 +75,30 @@ const Clipping: React.FC<ClippingProps> = ({ language }) => {
           excerpt: 'Iniciativa oferece formação gratuita para jovens negros da periferia de Salvador.',
           type: 'blogs',
           link: 'https://www.anf.org.br/bairro-da-paz-tera-curso-de-auxiliar-de-enfermagem-veterinaria-para-jovens-negros/'
+        },
+        {
+          title: 'Vídeo Institucional África 360',
+          source: 'YouTube',
+          date: '01/05/2025',
+          excerpt: 'Conheça os pilares e os objetivos do projeto em nosso vídeo institucional.',
+          type: 'videos',
+          link: 'https://www.youtube.com/watch?v=EXEMPLO1'
+        },
+        {
+          title: 'Entrevista com organizadores',
+          source: 'TV Bahia',
+          date: '10/04/2025',
+          excerpt: 'Organizadores falam sobre a importância da iniciativa e seus impactos.',
+          type: 'videos',
+          link: 'https://www.youtube.com/watch?v=EXEMPLO2'
+        },
+        {
+          title: 'Documentário sobre a mostra "Negócios Potentes"',
+          source: 'AfroTV',
+          date: '20/03/2025',
+          excerpt: 'Um olhar documental sobre a exposição de afroempreendedores.',
+          type: 'videos',
+          link: 'https://www.youtube.com/watch?v=EXEMPLO3'
         }
       ],
       readMore: 'Leia mais',
@@ -84,8 +110,7 @@ const Clipping: React.FC<ClippingProps> = ({ language }) => {
       subtitle: 'Media coverage and news about our initiatives',
       filters: {
         blogs: 'Blogs',
-        videos: 'Videos',
-        podcasts: 'Podcasts'
+        videos: 'Videos'
       },
       articles: [
         {
@@ -143,6 +168,30 @@ const Clipping: React.FC<ClippingProps> = ({ language }) => {
           excerpt: 'Free training program targets youth from Salvador\'s periphery.',
           type: 'blogs',
           link: 'https://www.anf.org.br/bairro-da-paz-tera-curso-de-auxiliar-de-enfermagem-veterinaria-para-jovens-negros/'
+        },
+        {
+          title: 'Africa 360 Institutional Video',
+          source: 'YouTube',
+          date: '2025-05-01',
+          excerpt: 'Learn about the pillars and goals of the project in our institutional video.',
+          type: 'videos',
+          link: 'https://www.youtube.com/watch?v=EXEMPLO1'
+        },
+        {
+          title: 'Interview with Organizers',
+          source: 'TV Bahia',
+          date: '2025-04-10',
+          excerpt: 'Leaders discuss the project’s impact and relevance.',
+          type: 'videos',
+          link: 'https://www.youtube.com/watch?v=EXEMPLO2'
+        },
+        {
+          title: 'Documentary: Powerful Black Businesses',
+          source: 'AfroTV',
+          date: '2025-03-20',
+          excerpt: 'A documentary look into the exhibition featuring Afro-entrepreneurs.',
+          type: 'videos',
+          link: 'https://www.youtube.com/watch?v=EXEMPLO3'
         }
       ],
       readMore: 'Read more',

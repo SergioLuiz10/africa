@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home, Book, MapPin, Calendar, Camera } from 'lucide-react';
+import imagemLOGo from '../assets/favela.png.jpg'
 
 interface FavelaProps {
   language: string;
@@ -113,7 +114,7 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
           <div>
             <div className="rounded-xl overflow-hidden shadow-lg">
               <img 
-                src="https://images.pexels.com/photos/13456610/pexels-photo-13456610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" 
+                src={imagemLOGo} 
                 alt="Urban community" 
                 className="w-full h-auto"
               />

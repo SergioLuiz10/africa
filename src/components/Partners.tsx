@@ -1,4 +1,6 @@
 import React from 'react';
+import parceiro1 from '../assets/parceiro1.png';
+import parceiro2 from '../assets/parceiro2.jpg';
 
 interface PartnersProps {
   language: string;
@@ -26,14 +28,9 @@ const Partners: React.FC<PartnersProps> = ({ language }) => {
 
   const t = content[language as keyof typeof content];
 
-  // Placeholder partner logos (using colored rectangles as placeholders)
   const partners = [
-    { name: 'Partner 1', color: 'bg-blue-500' },
-    { name: 'Partner 2', color: 'bg-green-500' },
-    { name: 'Partner 3', color: 'bg-orange-500' },
-    { name: 'Partner 4', color: 'bg-purple-500' },
-    { name: 'Partner 5', color: 'bg-red-500' },
-    { name: 'Partner 6', color: 'bg-teal-500' },
+    { name: 'Parceiro 1', image: parceiro1 },
+    { name: 'Parceiro 2', image: parceiro2 },
   ];
 
   return (
@@ -43,17 +40,20 @@ const Partners: React.FC<PartnersProps> = ({ language }) => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">{t.title}</h2>
           <p className="text-xl text-gray-600">{t.subtitle}</p>
         </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
-          {partners.map((partner, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-lg p-6 shadow-sm flex items-center justify-center h-24 hover:shadow-md transition-all"
-            >
-              <div className={`${partner.color} w-16 h-8 rounded opacity-70`}></div>
-            </div>
-          ))}
-        </div>
+<div className="flex justify-center gap-8 mb-16 flex-wrap">
+  {partners.map((partner, index) => (
+    <div 
+      key={index} 
+      className="bg-white rounded-lg p-6 shadow-sm flex items-center justify-center h-56 w-80 hover:shadow-md transition-all"
+    >
+      <img 
+        src={partner.image} 
+        alt={partner.name} 
+        className="max-h-40 max-w-full object-contain" 
+      />
+    </div>
+  ))}
+</div>
 
         <div className="text-center mb-12">
           <p className="text-gray-600 text-lg">{t.message}</p>
