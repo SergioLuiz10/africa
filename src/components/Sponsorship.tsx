@@ -38,13 +38,21 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
       },
       projects: {
         title: 'Projetos para patrocínio',
-     list: [
-    'CGBW',
-    'kindezi BAL',
-    'Favela Tech',
-    'DeLa',
-    'Manifesto'
-    ]
+        list: [
+          'Manifesto',
+          'Quem somos',
+          'O projeto',
+          'Impacto',
+          'Mentorias',
+          'Programas',
+          'Parceiros',
+          'Delá',
+          'Favela Tech',
+          'Kindezi BAL',
+          'CGBW',
+          'clipping',
+          'Contato'
+        ]
       },
       contact: 'Entre em contato para discutir oportunidades'
     },
@@ -79,13 +87,21 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
       },
       projects: {
         title: 'Projects for sponsorship',
-    list: [
-    'CGBW',
-    'kindezi BAL',
-    'Favela Tech',
-    'DeLa',
-    'Manifesto'
-  ]
+        list: [
+          'Manifesto',
+          'Quem somos',
+          'O projeto',
+          'Impacto',
+          'Mentorias',
+          'Programas',
+          'Parceiros',
+          'Delá',
+          'Favela Tech',
+          'Kindezi BAL',
+          'CGBW',
+          'clipping',
+          'Contato'
+        ]
       },
       contact: 'Contact us to discuss opportunities'
     }

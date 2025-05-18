@@ -10,46 +10,42 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
   const [activeSection, setActiveSection] = useState('home');
 
-const content = {
-  pt: {
-    menuItems: [
-      { id: 'manifesto', label: 'Manifesto' },
-      { id: 'about', label: 'Quem Somos' },
-      { id: 'project', label: 'Projeto' },
-      { id: 'dela', label: 'DeLa' },
-      { id: 'favela', label: 'Favela Tech' },
-      { id: 'cgbn', label: 'CGBW' },
-      { id: 'kindezi', label: 'kindezi BAL' },
-      { id: 'clipping', label: 'Clipping' },
-      { id: 'sponsorship', label: 'Patrocínio' },
-      { id: 'gallery', label: 'Galeria de Momentos' },
-      { id: 'programs', label: 'Programas' },
-      { id: 'partners', label: 'Parceiros' },
-      { id: 'impact', label: 'Impacto' },
-      { id: 'mentorship', label: 'Mentorias' },
-      { id: 'contact', label: 'Contato' }
-    ]
-  },
-  en: {
-    menuItems: [
-      { id: 'manifest', label: 'Manifest' },
-      { id: 'about', label: 'About Us' },
-      { id: 'project', label: 'Project' },
-      { id: 'dela', label: 'DeLa' },
-      { id: 'favela', label: 'Favela Tech' },
-      { id: 'cgbn', label: 'CGBW' },
-      { id: 'kindezi', label: 'kindezi BAL' },
-      { id: 'clipping', label: 'Clipping' },
-      { id: 'sponsorship', label: 'Sponsorship' },
-      { id: 'gallery', label: 'Moments Gallery' },
-      { id: 'programs', label: 'Programs' },
-      { id: 'partners', label: 'Partners' },
-      { id: 'impact', label: 'Impact' },
-      { id: 'mentorship', label: 'Mentorships' },
-      { id: 'contact', label: 'Contact' }
-    ]
-  }
-};
+  const content = {
+    pt: {
+      menuItems: [
+        { id: 'manifesto', label: 'Manifesto' },
+        { id: 'about', label: 'Quem Somos' },
+        { id: 'project', label: 'Projeto' },
+        { id: 'impact', label: 'Impacto' },
+        { id: 'mentorship', label: 'Mentorias' },
+        { id: 'programs', label: 'Programas' },
+        { id: 'partners', label: 'Parceiros' },
+        { id: 'dela', label: 'Delá' },
+        { id: 'favela', label: 'Favela Tech' },
+        { id: 'kindezi', label: 'Kindezi BAL' },
+        { id: 'cgbn', label: 'CGBW' },
+        { id: 'clipping', label: 'Clipping' },
+        { id: 'contact', label: 'Contato' }
+      ]
+    },
+    en: {
+      menuItems: [
+        { id: 'manifesto', label: 'Manifest' },
+        { id: 'about', label: 'About Us' },
+        { id: 'project', label: 'Project' },
+        { id: 'impact', label: 'Impact' },
+        { id: 'mentorship', label: 'Mentorships' },
+        { id: 'programs', label: 'Programs' },
+        { id: 'partners', label: 'Partners' },
+        { id: 'dela', label: 'Delá' },
+        { id: 'favela', label: 'Favela Tech' },
+        { id: 'kindezi', label: 'Kindezi BAL' },
+        { id: 'cgbn', label: 'CGBW' },
+        { id: 'clipping', label: 'Clipping' },
+        { id: 'contact', label: 'Contact' }
+      ]
+    }
+  };
 
   const t = content[language];
 
@@ -70,7 +66,6 @@ const content = {
 
   return (
     <>
-      {/* Backdrop para fechar no mobile */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
@@ -82,7 +77,7 @@ const content = {
         className={`
           fixed top-0 left-0 w-64 h-screen overflow-y-auto bg-[#1A0900] text-white py-8 z-40
           transform transition-transform duration-300
-          ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
+          ${isOpen ? 'translate-x-0' : '-translate-x-full'}
           lg:translate-x-0 lg:fixed
         `}
       >
