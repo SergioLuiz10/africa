@@ -17,13 +17,15 @@ const Gallery: React.FC<GalleryProps> = ({ language }) => {
       title: 'Galeria de Momentos',
       subtitle:
         'Nossa galeria celebra histórias reais, sorrisos sinceros e momentos que revelam a alma africana. ' +
-        'São registros de encontros, trocas culturais, comunidades vibrantes e ações que transformam vidas — um reflexo visual do que o África 360 representa.'
+        'São registros de encontros, trocas culturais, comunidades vibrantes e ações que transformam vidas — um reflexo visual do que o África 360 representa.',
+      tooltip: 'Clique para ampliar',
     },
     en: {
       title: 'Moments Gallery',
       subtitle:
         'Our gallery celebrates real stories, genuine smiles, and moments that reveal Africa’s soul. ' +
-        'These images capture vibrant communities, cultural exchanges, and impactful actions — a visual reflection of what Africa 360 stands for.'
+        'These images capture vibrant communities, cultural exchanges, and impactful actions — a visual reflection of what Africa 360 stands for.',
+      tooltip: 'Click to enlarge',
     }
   };
 
@@ -55,16 +57,18 @@ const Gallery: React.FC<GalleryProps> = ({ language }) => {
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-lg group cursor-pointer"
+              className="relative overflow-hidden rounded-xl border-4 border-[#f4e3d7] shadow-md group cursor-pointer"
               onClick={() => setSelectedIndex(index)}
             >
-             <img
-  src={image}
-  alt={`Gallery image ${index + 1}`}
-  className="w-full h-[500px] object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
-/>
-
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300"></div>
+              <img
+                src={image}
+                alt={`Gallery image ${index + 1}`}
+                className="w-full h-[400px] object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300" />
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-orange-500 text-white text-sm px-4 py-2 rounded-full shadow-md animate-pulse">
+                {t.tooltip}
+              </div>
             </div>
           ))}
         </div>
@@ -107,7 +111,7 @@ const Gallery: React.FC<GalleryProps> = ({ language }) => {
                 alt={`Miniatura ${i + 1}`}
                 onClick={() => setSelectedIndex(i)}
                 className={`w-24 h-16 object-cover rounded cursor-pointer border-2 ${
-                  i === selectedIndex ? 'border-white' : 'border-transparent'
+                  i === selectedIndex ? 'border-orange-500' : 'border-[#f4e3d7]'
                 }`}
               />
             ))}

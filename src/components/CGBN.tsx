@@ -1,131 +1,139 @@
 import React from 'react';
 import { Leaf, Droplet, Wind, Globe, TreePine } from 'lucide-react';
-import imagemdela2 from '../assets/imagemdela2.jpg'
-import americacgbw from '../assets/americacgbw.jpg'
+import imagemdela2 from '../assets/imagemdela2.jpg';
+import americacgbw from '../assets/americacgbw.jpg';
 
 interface CGBNProps {
   language: string;
 }
 
 const CGBN: React.FC<CGBNProps> = ({ language }) => {
- const content = {
-  pt: {
-    title: 'CGBW',
-    subtitle: 'Circle Global Business Women',
-    intro: 'O Circle Global Business Women (CGBW) é uma rede internacional de mulheres de negócios comprometida com o fortalecimento da presença feminina negra no cenário econômico global. Fundada no continente africano, a iniciativa atua como ponte entre mulheres líderes da África e da diáspora, promovendo parcerias estratégicas, capacitação, intercâmbio de experiências e oportunidades reais de expansão de negócios.',
-    mission: 'Empoderar mulheres empreendedoras por meio do acesso a conhecimento, mercado, conexões internacionais e visibilidade global.',
-    areas: {
-      title: 'Áreas de atuação',
-      list: [
-        {
-          title: 'Conexões estratégicas',
-          description: 'Promoção de parcerias entre líderes africanas e da diáspora para fomentar negócios globais',
-          icon: <Globe className="w-8 h-8 text-green-600" />
-        },
-        {
-          title: 'Capacitação',
-          description: 'Formações e mentorias voltadas ao desenvolvimento de competências empreendedoras',
-          icon: <Leaf className="w-8 h-8 text-green-600" />
-        },
-        {
-          title: 'Expansão de mercado',
-          description: 'Criação de oportunidades concretas para internacionalização de negócios liderados por mulheres negras',
-          icon: <TreePine className="w-8 h-8 text-green-600" />
-        },
-        {
-          title: 'Visibilidade e liderança',
-          description: 'Eventos e ações para destacar a atuação de mulheres negras no cenário econômico global',
-          icon: <Wind className="w-8 h-8 text-green-600" />
-        }
-      ]
+  const content = {
+    pt: {
+      title: 'CGBW',
+      subtitle: 'Circle Global Business Women',
+      intro:
+        'O Circle Global Business Women (CGBW) é uma rede internacional de mulheres de negócios comprometida com o fortalecimento da presença feminina negra no cenário econômico global. Fundada no continente africano, a iniciativa atua como ponte entre mulheres líderes da África e da diáspora, promovendo parcerias estratégicas, capacitação, intercâmbio de experiências e oportunidades reais de expansão de negócios.',
+      mission:
+        'Empoderar mulheres empreendedoras por meio do acesso a conhecimento, mercado, conexões internacionais e visibilidade global.',
+      areas: {
+        title: 'Áreas de atuação',
+        list: [
+          {
+            title: 'Conexões estratégicas',
+            description:
+              'Promoção de parcerias entre líderes africanas e da diáspora para fomentar negócios globais',
+            icon: <Globe className="w-8 h-8 text-orange-500" />
+          },
+          {
+            title: 'Capacitação',
+            description:
+              'Formações e mentorias voltadas ao desenvolvimento de competências empreendedoras',
+            icon: <Leaf className="w-8 h-8 text-orange-500" />
+          },
+          {
+            title: 'Expansão de mercado',
+            description:
+              'Criação de oportunidades concretas para internacionalização de negócios liderados por mulheres negras',
+            icon: <TreePine className="w-8 h-8 text-orange-500" />
+          },
+          {
+            title: 'Visibilidade e liderança',
+            description:
+              'Eventos e ações para destacar a atuação de mulheres negras no cenário econômico global',
+            icon: <Wind className="w-8 h-8 text-orange-500" />
+          }
+        ]
+      },
+      ecosystems: {
+        title: 'Impacto internacional',
+        list: [
+          {
+            name: 'Dijara Santos ',
+            description: 'presidenta do CGBW no Brasil',
+            image: imagemdela2
+          },
+          {
+            name: 'Lucia Stanislas',
+            description: 'presidente na América do CGBW',
+            image: americacgbw
+          }
+        ]
+      },
+      projects: {
+        title: 'Ações em destaque',
+        list: [
+          'Encontros e fóruns de lideranças femininas negras',
+          'Mentorias com empresárias de diferentes países',
+          'Eventos internacionais de visibilidade econômica',
+          'Programas de intercâmbio e capacitação global'
+        ]
+      },
+      join: 'Junte-se à rede como associada'
     },
-    ecosystems: {
-      title: 'Impacto internacional',
-      list: [
-        {
-          name: 'Dijara Santos ',
-          description: ' presidenta do CGBW no Brasil ',
-          image: imagemdela2,
-        },
-        {
-          name: 'Lucia Stanislas',
-          description: 'presidente na américa do CGBW',
-          image: americacgbw,
-        },
-       
-      ]
-    },
-    projects: {
-      title: 'Ações em destaque',
-      list: [
-        'Encontros e fóruns de lideranças femininas negras',
-        'Mentorias com empresárias de diferentes países',
-        'Eventos internacionais de visibilidade econômica',
-        'Programas de intercâmbio e capacitação global'
-      ]
-    },
-    join: 'Junte-se à rede como associada'
-  },
-en: {
-  title: 'CGBW',
-  subtitle: 'Circle Global Business Women',
-  intro: 'The Circle Global Business Women (CGBW) is an international network of businesswomen committed to strengthening the presence of Black women in the global economic landscape. Founded on the African continent, the initiative acts as a bridge between women leaders in Africa and the diaspora, promoting strategic partnerships, training, experience exchange, and real business expansion opportunities.',
-  mission: 'To empower entrepreneurial women through access to knowledge, markets, international connections, and global visibility.',
-  areas: {
-    title: 'Areas of activity',
-    list: [
-      {
-        title: 'Strategic connections',
-        description: 'Promotion of partnerships between African and diaspora leaders to foster global business',
-        icon: <Globe className="w-8 h-8 text-green-600" />
+    en: {
+      title: 'CGBW',
+      subtitle: 'Circle Global Business Women',
+      intro:
+        'The Circle Global Business Women (CGBW) is an international network of businesswomen committed to strengthening the presence of Black women in the global economic landscape. Founded on the African continent, the initiative acts as a bridge between women leaders in Africa and the diaspora, promoting strategic partnerships, training, experience exchange, and real business expansion opportunities.',
+      mission:
+        'To empower entrepreneurial women through access to knowledge, markets, international connections, and global visibility.',
+      areas: {
+        title: 'Areas of activity',
+        list: [
+          {
+            title: 'Strategic connections',
+            description:
+              'Promotion of partnerships between African and diaspora leaders to foster global business',
+            icon: <Globe className="w-8 h-8 text-orange-500" />
+          },
+          {
+            title: 'Training',
+            description:
+              'Training and mentoring focused on the development of entrepreneurial skills',
+            icon: <Leaf className="w-8 h-8 text-orange-500" />
+          },
+          {
+            title: 'Market expansion',
+            description:
+              'Creation of concrete opportunities for internationalization of Black women-led businesses',
+            icon: <TreePine className="w-8 h-8 text-orange-500" />
+          },
+          {
+            title: 'Visibility and leadership',
+            description:
+              'Events and actions to highlight the role of Black women in the global economic landscape',
+            icon: <Wind className="w-8 h-8 text-orange-500" />
+          }
+        ]
       },
-      {
-        title: 'Training',
-        description: 'Training and mentoring focused on the development of entrepreneurial skills',
-        icon: <Leaf className="w-8 h-8 text-green-600" />
+      ecosystems: {
+        title: 'International impact',
+        list: [
+          {
+            name: 'Dijara Santos',
+            description: 'CGBW President in Brazil',
+            image: imagemdela2
+          },
+          {
+            name: 'Lucia Stanislas',
+            description: 'CGBW President in America',
+            image: americacgbw
+          }
+        ]
       },
-      {
-        title: 'Market expansion',
-        description: 'Creation of concrete opportunities for internationalization of Black women-led businesses',
-        icon: <TreePine className="w-8 h-8 text-green-600" />
+      projects: {
+        title: 'Featured actions',
+        list: [
+          'Meetings and forums of Black women leaders',
+          'Mentoring with businesswomen from different countries',
+          'International events for economic visibility',
+          'Global training and exchange programs'
+        ]
       },
-      {
-        title: 'Visibility and leadership',
-        description: 'Events and actions to highlight the role of Black women in the global economic landscape',
-        icon: <Wind className="w-8 h-8 text-green-600" />
-      }
-    ]
-  },
-  ecosystems: {
-    title: 'International impact',
-    list: [
-      {
-        name: 'Dijara Santos',
-        description: 'CGBW President in Brazil',
-        image: imagemdela2,
-      },
-      {
-        name: 'Lucia Stanislas',
-        description: 'CGBW President in America',
-        image: americacgbw,
-      }
-    ]
-  },
-  projects: {
-    title: 'Featured actions',
-    list: [
-      'Meetings and forums of Black women leaders',
-      'Mentoring with businesswomen from different countries',
-      'International events for economic visibility',
-      'Global training and exchange programs'
-    ]
-  },
-  join: 'Join the network as a member'
-}
-
-};
-
-  
+      join: 'Join the network as a member'
+    }
+  };
 
   const t = content[language as keyof typeof content];
 
@@ -142,8 +150,8 @@ en: {
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
               {t.intro}
             </p>
-            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-600 mb-8">
-              <p className="text-lg italic text-gray-700">
+            <div className="bg-white p-6 rounded-lg border-l-4 border-orange-500 shadow-md mb-8">
+              <p className="text-lg italic text-gray-800 leading-relaxed">
                 {t.mission}
               </p>
             </div>
@@ -153,7 +161,7 @@ en: {
               {t.projects.list.map((project, index) => (
                 <li key={index} className="flex items-start">
                   <div className="mt-1 mr-3">
-                    <Droplet className="w-5 h-5 text-green-600" />
+                    <Droplet className="w-5 h-5 text-orange-500" />
                   </div>
                   <span className="text-gray-700">{project}</span>
                 </li>
@@ -161,23 +169,23 @@ en: {
             </ul>
 
             <div className="text-center mt-8">
-              <a 
-                href="#" 
-                className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full transition-colors duration-300"
+              <a
+                href="#"
+                className="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-full transition-colors duration-300"
               >
                 {t.join}
               </a>
             </div>
           </div>
-          
+
           <div>
             <div className="grid grid-cols-1 gap-6">
               {t.ecosystems.list.map((ecosystem, index) => (
                 <div key={index} className="group overflow-hidden rounded-xl shadow-md">
                   <div className="relative h-64">
-                    <img 
-                      src={ecosystem.image} 
-                      alt={ecosystem.name} 
+                    <img
+                      src={ecosystem.image}
+                      alt={ecosystem.name}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity group-hover:bg-opacity-30"></div>
@@ -198,8 +206,11 @@ en: {
           <h3 className="text-2xl font-bold mb-8 text-center text-gray-900">{t.areas.title}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.areas.list.map((area, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <div
+                key={index}
+                className="bg-white rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                   {area.icon}
                 </div>
                 <h4 className="text-xl font-bold mb-3 text-gray-900 text-center">{area.title}</h4>
