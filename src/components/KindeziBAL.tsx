@@ -226,7 +226,7 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
           <h3 className="text-2xl font-bold mb-8 text-center text-gray-900">{t.collections.title}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.collections.list.map((collection, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <div key={index} className="bg-[#f4e3d7] rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                   {collection.icon}
                 </div>

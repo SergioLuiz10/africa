@@ -75,7 +75,7 @@ const Experiences: React.FC<ExperiencesProps> = ({ language }) => {
           {t.experiences.map((experience, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-[#f4e3d7] rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
             >
               <div className="mb-6">
                 {experience.icon}

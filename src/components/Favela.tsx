@@ -138,7 +138,7 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
           <h3 className="text-2xl font-bold mb-8 text-center text-gray-900">{t.experiences.title}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.experiences.list.map((experience, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <div key={index} className="bg-[#f4e3d7] rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div className="bg-orange-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
                   {experience.icon}
                 </div>
@@ -157,7 +157,7 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {t.impact.stats.map((stat, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg shadow-md text-center">
+                <div key={index} className="bg-[#f4e3d7] p-4 rounded-lg shadow-md text-center">
                   <p className="text-2xl font-bold text-orange-500">{stat.value}</p>
                   <p className="text-sm text-gray-600">{stat.label}</p>
                 </div>

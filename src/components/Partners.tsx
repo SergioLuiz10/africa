@@ -44,7 +44,7 @@ const Partners: React.FC<PartnersProps> = ({ language }) => {
   {partners.map((partner, index) => (
     <div 
       key={index} 
-      className="bg-white rounded-lg p-6 shadow-sm flex items-center justify-center h-56 w-80 hover:shadow-md transition-all"
+      className="bg-[#f4e3d7] rounded-lg p-6 shadow-sm flex items-center justify-center h-56 w-80 hover:shadow-md transition-all"
     >
       <img 
         src={partner.image} 

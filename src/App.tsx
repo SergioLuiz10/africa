@@ -25,7 +25,7 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden flex relative">
+    <div className="min-h-screen bg-[#f4e3d7] text-gray-900 overflow-x-hidden flex relative">
       {/* Botão mobile para abrir/fechar sidebar */}
       <button
         className="lg:hidden fixed top-4 left-4 z-50 bg-orange-500 text-white p-2 rounded-md"

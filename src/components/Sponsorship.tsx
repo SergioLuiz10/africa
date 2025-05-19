@@ -130,7 +130,7 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
             {t.why.reasons.map((reason, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-[#f4e3d7] rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                   {reason.icon}
@@ -157,7 +157,7 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
             <h3 className="text-2xl font-bold mb-6 text-gray-900">{t.projects.title}</h3>
             <ul className="space-y-3 mb-8">
               {t.projects.list.map((project, index) => (
-                <li key={index} className="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                <li key={index} className="flex items-start bg-[#f4e3d7] p-4 rounded-lg shadow-sm">
                   <div className="mr-3 mt-1">
                     <div className="w-2 h-2 rounded-full bg-orange-500"></div>
                   </div>

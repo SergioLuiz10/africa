@@ -55,7 +55,7 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 border border-amber-300 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+                  className="w-full px-4 py-3 border border-amber-300 rounded-lg bg-[#f4e3d7] text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
                 />
               </div>
               <div>
@@ -63,7 +63,7 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 border border-amber-300 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+                  className="w-full px-4 py-3 border border-amber-300 rounded-lg bg-[#f4e3d7] text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
                 />
               </div>
               <div>
@@ -71,7 +71,7 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full px-4 py-3 border border-amber-300 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
+                  className="w-full px-4 py-3 border border-amber-300 rounded-lg bg-[#f4e3d7] text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
                 ></textarea>
               </div>
               <div>

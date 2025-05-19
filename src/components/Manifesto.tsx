@@ -84,7 +84,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <section id="manifesto" ref={sectionRef} className="py-20 bg-white scroll-hidden">
+    <section id="manifesto" ref={sectionRef} className="py-20 bg-[#f4e3d7] scroll-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold mb-4 text-brown-900">{t.title}</h2>
@@ -102,7 +102,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
               {t.principles.map((principle, index) => (
                 <div
                   key={index}
-                  className="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500 transition-all duration-300 hover:shadow-lg animate-slide-up"
+                  className="bg-white p-6 rounded-xl border-l-4 border-orange-500 transition-all duration-300 hover:shadow-lg animate-slide-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <h3 className="text-xl font-bold mb-2 text-brown-900">{principle.title}</h3>
@@ -135,4 +135,4 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
   );
 };
 
-export default  Manifesto;
+export default Manifesto;

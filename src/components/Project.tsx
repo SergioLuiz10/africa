@@ -93,26 +93,26 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="bg-white p-8 rounded-xl shadow-md transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <div className="bg-[#f4e3d7] p-8 rounded-xl shadow-md transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <Target className="w-12 h-12 text-orange-500 mb-6" />
             <h3 className="text-2xl font-bold mb-4 text-gray-900">{t.vision}</h3>
             <p className="text-lg text-gray-700">{t.visionText}</p>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-md transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <div className="bg-[#f4e3d7] p-8 rounded-xl shadow-md transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <Flag className="w-12 h-12 text-orange-500 mb-6" />
             <h3 className="text-2xl font-bold mb-4 text-gray-900">{t.mission}</h3>
             <p className="text-lg text-gray-700">{t.missionText}</p>
           </div>
         </div>
 
-        <div className="bg-white p-8 rounded-xl shadow-md mb-16">
+        <div className="bg-[#f4e3d7] p-8 rounded-xl shadow-md mb-16">
           <h3 className="text-2xl font-bold mb-4 text-gray-900 text-center">{t.whySouthAfricaTitle}</h3>
           <p className="text-lg text-gray-700">{t.whySouthAfricaText}</p>
         </div>
 
         {/* Linha do Tempo Estilo Zigue-Zague Corrigido */}
-        <div className="bg-white p-8 rounded-xl shadow-md">
+        <div className="bg-[#f4e3d7] p-8 rounded-xl shadow-md">
           <h3 className="text-2xl font-bold text-center mb-12 text-gray-900">{t.timelineTitle}</h3>
           <div className="relative">
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-orange-500"></div>

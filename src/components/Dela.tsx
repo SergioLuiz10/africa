@@ -1,6 +1,6 @@
 import React from 'react';
 import { AtSign, Phone, MapPin } from 'lucide-react';
-import imagemdela from '../assets/imagemdela.jpg'
+import imagemdela from '../assets/imagemdela.jpg';
 
 interface DelaProps {
   language: 'pt' | 'en';
@@ -45,29 +45,38 @@ const Dela: React.FC<DelaProps> = ({ language }) => {
   const t = content[language];
 
   return (
-    <section id="dela" className="py-20 bg-white">
+    <section id="dela" className="py-20 bg-[#f4e3d7]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-gray-900">{t.title}</h2>
-          <p className="text-xl text-gray-600">{t.subtitle}</p>
+          <p className="text-xl text-gray-700">{t.subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
-          <div>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              {t.intro}
-            </p>
-
-            <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500 mb-8">
-              <p className="text-lg italic text-gray-700">
-                {t.mission}
-              </p>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-xl shadow">
+              <p className="text-lg text-gray-700 leading-relaxed">{t.intro}</p>
             </div>
 
-            <p className="text-lg text-gray-700 mb-6">{t.approach}</p>
-            <p className="text-lg text-gray-700 mb-6">{t.vision}</p>
-            <p className="text-lg text-gray-700 mb-6">{t.project}</p>
-            <p className="text-lg text-gray-700">{t.conclusion}</p>
+            <div className="bg-white p-6 rounded-xl shadow border-l-4 border-orange-500">
+              <p className="text-lg italic text-gray-700">{t.mission}</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow">
+              <p className="text-lg text-gray-700">{t.approach}</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow">
+              <p className="text-lg text-gray-700">{t.vision}</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow">
+              <p className="text-lg text-gray-700">{t.project}</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow">
+              <p className="text-lg text-gray-700">{t.conclusion}</p>
+            </div>
           </div>
 
           <div>

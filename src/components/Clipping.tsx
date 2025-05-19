@@ -203,7 +203,7 @@ const Clipping: React.FC<ClippingProps> = ({ language }) => {
   const filteredArticles = t.articles.filter(article => article.type === activeFilter);
 
   return (
-    <section id="clipping" className="py-20 bg-white">
+    <section id="clipping" className="py-20 bg-[#f4e3d7]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-gray-900">{t.title}</h2>
