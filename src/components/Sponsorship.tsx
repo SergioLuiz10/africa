@@ -109,6 +109,14 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
 
   const t = content[language as keyof typeof content];
 
+  const handleScroll = (sectionName: string) => {
+    const id = sectionName.toLowerCase().replace(/\s/g, '-'); // transforma "Quem somos" em "quem-somos"
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="sponsorship" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -157,7 +165,11 @@ const Sponsorship: React.FC<SponsorshipProps> = ({ language }) => {
             <h3 className="text-2xl font-bold mb-6 text-gray-900">{t.projects.title}</h3>
             <ul className="space-y-3 mb-8">
               {t.projects.list.map((project, index) => (
-                <li key={index} className="flex items-start bg-[#f4e3d7] p-4 rounded-lg shadow-sm">
+                <li
+                  key={index}
+                  className="flex items-start bg-[#f4e3d7] p-4 rounded-lg shadow-sm cursor-pointer hover:bg-orange-100 transition"
+                  onClick={() => handleScroll(project)}
+                >
                   <div className="mr-3 mt-1">
                     <div className="w-2 h-2 rounded-full bg-orange-500"></div>
                   </div>
