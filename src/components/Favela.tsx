@@ -76,7 +76,7 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
     <section id="favela" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-2">
-          <h2 className="text-4xl font-bold mb-1 text-white">{t.title}</h2>
+          <h2 className="text-4xl font-bold mb-1 text-black">{t.title}</h2>
           <p className="text-md font-semibold text-gray-100">{t.techTagline}</p>
         </div>
         <p className="text-xl text-gray-600 text-center mb-16">{t.subtitle}</p>

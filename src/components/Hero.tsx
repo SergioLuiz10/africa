@@ -11,6 +11,7 @@ import backgroundImage from '../assets/Background.png';
 import favela from '../assets/FavelaTech-Logotipo-Negativo.png';
 import dela from '../assets/Delaaa.png';
 import pais from '../assets/Paises.png';
+import ELAsemfundo from '../assets/Elasemfund.png';
 
 interface HeroProps {
   language: 'en' | 'pt';
@@ -77,15 +78,13 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
         <img
           src={logo}
           alt="África 360"
-          className="mx-auto w-64 sm:w-72 md:w-80 animate-pulse mb-6"
+           className="mx-auto w-64 sm:w-72 md:w-80 animate-pulse mb-6"
         />
 
-        {/* Frase de efeito */}
         <p className="text-base sm:text-xl text-white/90 px-2 animate-fadeIn delay-100 mb-4">
           {t.description}
         </p>
 
-        {/* Bandeiras */}
         <img
           src={pais}
           alt="Países"
@@ -93,16 +92,24 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
         />
       </div>
 
-      {/* Logos laterais com animação intensa */}
+      {/* Logos laterais */}
       <img
         src={dela}
         alt="De Lá"
         className="absolute bottom-4 left-4 w-24 sm:w-28 animate-bounce"
       />
+
       <img
         src={favela}
         alt="Favela Tech"
-        className="absolute bottom-4 right-4 w-24 sm:w-28 animate-bounce"
+        className="absolute top-4 left-4 w-24 sm:w-28 animate-bounce"
+      />
+
+      {/* Imagem da mulher reposicionada para evitar sobreposição */}
+      <img
+        src={ELAsemfundo}
+        alt="Imagem mulher"
+        className="absolute bottom-0 right-[-40px] translate-x-[10%] max-h-[90%] w-auto object-contain pointer-events-none select-none z-0"
       />
     </section>
   );
