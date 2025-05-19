@@ -8,7 +8,7 @@ import {
   Globe
 } from 'lucide-react';
 import logo from '../assets/logo.png';
-import backgroundImage from '../assets/Apresentação-África360_v3.png'; // 
+import backgroundImage from '../assets/Apresentação-África360_v3.png';
 
 interface HeroProps {
   language: 'en' | 'pt';
@@ -100,14 +100,15 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
           <img
             src={logo}
             alt="África 360"
-            className="mx-auto w-48 sm:w-64 md:w-72 lg:w-80 mb-8 animate-fade-in max-w-full"
+            className="mx-auto w-48 sm:w-64 md:w-72 lg:w-80 mb-8 animate-logoPulse max-w-full"
           />
-          <p className="text-xl sm:text-2xl mb-4 text-orange-400 font-medium animate-slide-up break-words">
-            {t.subtitle}
-          </p>
-          <p className="text-base sm:text-xl mb-8 text-white/90 animate-slide-up delay-100 px-2 break-words">
-            {t.description}
-          </p>
+         <p className="text-xl sm:text-2xl mb-4 text-orange-400 font-medium animate-float break-words">
+  {t.subtitle}
+</p>
+<p className="text-base sm:text-xl mb-8 text-white/90 animate-wave delay-100 px-2 break-words">
+  {t.description}
+</p>
+ 
           <a
             href="#about"
             className="group inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full transition-all transform hover:scale-105 text-base sm:text-lg font-medium"
