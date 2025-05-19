@@ -23,25 +23,25 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
             title: 'Conexões estratégicas',
             description:
               'Promoção de parcerias entre líderes africanas e da diáspora para fomentar negócios globais',
-            icon: <Globe className="w-8 h-8 text-orange-500" />
+            icon: <Globe className="w-8 h-8 text-orange-200" />
           },
           {
             title: 'Capacitação',
             description:
               'Formações e mentorias voltadas ao desenvolvimento de competências empreendedoras',
-            icon: <Leaf className="w-8 h-8 text-orange-500" />
+            icon: <Leaf className="w-8 h-8 text-orange-200" />
           },
           {
             title: 'Expansão de mercado',
             description:
               'Criação de oportunidades concretas para internacionalização de negócios liderados por mulheres negras',
-            icon: <TreePine className="w-8 h-8 text-orange-500" />
+            icon: <TreePine className="w-8 h-8 text-orange-200" />
           },
           {
             title: 'Visibilidade e liderança',
             description:
               'Eventos e ações para destacar a atuação de mulheres negras no cenário econômico global',
-            icon: <Wind className="w-8 h-8 text-orange-500" />
+            icon: <Wind className="w-8 h-8 text-orange-200" />
           }
         ]
       },
@@ -85,25 +85,25 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
             title: 'Strategic connections',
             description:
               'Promotion of partnerships between African and diaspora leaders to foster global business',
-            icon: <Globe className="w-8 h-8 text-orange-500" />
+            icon: <Globe className="w-8 h-8 text-orange-200" />
           },
           {
             title: 'Training',
             description:
               'Training and mentoring focused on the development of entrepreneurial skills',
-            icon: <Leaf className="w-8 h-8 text-orange-500" />
+            icon: <Leaf className="w-8 h-8 text-orange-200" />
           },
           {
             title: 'Market expansion',
             description:
               'Creation of concrete opportunities for internationalization of Black women-led businesses',
-            icon: <TreePine className="w-8 h-8 text-orange-500" />
+            icon: <TreePine className="w-8 h-8 text-orange-200" />
           },
           {
             title: 'Visibility and leadership',
             description:
               'Events and actions to highlight the role of Black women in the global economic landscape',
-            icon: <Wind className="w-8 h-8 text-orange-500" />
+            icon: <Wind className="w-8 h-8 text-orange-200" />
           }
         ]
       },
@@ -138,22 +138,18 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <section id="cgbn" className="py-20 bg-[#f4e3d7]">
+    <section id="cgbn" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-gray-900">{t.title}</h2>
-          <p className="text-xl text-gray-600">{t.subtitle}</p>
+          <p className="text-xl text-gray-700">{t.subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              {t.intro}
-            </p>
-            <div className="bg-white p-6 rounded-lg border-l-4 border-orange-500 shadow-md mb-8">
-              <p className="text-lg italic text-gray-800 leading-relaxed">
-                {t.mission}
-              </p>
+            <p className="text-lg text-gray-800 mb-8 leading-relaxed">{t.intro}</p>
+            <div className="bg-[#a97457] p-6 rounded-lg shadow-md mb-8">
+              <p className="text-lg italic text-white leading-relaxed">{t.mission}</p>
             </div>
 
             <h3 className="text-xl font-bold mb-6 text-gray-900">{t.projects.title}</h3>
@@ -189,7 +185,7 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
                     <img
                       src={ecosystem.image}
                       alt={ecosystem.name}
-                      className={`absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-125 contrast-110`}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-110"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity group-hover:bg-opacity-30"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -211,13 +207,13 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
             {t.areas.list.map((area, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-[#a97457] rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
               >
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                   {area.icon}
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-gray-900 text-center">{area.title}</h4>
-                <p className="text-gray-600 text-center">{area.description}</p>
+                <h4 className="text-xl font-bold mb-3 text-white text-center">{area.title}</h4>
+                <p className="text-gray-100 text-center">{area.description}</p>
               </div>
             ))}
           </div>

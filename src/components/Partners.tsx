@@ -40,28 +40,29 @@ const Partners: React.FC<PartnersProps> = ({ language }) => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">{t.title}</h2>
           <p className="text-xl text-gray-600">{t.subtitle}</p>
         </div>
-<div className="flex justify-center gap-8 mb-16 flex-wrap">
-  {partners.map((partner, index) => (
-    <div 
-      key={index} 
-      className="bg-[#f4e3d7] rounded-lg p-6 shadow-sm flex items-center justify-center h-56 w-80 hover:shadow-md transition-all"
-    >
-      <img 
-        src={partner.image} 
-        alt={partner.name} 
-        className="max-h-40 max-w-full object-contain" 
-      />
-    </div>
-  ))}
-</div>
+
+        <div className="flex justify-center gap-8 mb-16 flex-wrap">
+          {partners.map((partner, index) => (
+            <div 
+              key={index} 
+              className="bg-[#a97457] rounded-lg p-6 shadow-sm flex items-center justify-center h-56 w-80 hover:shadow-md transition-all"
+            >
+              <img 
+                src={partner.image} 
+                alt={partner.name} 
+                className="max-h-40 max-w-full object-contain" 
+              />
+            </div>
+          ))}
+        </div>
 
         <div className="text-center mb-12">
           <p className="text-gray-600 text-lg">{t.message}</p>
         </div>
 
-        <div className="max-w-2xl mx-auto bg-orange-100 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold mb-3 text-orange-800">{t.joinTitle}</h3>
-          <p className="text-orange-700 mb-6">{t.joinText}</p>
+        <div className="max-w-2xl mx-auto bg-[#a97457] rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold mb-3 text-white">{t.joinTitle}</h3>
+          <p className="text-white mb-6">{t.joinText}</p>
           <a 
             href="#contact" 
             className="inline-block bg-orange-600 hover:bg-orange-700 text-white py-3 px-8 rounded-full transition-colors font-medium"

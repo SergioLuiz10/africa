@@ -38,11 +38,11 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <section id="contact" className="py-14 bg-amber-900">
+    <section id="contact" className="py-14 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold mb-3 text-amber-50">{t.title}</h2>
-          <p className="text-lg text-amber-100">{t.subtitle}</p>
+          <h2 className="text-3xl font-bold mb-3 text-brown-900">{t.title}</h2>
+          <p className="text-lg text-brown-700">{t.subtitle}</p>
         </div>
 
         <div className="space-y-6 max-w-xl mx-auto">
@@ -51,13 +51,13 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
             href={t.phoneLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-amber-100 p-5 rounded-lg shadow-sm border border-amber-300 hover:bg-amber-200 transition"
+            className="block bg-[#a97457] p-5 rounded-lg shadow-sm border border-amber-300 hover:shadow-md transition"
           >
             <div className="flex items-start">
-              <Phone className="text-orange-600 mr-4 mt-1 flex-shrink-0" />
+              <Phone className="text-orange-200 mr-4 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-bold text-orange-700 mb-1">{t.phone}</h3>
-                <p className="text-amber-900">{t.phoneText}</p>
+                <h3 className="font-bold text-white mb-1">{t.phone}</h3>
+                <p className="text-orange-100">{t.phoneText}</p>
               </div>
             </div>
           </a>
@@ -80,13 +80,13 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
             href={t.emailLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-amber-100 p-5 rounded-lg shadow-sm border border-amber-300 hover:bg-amber-200 transition"
+            className="block bg-[#a97457] p-5 rounded-lg shadow-sm border border-amber-300 hover:shadow-md transition"
           >
             <div className="flex items-start">
-              <Mail className="text-orange-600 mr-4 mt-1 flex-shrink-0" />
+              <Mail className="text-orange-200 mr-4 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-bold text-orange-700 mb-1">{t.emailContact}</h3>
-                <p className="text-amber-900">{t.emailText}</p>
+                <h3 className="font-bold text-white mb-1">{t.emailContact}</h3>
+                <p className="text-orange-100">{t.emailText}</p>
               </div>
             </div>
           </a>

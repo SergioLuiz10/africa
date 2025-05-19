@@ -84,17 +84,17 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <section id="manifesto" ref={sectionRef} className="py-20 bg-[#f4e3d7] scroll-hidden">
+    <section id="manifesto" ref={sectionRef} className="py-20 bg-[#a97457] scroll-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold mb-4 text-brown-900">{t.title}</h2>
-          <p className="text-xl text-gray-600">{t.subtitle}</p>
+          <h2 className="text-4xl font-bold mb-4 text-white">{t.title}</h2>
+          <p className="text-xl text-gray-100">{t.subtitle}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="animate-slide-in-left">
             <ScrollText className="w-16 h-16 text-orange-500 mb-6" />
-            <p className="text-xl text-gray-700 leading-relaxed mb-8">
+            <p className="text-xl text-gray-100 leading-relaxed mb-8">
               {t.introduction}
             </p>
 
@@ -105,7 +105,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
                   className="bg-white p-6 rounded-xl border-l-4 border-orange-500 transition-all duration-300 hover:shadow-lg animate-slide-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <h3 className="text-xl font-bold mb-2 text-brown-900">{principle.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-[#4a2c1a]">{principle.title}</h3>
                   <p className="text-gray-700">{principle.content}</p>
                 </div>
               ))}
@@ -118,7 +118,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
               <p className="text-2xl italic text-gray-700 mb-6 leading-relaxed">
                 "{t.quote}"
               </p>
-              <p className="text-right font-medium text-brown-900">— {t.quoteAuthor}</p>
+              <p className="text-right font-medium text-[#4a2c1a]">— {t.quoteAuthor}</p>
             </div>
 
             <div className="rounded-xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">

@@ -37,6 +37,14 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         { label: 'Impacto', href: '#impact' },
         { label: 'Parceiros', href: '#partners' },
         { label: 'Contato', href: '#contact' },
+        { label: 'Manifesto', href: '#manifesto' },
+        { label: 'Projeto', href: '#project' },
+        { label: 'DeLá', href: '#dela' },
+        { label: 'Favela', href: '#favela' },
+        { label: 'CGBW', href: '#cgbn' },
+        { label: 'Kindezi BAL', href: '#kindezi' },
+        { label: 'Clipping', href: '#clipping' },
+        { label: 'Patrocínio', href: '#sponsorship' }
       ],
       privacy: 'Política de Privacidade',
       terms: 'Termos de Uso'
@@ -50,6 +58,14 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         { label: 'Impact', href: '#impact' },
         { label: 'Partners', href: '#partners' },
         { label: 'Contact', href: '#contact' },
+        { label: 'Manifesto', href: '#manifesto' },
+        { label: 'Project', href: '#project' },
+        { label: 'DeLá', href: '#dela' },
+        { label: 'Favela', href: '#favela' },
+        { label: 'CGBW', href: '#cgbn' },
+        { label: 'Kindezi BAL', href: '#kindezi' },
+        { label: 'Clipping', href: '#clipping' },
+        { label: 'Sponsorship', href: '#sponsorship' }
       ],
       privacy: 'Privacy Policy',
       terms: 'Terms of Use'
@@ -57,26 +73,10 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
   };
 
   const socialLinks = [
-    { 
-      icon: <Facebook size={20} />, 
-      url: '',
-      delay: 0 
-    },
-    { 
-      icon: <Twitter size={20} />, 
-      url: '',
-      delay: 0.1 
-    },
-    { 
-      icon: <Instagram size={20} />, 
-      url: 'https://www.instagram.com/africa.360/?hl=pt-br',
-      delay: 0.2 
-    },
-    { 
-      icon: <Linkedin size={20} />, 
-      url: '',
-      delay: 0.3 
-    }
+    { icon: <Facebook size={20} />, url: '', delay: 0 },
+    { icon: <Twitter size={20} />, url: '', delay: 0.1 },
+    { icon: <Instagram size={20} />, url: 'https://www.instagram.com/africa.360/?hl=pt-br', delay: 0.2 },
+    { icon: <Linkedin size={20} />, url: '', delay: 0.3 }
   ];
 
   const t = content[language as keyof typeof content];
@@ -88,7 +88,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
           <div className="mb-6 md:mb-0 animate-fade-in">
             <span className="text-3xl font-bold text-gradient">África 360</span>
           </div>
-          
+
           <div className="flex space-x-4">
             {socialLinks.map((social, index) => (
               <a
@@ -104,7 +104,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
             ))}
           </div>
         </div>
-        
+
         <div className="border-t border-brown-800 pt-8 pb-4">
           <div className="flex flex-wrap justify-center mb-6 gap-6">
             {t.links.map((link, index) => (
@@ -112,13 +112,13 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
                 key={index}
                 href={link.href}
                 className="text-gray-400 hover:text-orange-400 transition-colors animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.05}s` }}
               >
                 {link.label}
               </a>
             ))}
           </div>
-          
+
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-500 mb-4 md:mb-0 animate-slide-in-left">
               {t.rights}

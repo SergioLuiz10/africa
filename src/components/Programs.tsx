@@ -64,24 +64,24 @@ const Programs: React.FC<ProgramsProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <section id="programs" className="py-20 bg-amber-900">
+    <section id="programs" className="py-20 bg-[#a97457]">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-amber-50">{t.title}</h2>
-          <p className="text-xl text-orange-200">{t.subtitle}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">{t.title}</h2>
+          <p className="text-xl text-orange-100">{t.subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {t.blocks.map((program, index) => (
             <div 
               key={index} 
-              className="bg-amber-100 rounded-xl p-8 shadow-sm border border-amber-300 transition-transform hover:transform hover:scale-105"
+              className="bg-[#f4e3d7] rounded-xl p-8 shadow-sm border border-orange-200 transition-transform hover:scale-105"
             >
               <div className="mb-4">
                 {program.icon}
               </div>
               <h3 className="text-xl font-bold mb-3 text-orange-700">{program.title}</h3>
-              <p className="text-amber-900">{program.description}</p>
+              <p className="text-brown-900">{program.description}</p>
             </div>
           ))}
         </div>

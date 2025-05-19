@@ -64,24 +64,24 @@ const Impact: React.FC<ImpactProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <section id="impact" className="py-20 bg-amber-900">
+    <section id="impact" className="py-20 bg-[#a97457]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-amber-50">{t.title}</h2>
-          <p className="text-xl text-amber-100">{t.subtitle}</p>
+          <h2 className="text-4xl font-bold mb-4 text-white">{t.title}</h2>
+          <p className="text-xl text-orange-100">{t.subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {t.stats.map((stat, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-amber-100 rounded-xl p-8 text-center border border-amber-300 shadow-sm transition-transform hover:transform hover:scale-105"
+              className="bg-white rounded-xl p-8 text-center border border-orange-200 shadow-sm transition-transform hover:transform hover:scale-105"
             >
               <div className="flex justify-center mb-4">
                 {stat.icon}
               </div>
               <div className="text-4xl font-bold text-orange-700 mb-2">{stat.value}</div>
-              <div className="text-amber-900">{stat.label}</div>
+              <div className="text-gray-700">{stat.label}</div>
             </div>
           ))}
         </div>

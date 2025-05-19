@@ -45,11 +45,11 @@ const Dela: React.FC<DelaProps> = ({ language }) => {
   const t = content[language];
 
   return (
-    <section id="dela" className="py-20 bg-[#f4e3d7]">
+    <section id="dela" className="py-20 bg-[#a97457]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">{t.title}</h2>
-          <p className="text-xl text-gray-700">{t.subtitle}</p>
+          <h2 className="text-4xl font-bold mb-4 text-white">{t.title}</h2>
+          <p className="text-xl text-gray-100">{t.subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start mb-16">

@@ -76,8 +76,8 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
     <section id="favela" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-2">
-          <h2 className="text-4xl font-bold mb-1 text-gray-900">{t.title}</h2>
-          <p className="text-md font-semibold text-[#7b4c2c]">{t.techTagline}</p>
+          <h2 className="text-4xl font-bold mb-1 text-white">{t.title}</h2>
+          <p className="text-md font-semibold text-gray-100">{t.techTagline}</p>
         </div>
         <p className="text-xl text-gray-600 text-center mb-16">{t.subtitle}</p>
 
@@ -109,12 +109,12 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
           <h3 className="text-2xl font-bold mb-8 text-center text-gray-900">{t.experiences.title}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.experiences.list.map((experience, index) => (
-              <div key={index} className="bg-[#f4e3d7] rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <div key={index} className="bg-[#a97457] rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                 <div className="bg-orange-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
                   {experience.icon}
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-gray-900">{experience.title}</h4>
-                <p className="text-gray-600">{experience.description}</p>
+                <h4 className="text-xl font-bold mb-3 text-white">{experience.title}</h4>
+                <p className="text-gray-100">{experience.description}</p>
               </div>
             ))}
           </div>
@@ -126,9 +126,9 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
             <p className="text-lg text-gray-700 mb-6">{t.impact.description}</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {t.impact.stats.map((stat, index) => (
-                <div key={index} className="bg-[#f4e3d7] p-4 rounded-lg shadow-md text-center">
-                  <p className="text-2xl font-bold text-orange-500">{stat.value}</p>
-                  <p className="text-sm text-gray-600">{stat.label}</p>
+                <div key={index} className="bg-[#a97457] p-4 rounded-lg shadow-md text-center">
+                  <p className="text-2xl font-bold text-orange-200">{stat.value}</p>
+                  <p className="text-sm text-white">{stat.label}</p>
                 </div>
               ))}
             </div>

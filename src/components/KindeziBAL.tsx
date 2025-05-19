@@ -84,28 +84,28 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
   const t = content[language as 'pt' | 'en'];
 
   return (
-    <section id="kindezi" className="py-20 bg-gray-50">
+    <section id="kindezi" className="py-20 bg-[#a97457]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">{t.title}</h2>
-          <p className="text-xl text-gray-600">{t.subtitle}</p>
+          <h2 className="text-4xl font-bold mb-4 text-white">{t.title}</h2>
+          <p className="text-xl text-gray-100">{t.subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">{t.intro}</p>
-            <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500 mb-8">
+            <p className="text-lg text-white mb-8 leading-relaxed">{t.intro}</p>
+            <div className="bg-white p-6 rounded-lg border-l-4 border-orange-500 mb-8">
               <p className="text-lg italic text-gray-700">{t.mission}</p>
             </div>
 
-            <h3 className="text-xl font-bold mb-4 text-gray-900">{t.activities.title}</h3>
+            <h3 className="text-xl font-bold mb-4 text-white">{t.activities.title}</h3>
             <ul className="space-y-3 mb-8">
               {t.activities.list.map((activity, index) => (
                 <li key={index} className="flex items-start">
                   <div className="mt-1 mr-3">
-                    <div className="w-2 h-2 rounded-full bg-orange-500"></div>
+                    <div className="w-2 h-2 rounded-full bg-orange-300"></div>
                   </div>
-                  <span className="text-gray-700">{activity}</span>
+                  <span className="text-white">{activity}</span>
                 </li>
               ))}
             </ul>
@@ -114,7 +114,7 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
               <a href="#" className="flex-1 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-center transition-colors duration-300">
                 {t.visit}
               </a>
-              <a href="#" className="flex-1 py-3 border border-orange-500 text-orange-500 hover:bg-orange-50 rounded-lg text-center transition-colors duration-300">
+              <a href="#" className="flex-1 py-3 border border-orange-500 text-orange-500 hover:bg-white hover:text-orange-600 rounded-lg text-center transition-colors duration-300 bg-transparent">
                 {t.donate}
               </a>
             </div>
@@ -149,11 +149,11 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold mb-8 text-center text-gray-900">{t.collections.title}</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center text-white">{t.collections.title}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.collections.list.map((collection, index) => (
-              <div key={index} className="bg-[#f4e3d7] rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <div key={index} className="bg-white rounded-xl p-8 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                   {collection.icon}
                 </div>
                 <h4 className="text-xl font-bold mb-3 text-gray-900 text-center">{collection.title}</h4>
