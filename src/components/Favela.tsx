@@ -1,6 +1,6 @@
 import React from 'react';
 import { Home, Book, MapPin, Calendar, Camera } from 'lucide-react';
-import imagemLOGo from '../assets/favela.png.jpg'
+import imagemLOGo from '../assets/favela.png.jpg';
 
 interface FavelaProps {
   language: string;
@@ -9,33 +9,18 @@ interface FavelaProps {
 const Favela: React.FC<FavelaProps> = ({ language }) => {
   const content = {
     pt: {
-      title: 'Favela',
+      title: 'Favela Tech',
       subtitle: 'Turismo comunitário e transformação social',
+      techTagline: 'Tecnologia e inovação a serviço da comunidade',
       intro: 'Nosso projeto Favela promove o turismo comunitário em áreas urbanas, destacando a rica cultura, resiliência e criatividade das comunidades africanas. Criamos experiências autênticas que beneficiam diretamente os moradores locais.',
       mission: 'Transformar a narrativa sobre as comunidades urbanas africanas através do turismo responsável, criando oportunidades econômicas e promovendo o orgulho cultural.',
       experiences: {
         title: 'Experiências',
         list: [
-          {
-            title: 'Tours culturais',
-            description: 'Conheça a história, arte e cultura local guiados por moradores da comunidade',
-            icon: <MapPin className="w-6 h-6 text-orange-500" />
-          },
-          {
-            title: 'Workshops de arte',
-            description: 'Aprenda técnicas artísticas com artistas locais e crie sua própria obra',
-            icon: <Camera className="w-6 h-6 text-orange-500" />
-          },
-          {
-            title: 'Gastronomia local',
-            description: 'Experimente autêntica comida de rua e pratos tradicionais preparados por cozinheiros da comunidade',
-            icon: <Book className="w-6 h-6 text-orange-500" />
-          },
-          {
-            title: 'Eventos culturais',
-            description: 'Participe de festivais, apresentações musicais e celebrações comunitárias',
-            icon: <Calendar className="w-6 h-6 text-orange-500" />
-          }
+          { title: 'Tours culturais', description: 'Conheça a história, arte e cultura local guiados por moradores da comunidade', icon: <MapPin className="w-6 h-6 text-orange-500" /> },
+          { title: 'Workshops de arte', description: 'Aprenda técnicas artísticas com artistas locais e crie sua própria obra', icon: <Camera className="w-6 h-6 text-orange-500" /> },
+          { title: 'Gastronomia local', description: 'Experimente autêntica comida de rua e pratos tradicionais preparados por cozinheiros da comunidade', icon: <Book className="w-6 h-6 text-orange-500" /> },
+          { title: 'Eventos culturais', description: 'Participe de festivais, apresentações musicais e celebrações comunitárias', icon: <Calendar className="w-6 h-6 text-orange-500" /> }
         ]
       },
       impact: {
@@ -54,33 +39,18 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
       }
     },
     en: {
-      title: 'Favela',
+      title: 'Favela Tech',
       subtitle: 'Community tourism and social transformation',
+      techTagline: 'Technology and innovation serving the community',
       intro: 'Our Favela project promotes community-based tourism in urban areas, highlighting the rich culture, resilience, and creativity of African communities. We create authentic experiences that directly benefit local residents.',
       mission: 'To transform the narrative about African urban communities through responsible tourism, creating economic opportunities and promoting cultural pride.',
       experiences: {
         title: 'Experiences',
         list: [
-          {
-            title: 'Cultural tours',
-            description: 'Learn about local history, art, and culture guided by community residents',
-            icon: <MapPin className="w-6 h-6 text-orange-500" />
-          },
-          {
-            title: 'Art workshops',
-            description: 'Learn artistic techniques from local artists and create your own artwork',
-            icon: <Camera className="w-6 h-6 text-orange-500" />
-          },
-          {
-            title: 'Local gastronomy',
-            description: 'Experience authentic street food and traditional dishes prepared by community cooks',
-            icon: <Book className="w-6 h-6 text-orange-500" />
-          },
-          {
-            title: 'Cultural events',
-            description: 'Participate in festivals, music performances, and community celebrations',
-            icon: <Calendar className="w-6 h-6 text-orange-500" />
-          }
+          { title: 'Cultural tours', description: 'Discover history, art, and local culture guided by community residents', icon: <MapPin className="w-6 h-6 text-orange-500" /> },
+          { title: 'Art workshops', description: 'Learn artistic techniques from local artists and create your own work', icon: <Camera className="w-6 h-6 text-orange-500" /> },
+          { title: 'Local gastronomy', description: 'Taste authentic street food and traditional dishes prepared by community cooks', icon: <Book className="w-6 h-6 text-orange-500" /> },
+          { title: 'Cultural events', description: 'Join festivals, music shows, and community celebrations', icon: <Calendar className="w-6 h-6 text-orange-500" /> }
         ]
       },
       impact: {
@@ -88,13 +58,13 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
         description: 'Through the Favela project, we are creating jobs, preserving cultural heritage, and changing perceptions about African urban communities.',
         stats: [
           { value: '3', label: 'Participating communities' },
-          { value: '45', label: 'Trained local guides' },
+          { value: '45', label: 'Local guides trained' },
           { value: '5000+', label: 'Visitors received' },
-          { value: '60%', label: 'Income retained in community' }
+          { value: '60%', label: 'Income retained in the community' }
         ]
       },
       testimonial: {
-        quote: 'The Favela project has not only brought economic opportunities to our community but has also helped us preserve our culture and traditions, showing the world our true story.',
+        quote: 'The Favela project has not only brought economic opportunities to our community, but it has also helped us preserve our culture and traditions, showing the world our true story.',
         author: 'Maria, Community guide'
       }
     }
@@ -105,10 +75,11 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
   return (
     <section id="favela" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">{t.title}</h2>
-          <p className="text-xl text-gray-600">{t.subtitle}</p>
+        <div className="text-center mb-2">
+          <h2 className="text-4xl font-bold mb-1 text-gray-900">{t.title}</h2>
+          <p className="text-md font-semibold text-[#7b4c2c]">{t.techTagline}</p>
         </div>
+        <p className="text-xl text-gray-600 text-center mb-16">{t.subtitle}</p>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
@@ -152,9 +123,7 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
         <div className="grid md:grid-cols-5 gap-8 items-center mb-16">
           <div className="md:col-span-3">
             <h3 className="text-2xl font-bold mb-4 text-gray-900">{t.impact.title}</h3>
-            <p className="text-lg text-gray-700 mb-6">
-              {t.impact.description}
-            </p>
+            <p className="text-lg text-gray-700 mb-6">{t.impact.description}</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {t.impact.stats.map((stat, index) => (
                 <div key={index} className="bg-[#f4e3d7] p-4 rounded-lg shadow-md text-center">
