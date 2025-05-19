@@ -1,14 +1,16 @@
 import React from 'react';
 import {
-  ArrowRight,
   Facebook,
   Twitter,
   Instagram,
   Linkedin,
   Globe
 } from 'lucide-react';
-import logo from '../assets/logo.png';
-import backgroundImage from '../assets/Apresentação-África360_v3.png';
+import logo from '../assets/Africa360-Logotipo-Negativo.png';
+import backgroundImage from '../assets/Background.png';
+import favela from '../assets/FavelaTech-Logotipo-Negativo.png';
+import dela from '../assets/Delaaa.png';
+import pais from '../assets/Paises.png';
 
 interface HeroProps {
   language: 'en' | 'pt';
@@ -18,14 +20,10 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
   const content = {
     pt: {
-      subtitle: 'Brasil • África do Sul',
       description: 'Uma jornada de negócios, ancestralidade e inovação',
-      cta: 'Saiba Mais',
     },
     en: {
-      subtitle: 'Brazil • South Africa',
       description: 'A journey of business, ancestry, and innovation',
-      cta: 'Learn More',
     },
   };
 
@@ -40,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundColor: '#3b1d10',
@@ -59,65 +57,53 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
         </button>
 
         <div className="flex gap-3">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-orange-400 hover:text-orange-300 transition-colors"
-          >
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 transition-colors">
             <Facebook size={20} />
           </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-orange-400 hover:text-orange-300 transition-colors"
-          >
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 transition-colors">
             <Twitter size={20} />
           </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-orange-400 hover:text-orange-300 transition-colors"
-          >
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 transition-colors">
             <Instagram size={20} />
           </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-orange-400 hover:text-orange-300 transition-colors"
-          >
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 transition-colors">
             <Linkedin size={20} />
           </a>
         </div>
       </div>
 
       {/* Conteúdo principal */}
-      <div className="container mx-auto px-4 relative z-10 py-20 max-w-full">
-        <div className="mx-auto text-center w-full max-w-screen-sm px-2">
-          <img
-            src={logo}
-            alt="África 360"
-            className="mx-auto w-48 sm:w-64 md:w-72 lg:w-80 mb-8 animate-logoPulse max-w-full"
-          />
-         <p className="text-xl sm:text-2xl mb-4 text-orange-400 font-medium animate-float break-words">
-  {t.subtitle}
-</p>
-<p className="text-base sm:text-xl mb-8 text-white/90 animate-wave delay-100 px-2 break-words">
-  {t.description}
-</p>
- 
-          <a
-            href="#about"
-            className="group inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-full transition-all transform hover:scale-105 text-base sm:text-lg font-medium"
-          >
-            {t.cta}
-            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </div>
+      <div className="text-center relative z-10 flex flex-col items-center justify-center -mt-10">
+        <img
+          src={logo}
+          alt="África 360"
+          className="mx-auto w-64 sm:w-72 md:w-80 animate-pulse mb-6"
+        />
+
+        {/* Frase de efeito */}
+        <p className="text-base sm:text-xl text-white/90 px-2 animate-fadeIn delay-100 mb-4">
+          {t.description}
+        </p>
+
+        {/* Bandeiras */}
+        <img
+          src={pais}
+          alt="Países"
+          className="mx-auto w-72 sm:w-80 md:w-[360px] animate-float"
+        />
       </div>
+
+      {/* Logos laterais com animação intensa */}
+      <img
+        src={dela}
+        alt="De Lá"
+        className="absolute bottom-4 left-4 w-24 sm:w-28 animate-bounce"
+      />
+      <img
+        src={favela}
+        alt="Favela Tech"
+        className="absolute bottom-4 right-4 w-24 sm:w-28 animate-bounce"
+      />
     </section>
   );
 };

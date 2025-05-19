@@ -1,7 +1,7 @@
 import React from 'react';
 import { Leaf, Droplet, Wind, Globe, TreePine } from 'lucide-react';
 import imagemdela2 from '../assets/imagemdela2.jpg';
-import americacgbw from '../assets/americacgbw.jpg';
+import americacgbw from '../assets/imagemdela.jpg';
 
 interface CGBNProps {
   language: string;
@@ -50,12 +50,12 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
         list: [
           {
             name: 'Dijara Santos ',
-            description: 'presidenta do CGBW no Brasil',
+            description: 'Presidente do CGBW no Brasil',
             image: imagemdela2
           },
           {
             name: 'Lucia Stanislas',
-            description: 'presidente na América do CGBW',
+            description: 'Presidente do CGBW no Brasil na América',
             image: americacgbw
           }
         ]
@@ -181,12 +181,15 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
           <div>
             <div className="grid grid-cols-1 gap-6">
               {t.ecosystems.list.map((ecosystem, index) => (
-                <div key={index} className="group overflow-hidden rounded-xl shadow-md">
-                  <div className="relative h-64">
+                <div
+                  key={index}
+                  className="group overflow-hidden rounded-xl shadow-md h-96"
+                >
+                  <div className="relative h-full">
                     <img
                       src={ecosystem.image}
                       alt={ecosystem.name}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className={`absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-125 contrast-110`}
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity group-hover:bg-opacity-30"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6">

@@ -50,24 +50,21 @@ function App() {
 
       {/* Conteúdo principal */}
       <main className="flex-1 w-full relative z-10 ml-0 lg:ml-64">
-        {/* Seções */}
         <section id="hero">
           <Hero language={language} onLanguageChange={setLanguage} />
         </section>
         <section id="manifesto"><Manifesto language={language} /></section>
         <section id="about"><About language={language} /></section>
         <section id="project"><Project language={language} /></section>
-        <section id="dela"><Dela language={language} /></section>
-        <section id="favela"><Favela language={language} /></section>
-        <section id="cgbn"><CGBN language={language} /></section>
-        <section id="kindezi"><KindeziBAL language={language} /></section>
-        <section id="clipping"><Clipping language={language} /></section>
-        <section id="sponsorship"><Sponsorship language={language} /></section>
-        <section id="gallery"><Gallery language={language} /></section>
-        <section id="programs"><Programs language={language} /></section>
-        <section id="partners"><Partners language={language} /></section>
         <section id="impact"><Impact language={language} /></section>
         <section id="mentorship"><Mentorship language={language} /></section>
+        <section id="programs"><Programs language={language} /></section>
+        <section id="partners"><Partners language={language} /></section>
+        <section id="dela"><Dela language={language} /></section>
+        <section id="favela"><Favela language={language} /></section>
+        <section id="kindezi"><KindeziBAL language={language} /></section>
+        <section id="cgbn"><CGBN language={language} /></section>
+        <section id="clipping"><Clipping language={language} /></section>
         <section id="contact"><Contact language={language} /></section>
         <Footer language={language} />
       </main>
@@ -75,4 +72,4 @@ function App() {
   );
 }
 
-export default  App;
+export default App;
