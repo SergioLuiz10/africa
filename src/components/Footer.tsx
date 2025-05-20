@@ -82,7 +82,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <footer ref={footerRef} className="bg-brown-900 text-white py-12 scroll-hidden">
+    <footer ref={footerRef} className="bg-[#3B1F0F] text-white py-12 scroll-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0 animate-fade-in">
@@ -96,7 +96,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-orange-400 transition-colors p-2 bg-brown-800 rounded-full hover-scale animate-slide-in-right"
+                className="hover:text-orange-400 transition-colors p-2 bg-[#4D2B1A] rounded-full hover-scale animate-slide-in-right"
                 style={{ animationDelay: `${social.delay}s` }}
               >
                 {social.icon}
@@ -105,7 +105,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
           </div>
         </div>
 
-        <div className="border-t border-brown-800 pt-8 pb-4">
+        <div className="border-t border-[#4D2B1A] pt-8 pb-4">
           <div className="flex flex-wrap justify-center mb-6 gap-6">
             {t.links.map((link, index) => (
               <a

@@ -75,7 +75,7 @@ const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
 
       <aside
         className={`
-          fixed top-0 left-0 w-64 h-screen overflow-y-auto bg-[#1A0900] text-white py-8 z-40
+          fixed top-0 left-0 w-64 h-screen overflow-y-auto bg-[#3B1F0F] text-white py-8 z-40
           transform transition-transform duration-300
           ${isOpen ? 'translate-x-0' : '-translate-x-full'}
           lg:translate-x-0 lg:fixed
