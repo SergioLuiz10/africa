@@ -32,7 +32,7 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <section id="kindezi" className="py-20 bg-[#a97457]">
+    <section id="kindezi" className="py-20 bg-amber-900">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">{t.title}</h2>
@@ -41,7 +41,7 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Imagem lateral */}
-          <div className="overflow-hidden rounded-2xl shadow-lg">
+          <div className="overflow-hidden rounded-2xl shadow-lg border border-orange-300">
             <img
               src={imagemKindezi}
               alt="Imagem Kindezi BAL"

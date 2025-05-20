@@ -64,7 +64,7 @@ const Programs: React.FC<ProgramsProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <section id="programs" className="py-20 bg-[#a97457]">
+    <section id="programs" className="py-20 bg-amber-900">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">{t.title}</h2>
@@ -81,7 +81,7 @@ const Programs: React.FC<ProgramsProps> = ({ language }) => {
                 {program.icon}
               </div>
               <h3 className="text-xl font-bold mb-3 text-orange-700">{program.title}</h3>
-              <p className="text-brown-900">{program.description}</p>
+              <p className="text-[#4b2e1e]">{program.description}</p>
             </div>
           ))}
         </div>

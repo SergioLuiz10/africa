@@ -21,10 +21,10 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
   const content = {
     pt: {
-      description: 'Uma jornada de negócios, ancestralidade e inovação',
+      description: 'Reconexão Ancestral, Inovação e Internacionalização de Negócios',
     },
     en: {
-      description: 'A journey of business, ancestry, and innovation',
+      description: 'Ancestral Reconnection, Innovation and Internationalization of Business',
     },
   };
 

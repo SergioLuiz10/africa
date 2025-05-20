@@ -36,19 +36,19 @@ const About: React.FC<AboutProps> = ({ language }) => {
   const t = content[selectedLanguage as keyof typeof content];
 
   return (
-    <section id="about" className="py-20 bg-amber-900">
+    <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-amber-50">{t.title}</h2>
-          <p className="text-xl text-amber-100 leading-relaxed">{t.description}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-amber-900">{t.title}</h2>
+          <p className="text-xl text-amber-800 leading-relaxed">{t.description}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto mt-12">
           {/* Texto */}
-          <div className="bg-[#f4e3d7] p-8 rounded-xl shadow-md animate-slide-up">
-            <h3 className="text-2xl font-bold mb-4 text-[#7b4c2c]">{t.nameTitle}</h3>
-            <p className="text-[#4b2e1e] leading-relaxed">{t.paragraph1}</p>
-            <p className="text-[#4b2e1e] mt-4 leading-relaxed">{t.paragraph2}</p>
+          <div className="bg-[#78350f] p-8 rounded-xl shadow-md animate-slide-up">
+            <h3 className="text-2xl font-bold mb-4 text-white">{t.nameTitle}</h3>
+            <p className="text-amber-100 leading-relaxed">{t.paragraph1}</p>
+            <p className="text-amber-100 mt-4 leading-relaxed">{t.paragraph2}</p>
           </div>
 
           {/* Imagem */}

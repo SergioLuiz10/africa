@@ -75,7 +75,7 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
       title: 'CGBW',
       subtitle: 'Circle Global Business Women',
       intro:
-        'The Circle Global Business Women (CGBW) is an international network of businesswomen committed to strengthening the presence of Black women in the global economic landscape. Founded on the African continent, the initiative acts as a bridge between women leaders in Africa and the diaspora, promoting strategic partnerships, training, experience exchange, and real business expansion opportunities.',
+        'The Circle Global Business Women (CGBW) is an international network of businesswomen committed to strengthening the presence of Black women in the global economic landscape...',
       mission:
         'To empower entrepreneurial women through access to knowledge, markets, international connections, and global visibility.',
       areas: {
@@ -83,26 +83,22 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
         list: [
           {
             title: 'Strategic connections',
-            description:
-              'Promotion of partnerships between African and diaspora leaders to foster global business',
+            description: 'Promotion of partnerships between African and diaspora leaders to foster global business',
             icon: <Globe className="w-8 h-8 text-orange-200" />
           },
           {
             title: 'Training',
-            description:
-              'Training and mentoring focused on the development of entrepreneurial skills',
+            description: 'Training and mentoring focused on the development of entrepreneurial skills',
             icon: <Leaf className="w-8 h-8 text-orange-200" />
           },
           {
             title: 'Market expansion',
-            description:
-              'Creation of concrete opportunities for internationalization of Black women-led businesses',
+            description: 'Creation of concrete opportunities for internationalization of Black women-led businesses',
             icon: <TreePine className="w-8 h-8 text-orange-200" />
           },
           {
             title: 'Visibility and leadership',
-            description:
-              'Events and actions to highlight the role of Black women in the global economic landscape',
+            description: 'Events and actions to highlight the role of Black women in the global economic landscape',
             icon: <Wind className="w-8 h-8 text-orange-200" />
           }
         ]
@@ -148,8 +144,8 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <p className="text-lg text-gray-800 mb-8 leading-relaxed">{t.intro}</p>
-            <div className="bg-[#a97457] p-6 rounded-lg shadow-md mb-8">
-              <p className="text-lg italic text-white leading-relaxed">{t.mission}</p>
+            <div className="bg-amber-900 p-6 rounded-lg shadow-md mb-8">
+              <p className="text-lg italic text-orange-100 leading-relaxed">{t.mission}</p>
             </div>
 
             <h3 className="text-xl font-bold mb-6 text-gray-900">{t.projects.title}</h3>
@@ -207,13 +203,13 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
             {t.areas.list.map((area, index) => (
               <div
                 key={index}
-                className="bg-[#a97457] rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-amber-900 rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                   {area.icon}
                 </div>
                 <h4 className="text-xl font-bold mb-3 text-white text-center">{area.title}</h4>
-                <p className="text-gray-100 text-center">{area.description}</p>
+                <p className="text-orange-100 text-center">{area.description}</p>
               </div>
             ))}
           </div>

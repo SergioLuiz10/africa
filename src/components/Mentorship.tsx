@@ -77,15 +77,15 @@ const Mentorship: React.FC<MentorshipProps> = ({ language }) => {
     <section id="mentorship" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-brown-900">{t.title}</h2>
-          <p className="text-xl text-brown-700">{t.subtitle}</p>
+          <h2 className="text-4xl font-bold mb-4 text-amber-900">{t.title}</h2>
+          <p className="text-xl text-amber-800">{t.subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {t.areas.map((area, index) => (
             <div
               key={index}
-              className="bg-[#a97457] rounded-xl p-8 shadow-sm border border-orange-300 transition-transform hover:scale-105"
+              className="bg-amber-900 rounded-xl p-8 shadow-sm border border-orange-300 transition-transform hover:scale-105"
             >
               <div className="mb-6">
                 {area.icon}

@@ -43,7 +43,7 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
 
   const timeline = [
     {
-      icon: <Lightbulb className="w-6 h-6 text-orange-500" />,
+      icon: <Lightbulb className="w-6 h-6 text-orange-300" />,
       title: language === 'pt' ? 'Concepção do Projeto' : 'Project Conception',
       description:
         language === 'pt'
@@ -51,7 +51,7 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
           : 'Creation of the Africa 360 initiative focused on transforming African tourism through authentic connections, sustainability, and cultural appreciation.'
     },
     {
-      icon: <Target className="w-6 h-6 text-orange-500" />,
+      icon: <Target className="w-6 h-6 text-orange-300" />,
       title: language === 'pt' ? 'Definição da Visão e Missão' : 'Vision and Mission Definition',
       description:
         language === 'pt'
@@ -59,7 +59,7 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
           : 'Vision: Transform African tourism. Mission: Create experiences that benefit local communities and foster cross-cultural understanding.'
     },
     {
-      icon: <Flag className="w-6 h-6 text-orange-500" />,
+      icon: <Flag className="w-6 h-6 text-orange-300" />,
       title: language === 'pt' ? 'Escolha da África do Sul' : 'Choosing South Africa',
       description:
         language === 'pt'
@@ -67,7 +67,7 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
           : 'A strategic and symbolic country with advanced infrastructure, leadership in cultural debates, and home to key Pan-African institutions.'
     },
     {
-      icon: <MapPin className="w-6 h-6 text-orange-500" />,
+      icon: <MapPin className="w-6 h-6 text-orange-300" />,
       title: language === 'pt' ? 'Início em Joanesburgo' : 'Launch in Johannesburg',
       description:
         language === 'pt'
@@ -75,7 +75,7 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
           : 'Sub-Saharan Africa’s financial hub. The ideal starting point for sowing ancestral reconnection and building bridges between Africa and Brazil.'
     },
     {
-      icon: <Link2 className="w-6 h-6 text-orange-500" />,
+      icon: <Link2 className="w-6 h-6 text-orange-300" />,
       title: language === 'pt' ? 'Expansão e Conexão com o Brasil' : 'Expansion and Connection with Brazil',
       description:
         language === 'pt'
@@ -85,34 +85,40 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
   ];
 
   return (
-    <section id="project" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">{t.title}</h2>
-          <p className="text-xl text-gray-600">{t.subtitle}</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="bg-[#a97457] p-8 rounded-xl shadow-md transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <Target className="w-12 h-12 text-orange-500 mb-6" />
-            <h3 className="text-2xl font-bold mb-4 text-white">{t.vision}</h3>
-            <p className="text-lg text-gray-100">{t.visionText}</p>
+    <>
+      {/* Seção marrom escuro com cards brancos */}
+      <section id="project" className="py-20 bg-amber-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-white">{t.title}</h2>
+            <p className="text-xl text-amber-100">{t.subtitle}</p>
           </div>
 
-          <div className="bg-[#a97457] p-8 rounded-xl shadow-md transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <Flag className="w-12 h-12 text-orange-500 mb-6" />
-            <h3 className="text-2xl font-bold mb-4 text-white">{t.mission}</h3>
-            <p className="text-lg text-gray-100">{t.missionText}</p>
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div className="bg-white p-8 rounded-xl shadow-md transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <Target className="w-12 h-12 text-orange-500 mb-6" />
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">{t.vision}</h3>
+              <p className="text-lg text-gray-700">{t.visionText}</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-md transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <Flag className="w-12 h-12 text-orange-500 mb-6" />
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">{t.mission}</h3>
+              <p className="text-lg text-gray-700">{t.missionText}</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-md mb-16">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900 text-center">{t.whySouthAfricaTitle}</h3>
+            <p className="text-lg text-gray-700">{t.whySouthAfricaText}</p>
           </div>
         </div>
+      </section>
 
-        <div className="bg-[#a97457] p-8 rounded-xl shadow-md mb-16">
-          <h3 className="text-2xl font-bold mb-4 text-white text-center">{t.whySouthAfricaTitle}</h3>
-          <p className="text-lg text-gray-100">{t.whySouthAfricaText}</p>
-        </div>
-
-        <div className="bg-[#a97457] p-8 rounded-xl shadow-md">
-          <h3 className="text-2xl font-bold text-center mb-12 text-white">{t.timelineTitle}</h3>
+      {/* Linha do tempo: fundo branco com cards marrons */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h3 className="text-2xl font-bold text-center mb-12 text-gray-900">{t.timelineTitle}</h3>
           <div className="relative">
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-orange-500"></div>
 
@@ -124,12 +130,12 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
                 }`}
               >
                 <div className="w-full md:w-1/2 px-4">
-                  <div className="bg-white border border-orange-200 shadow-lg rounded-xl p-6 relative hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white border-4 border-orange-500 rounded-full w-12 h-12 flex items-center justify-center z-10">
+                  <div className="bg-[#78350f] border border-orange-300 shadow-lg rounded-xl p-6 relative hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                    <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#78350f] border-4 border-orange-500 rounded-full w-12 h-12 flex items-center justify-center z-10">
                       {item.icon}
                     </div>
-                    <h4 className="text-xl font-bold text-center text-gray-900 mt-6 mb-2">{item.title}</h4>
-                    <p className="text-gray-700 text-center">{item.description}</p>
+                    <h4 className="text-xl font-bold text-center text-white mt-6 mb-2">{item.title}</h4>
+                    <p className="text-amber-100 text-center">{item.description}</p>
                   </div>
                 </div>
                 <div className="hidden md:block w-1/2"></div>
@@ -137,8 +143,8 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

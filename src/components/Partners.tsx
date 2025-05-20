@@ -45,7 +45,7 @@ const Partners: React.FC<PartnersProps> = ({ language }) => {
           {partners.map((partner, index) => (
             <div 
               key={index} 
-              className="bg-[#a97457] rounded-lg p-6 shadow-sm flex items-center justify-center h-56 w-80 hover:shadow-md transition-all"
+              className="bg-amber-900 rounded-lg p-6 shadow-sm flex items-center justify-center h-56 w-80 hover:shadow-md transition-all"
             >
               <img 
                 src={partner.image} 
@@ -60,7 +60,7 @@ const Partners: React.FC<PartnersProps> = ({ language }) => {
           <p className="text-gray-600 text-lg">{t.message}</p>
         </div>
 
-        <div className="max-w-2xl mx-auto bg-[#a97457] rounded-xl p-8 text-center">
+        <div className="max-w-2xl mx-auto bg-amber-900 rounded-xl p-8 text-center">
           <h3 className="text-2xl font-bold mb-3 text-white">{t.joinTitle}</h3>
           <p className="text-white mb-6">{t.joinText}</p>
           <a 

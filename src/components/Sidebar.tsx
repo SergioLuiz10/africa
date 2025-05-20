@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logoleal from '../assets/logoleao.png';
+import logoleal from '../assets/Logao.png';
 
 interface SidebarProps {
   language: 'en' | 'pt';
@@ -82,11 +82,21 @@ const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
         `}
       >
         <div className="flex items-center justify-center mb-12 px-4">
-          <img
-            src={logoleal}
-            alt="Logo"
-            className="h-12 object-contain"
-          />
+          <a
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              onClose();
+              const el = document.getElementById('home');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            <img
+              src={logoleal}
+              alt="Logo"
+              className="h-12 object-contain cursor-pointer"
+            />
+          </a>
         </div>
 
         <nav>
