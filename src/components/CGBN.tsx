@@ -189,29 +189,33 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
           </div>
 
           <div>
-            <div className="grid grid-cols-1 gap-6">
-              {t.ecosystems.list.map((ecosystem, index) => (
-                <div
-                  key={index}
-                  className="group overflow-hidden rounded-xl shadow-md"
-                >
-                  <div className="relative">
-                    <img
-                      src={ecosystem.image}
-                      alt={ecosystem.name}
-                      className={`w-full h-[320px] object-cover transition-transform duration-500 group-hover:scale-105 brightness-110`}
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity group-hover:bg-opacity-30"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h4 className="text-xl font-bold text-white mb-2">{ecosystem.name}</h4>
-                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        {ecosystem.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+<div className="grid grid-cols-1 gap-6">
+  {t.ecosystems.list.map((ecosystem, index) => (
+    <div
+      key={index}
+      className="group overflow-hidden rounded-xl shadow-md"
+    >
+      <div className="relative">
+<img
+  src={ecosystem.image}
+  alt={ecosystem.name}
+  className={`w-full h-[320px] object-cover transition-transform duration-500 group-hover:scale-105 brightness-110 ${
+    ecosystem.name === 'Sindiswa Mzamo' ? 'object-[center_14%]' : 'object-top'
+  }`}
+/>
+
+        <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity group-hover:bg-opacity-30"></div>
+        <div className="absolute bottom-0 left-0 right-0 p-6">
+          <h4 className="text-xl font-bold text-white mb-2">{ecosystem.name}</h4>
+          <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {ecosystem.description}
+          </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
           </div>
         </div>
 
