@@ -65,6 +65,7 @@ function App() {
         <section id="kindezi"><KindeziBAL language={language} /></section>
         <section id="cgbn"><CGBN language={language} /></section>
         <section id="clipping"><Clipping language={language} /></section>
+        <section id="gallery"><Gallery language={language} /></section>
         <section id="contact"><Contact language={language} /></section>
         <Footer language={language} />
       </main>

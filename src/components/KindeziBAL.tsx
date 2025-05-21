@@ -1,5 +1,5 @@
 import React from 'react';
-import imagemKindezi from '../assets/Sindi.jpg'; // substitua pela imagem real
+import imagemKindezi from '../assets/DJARA.png'; // ajuste o caminho conforme necessário
 
 interface KindeziBALProps {
   language: string;
@@ -32,35 +32,35 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
   const t = content[language as keyof typeof content];
 
   return (
-    <section id="kindezi" className="py-20 bg-amber-900">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="kindezi" className="py-20 bg-[#8a3d14] relative overflow-hidden">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">{t.title}</h2>
           <p className="text-lg text-white">{t.subtitle}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Imagem lateral */}
-          <div className="overflow-hidden rounded-2xl shadow-lg border border-orange-300">
-            <img
-              src={imagemKindezi}
-              alt="Imagem Kindezi BAL"
-              className="w-full h-auto object-cover"
-            />
-          </div>
+      <div className="relative z-10 flex flex-col md:flex-row items-start">
+  {/* Cards de texto - esquerda */}
+  <div className="space-y-8 md:w-2/3 pr-4 z-10">
+    {t.paragraphs.map((paragraph, index) => (
+      <div
+        key={index}
+        className="bg-white text-[#4a2c1a] border-l-4 border-orange-500 rounded-2xl p-6 text-lg shadow-md max-w-xl animate-slide-in-left"
+      >
+        {paragraph}
+      </div>
+    ))}
+  </div>
 
-          {/* Blocos de texto em cards brancos */}
-          <div className="space-y-6">
-            {t.paragraphs.map((paragraph, index) => (
-              <div
-                key={index}
-                className="bg-white text-[#4a2c1a] border-l-4 border-orange-500 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
-              >
-                {paragraph}
-              </div>
-            ))}
-          </div>
-        </div>
+  {/* Imagem - canto inferior direito */}
+  <div className="hidden md:block absolute bottom-0 right-0 z-0">
+    <img
+      src={imagemKindezi}
+      alt="Imagem Kindezi BAL"
+      className="w-[380px] lg:w-[460px] animate-slide-in-right"
+    />
+  </div>
+</div>
       </div>
     </section>
   );

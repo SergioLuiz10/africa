@@ -116,3 +116,23 @@
 .animate-wave {
   animation: wave 5s ease-in-out infinite;
 }
+
+
+/* Scrollbar estilizada para navegadores WebKit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #3b1f13; /* marrom escuro - igual ao brown.700 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a2b1b; /* marrom médio - brown.600 */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5a321e; /* hover um pouco mais claro */
+}

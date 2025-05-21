@@ -2,6 +2,7 @@ import React from 'react';
 import { Leaf, Droplet, Wind, Globe, TreePine } from 'lucide-react';
 import imagemdela2 from '../assets/imagemdela2.jpg';
 import americacgbw from '../assets/imagemdela.jpg';
+import SINDI from '../assets/Sindi.jpg';
 
 interface CGBNProps {
   language: string;
@@ -49,14 +50,25 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
         title: 'Impacto internacional',
         list: [
           {
-            name: 'Dijara Santos ',
-            description: 'Presidente do CGBW no Brasil',
+            name: 'Dijara Santos',
+            description: language === 'pt'
+              ? 'Presidente do CGBW no Brasil'
+              : 'CGBW President in Brazil',
             image: imagemdela2
           },
           {
             name: 'Lucia Stanislas',
-            description: 'Presidente do CGBW no Brasil na América',
+            description: language === 'pt'
+              ? 'Presidente do CGBW na América'
+              : 'CGBW President in America',
             image: americacgbw
+          },
+          {
+            name: 'Sindiswa Mzamo',
+            description: language === 'pt'
+              ? 'Presidente Global do Circle of Global Business Women'
+              : 'Global President at Circle of Global Business Women',
+            image: SINDI
           }
         ]
       },
@@ -115,6 +127,11 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
             name: 'Lucia Stanislas',
             description: 'CGBW President in America',
             image: americacgbw
+          },
+          {
+            name: 'Sindiswa Mzamo',
+            description: 'Global President at Circle of Global Business Women',
+            image: SINDI
           }
         ]
       },
@@ -136,19 +153,20 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
   return (
     <section id="cgbn" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">{t.title}</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-2 text-gray-900">{t.title}</h2>
           <p className="text-xl text-gray-700">{t.subtitle}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid md:grid-cols-2 gap-12 items-start mb-4 mt-[-40px] md:items-stretch">
           <div>
-            <p className="text-lg text-gray-800 mb-8 leading-relaxed">{t.intro}</p>
-            <div className="bg-amber-900 p-6 rounded-lg shadow-md mb-8">
+            <p className="text-lg text-gray-800 mb-6 leading-relaxed">{t.intro}</p>
+
+            <div className="bg-amber-900 p-6 rounded-lg shadow-md mt-28 mb-28">
               <p className="text-lg italic text-orange-100 leading-relaxed">{t.mission}</p>
             </div>
 
-            <h3 className="text-xl font-bold mb-6 text-gray-900">{t.projects.title}</h3>
+            <h3 className="text-xl font-bold mt-24 mb-6 text-gray-900">{t.projects.title}</h3>
             <ul className="space-y-3 mb-8">
               {t.projects.list.map((project, index) => (
                 <li key={index} className="flex items-start">
@@ -175,13 +193,13 @@ const CGBN: React.FC<CGBNProps> = ({ language }) => {
               {t.ecosystems.list.map((ecosystem, index) => (
                 <div
                   key={index}
-                  className="group overflow-hidden rounded-xl shadow-md h-96"
+                  className="group overflow-hidden rounded-xl shadow-md"
                 >
-                  <div className="relative h-full">
+                  <div className="relative">
                     <img
                       src={ecosystem.image}
                       alt={ecosystem.name}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-110"
+                      className={`w-full h-[320px] object-cover transition-transform duration-500 group-hover:scale-105 brightness-110`}
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity group-hover:bg-opacity-30"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6">

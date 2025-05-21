@@ -12,78 +12,128 @@ const Clipping: React.FC<ClippingProps> = ({ language }) => {
   const [activeFilter, setActiveFilter] = useState('blogs');
 
   const content = {
-    pt: {
-      title: 'Clipping',
-      subtitle: 'Cobertura de mídia e notícias sobre nossas iniciativas',
-      filters: {
-        blogs: 'Blogs',
-        videos: 'Vídeos'
-      },
-      articles: [
-        {
-          title: 'Shopping Bela Vista recebe a 2ª edição da roda de conversa "De onde viemos, para onde vamos?"',
-          source: 'Lícia Fábio',
-          date: '13/05/2024',
-          excerpt: 'Evento promove reflexões sobre ancestralidade e afroempreendedorismo no Novembro Negro.',
-          type: 'blogs',
-          link: 'https://www.liciafabio.com.br/shopping-bela-vista-recebe-a-2a-edicao-da-roda-de-conversa-de-onde-viemos-para-onde-vamos/'
-        },
-        {
-          title: 'Roda de Conversa: "De onde viemos, para onde vamos?"',
-          source: 'Salvador Notícias',
-          date: '10/01/2025',
-          excerpt: 'Discussão sobre identidade negra e futuro dos negócios afrocentrados em Salvador.',
-          type: 'blogs',
-          link: 'https://www.salvadornoticias.com/2025/01/roda-de-conversa-de-onde-viemos-para.html'
-        },
-        {
-          title: 'Shopping Bela Vista segue com exposição "Pessoas Negras, Negócios Potentes"',
-          source: 'Revista Yacht',
-          date: '20/11/2024',
-          excerpt: 'Mostra celebra o afroempreendedorismo com rodas de conversa e homenagens.',
-          type: 'blogs',
-          link: 'https://www.revistayacht.com.br/shopping-bela-vista-segue-com-exposicao-pessoas-negras-negocios-potentes-e-traz-serie-de-rodas-de-conversas/'
-        },
-        {
-          title: 'Vídeo Institucional África 360',
-          source: 'YouTube',
-          date: '01/05/2025',
-          excerpt: 'Conheça os pilares e os objetivos do projeto em nosso vídeo institucional.',
-          type: 'videos',
-          link: 'https://www.youtube.com/watch?v=EXEMPLO1'
-        },
-        {
-          title: 'Entrevista com organizadores',
-          source: 'TV Bahia',
-          date: '10/04/2025',
-          excerpt: 'Organizadores falam sobre a importância da iniciativa e seus impactos.',
-          type: 'videos',
-          link: 'https://www.youtube.com/watch?v=EXEMPLO2'
-        },
-        {
-          title: 'Documentário sobre a mostra "Negócios Potentes"',
-          source: 'AfroTV',
-          date: '20/03/2025',
-          excerpt: 'Um olhar documental sobre a exposição de afroempreendedores.',
-          type: 'videos',
-          link: 'https://www.youtube.com/watch?v=EXEMPLO3'
-        }
-      ],
-      readMore: 'Leia mais',
-      noResults: 'Nenhum artigo encontrado com esses filtros.'
+  pt: {
+    title: 'Clipping',
+    subtitle: 'Cobertura de mídia e notícias sobre nossas iniciativas',
+    filters: {
+      blogs: 'Blogs',
+      videos: 'Vídeos'
     },
-    en: {
-      title: 'Clipping',
-      subtitle: 'Media coverage and news about our initiatives',
-      filters: {
-        blogs: 'Blogs',
-        videos: 'Videos'
+    articles: [
+      {
+        title: 'Shopping Bela Vista recebe a 2ª edição da roda de conversa "De onde viemos, para onde vamos?"',
+        source: 'Lícia Fábio',
+        date: '13/05/2024',
+        excerpt: 'Evento promove reflexões sobre ancestralidade e afroempreendedorismo no Novembro Negro.',
+        type: 'blogs',
+        link: 'https://www.liciafabio.com.br/shopping-bela-vista-recebe-a-2a-edicao-da-roda-de-conversa-de-onde-viemos-para-onde-vamos/'
       },
-      articles: [],
-      readMore: 'Read more',
-      noResults: 'No articles found with these filters.'
-    }
-  };
+      {
+        title: 'Roda de Conversa: "De onde viemos, para onde vamos?"',
+        source: 'Salvador Notícias',
+        date: '10/01/2025',
+        excerpt: 'Discussão sobre identidade negra e futuro dos negócios afrocentrados em Salvador.',
+        type: 'blogs',
+        link: 'https://www.salvadornoticias.com/2025/01/roda-de-conversa-de-onde-viemos-para.html'
+      },
+      {
+        title: 'Shopping Bela Vista segue com exposição "Pessoas Negras, Negócios Potentes"',
+        source: 'Revista Yacht',
+        date: '20/11/2024',
+        excerpt: 'Mostra celebra o afroempreendedorismo com rodas de conversa e homenagens.',
+        type: 'blogs',
+        link: 'https://www.revistayacht.com.br/shopping-bela-vista-segue-com-exposicao-pessoas-negras-negocios-potentes-e-traz-serie-de-rodas-de-conversas/'
+      },
+      {
+        title: 'Vídeo Institucional África 360',
+        source: 'YouTube',
+        date: '01/05/2025',
+        excerpt: 'Conheça os pilares e os objetivos do projeto em nosso vídeo institucional.',
+        type: 'videos',
+        link: 'https://www.youtube.com/watch?v=EXEMPLO1'
+      },
+      {
+        title: 'Entrevista com organizadores',
+        source: 'TV Bahia',
+        date: '10/04/2025',
+        excerpt: 'Organizadores falam sobre a importância da iniciativa e seus impactos.',
+        type: 'videos',
+        link: 'https://www.youtube.com/watch?v=EXEMPLO2'
+      },
+      {
+        title: 'Documentário sobre a mostra "Negócios Potentes"',
+        source: 'AfroTV',
+        date: '20/03/2025',
+        excerpt: 'Um olhar documental sobre a exposição de afroempreendedores.',
+        type: 'videos',
+        link: 'https://www.youtube.com/watch?v=EXEMPLO3'
+      }
+    ],
+    readMore: 'Leia mais',
+    noResults: 'Nenhum artigo encontrado com esses filtros.'
+  },
+  en: {
+    title: 'Clipping',
+    subtitle: 'Media coverage and news about our initiatives',
+    filters: {
+      blogs: 'Blogs',
+      videos: 'Videos'
+    },
+    articles: [
+      {
+        title: 'Shopping Bela Vista hosts 2nd edition of the talk "Where do we come from, where are we going?"',
+        source: 'Lícia Fábio',
+        date: '05/13/2024',
+        excerpt: 'Event promotes reflections on ancestry and Black entrepreneurship during Black November.',
+        type: 'blogs',
+        link: 'https://www.liciafabio.com.br/shopping-bela-vista-recebe-a-2a-edicao-da-roda-de-conversa-de-onde-viemos-para-onde-vamos/'
+      },
+      {
+        title: 'Talk: "Where do we come from, where are we going?"',
+        source: 'Salvador Notícias',
+        date: '01/10/2025',
+        excerpt: 'Discussion about Black identity and the future of Afro-centered businesses in Salvador.',
+        type: 'blogs',
+        link: 'https://www.salvadornoticias.com/2025/01/roda-de-conversa-de-onde-viemos-para.html'
+      },
+      {
+        title: 'Shopping Bela Vista continues with the exhibition "Black People, Powerful Businesses"',
+        source: 'Revista Yacht',
+        date: '11/20/2024',
+        excerpt: 'Exhibit celebrates Black entrepreneurship with talks and tributes.',
+        type: 'blogs',
+        link: 'https://www.revistayacht.com.br/shopping-bela-vista-segue-com-exposicao-pessoas-negras-negocios-potentes-e-traz-serie-de-rodas-de-conversas/'
+      },
+      {
+        title: 'África 360 Institutional Video',
+        source: 'YouTube',
+        date: '05/01/2025',
+        excerpt: 'Discover the project’s pillars and goals in our institutional video.',
+        type: 'videos',
+        link: 'https://www.youtube.com/watch?v=EXEMPLO1'
+      },
+      {
+        title: 'Interview with organizers',
+        source: 'TV Bahia',
+        date: '04/10/2025',
+        excerpt: 'Organizers talk about the importance of the initiative and its impact.',
+        type: 'videos',
+        link: 'https://www.youtube.com/watch?v=EXEMPLO2'
+      },
+      {
+        title: 'Documentary on the "Powerful Businesses" exhibition',
+        source: 'AfroTV',
+        date: '03/20/2025',
+        excerpt: 'A documentary look at the exhibition of Black entrepreneurs.',
+        type: 'videos',
+        link: 'https://www.youtube.com/watch?v=EXEMPLO3'
+      }
+    ],
+    readMore: 'Read more',
+    noResults: 'No articles found with these filters.'
+  }
+};
+
 
   const t = content[language as keyof typeof content];
   const filteredArticles = t.articles.filter(article => article.type === activeFilter);

@@ -1,5 +1,5 @@
 import React from 'react';
-import leoaMulher from '../assets/Leao.jpg'; // ajuste se necessário
+import leoaMulher from '../assets/Leao.jpg'; // ajuste o caminho se necessário
 
 interface AboutProps {
   language: string;
@@ -36,28 +36,24 @@ const About: React.FC<AboutProps> = ({ language }) => {
   const t = content[selectedLanguage as keyof typeof content];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section
+      id="about"
+      className="py-20 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${leoaMulher})` }}
+    >
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-amber-900">{t.title}</h2>
-          <p className="text-xl text-amber-800 leading-relaxed">{t.description}</p>
+        <div className="max-w-3xl text-left mb-12 bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-md">
+            {t.title}
+          </h2>
+          <p className="text-xl text-white drop-shadow-md">{t.description}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto mt-12">
-          {/* Texto */}
-          <div className="bg-[#78350f] p-8 rounded-xl shadow-md animate-slide-up">
-            <h3 className="text-2xl font-bold mb-4 text-white">{t.nameTitle}</h3>
+        <div className="flex justify-start">
+          <div className="max-w-xl bg-[#78350fdc] text-white p-8 rounded-2xl shadow-2xl animate-slide-up backdrop-blur-sm">
+            <h3 className="text-2xl font-bold mb-4">{t.nameTitle}</h3>
             <p className="text-amber-100 leading-relaxed">{t.paragraph1}</p>
             <p className="text-amber-100 mt-4 leading-relaxed">{t.paragraph2}</p>
-          </div>
-
-          {/* Imagem */}
-          <div className="rounded-xl overflow-hidden shadow-lg border border-amber-300 scale-105">
-            <img
-              src={leoaMulher}
-              alt="Dijara and lioness"
-              className="w-full h-auto object-cover"
-            />
           </div>
         </div>
       </div>

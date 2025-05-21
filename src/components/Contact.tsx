@@ -7,15 +7,15 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ language }) => {
   const content = {
-    pt: {
+  pt: {
     title: 'Entre em Contato',
     subtitle: 'Estamos ansiosos para ouvir de você',
     address: 'Endereço',
-    addressText: 'Av. das Nações, 123 - São Paulo, Brasil',
+    addressText: 'Hub Salvador - Avenida da França, 393 - Comércio, Salvador - BA, 40010-000, Brasil',
     mapsEmbed:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.6950404976934!2d-46.65598182483318!3d-23.580060762529333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d90bfa9eab%3A0x25d9f0b23e9996cf!2sAv.%20das%20Na%C3%A7%C3%B5es%20Unidas%2C%20123%20-%20S%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1716139390000!5m2!1spt-BR!2sbr',
+      'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15691.85101352536!2d-38.514045!3d-13.000364!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716038fb5e8e7e1%3A0xe6ac1722857e2e88!2sHub%20Salvador!5e0!3m2!1spt-BR!2sbr!4v1716216900000!5m2!1spt-BR!2sbr',
     phone: 'Telefone',
-    phoneText: '+55 (71) 993305723',
+    phoneText: '+55 (71) 99330-5723',
     phoneLink: 'https://wa.me/5571993305723',
     emailContact: 'Email',
     emailText: 'contato@africa360.org',
@@ -25,17 +25,18 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
     title: 'Get in Touch',
     subtitle: "We're excited to hear from you",
     address: 'Address',
-    addressText: 'Avenida da França, 393 - Salvador, BA, Brazil',
+    addressText: 'Hub Salvador - Avenida da França, 393 - Comércio, Salvador - BA, 40010-000, Brazil',
     mapsEmbed:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.6950404976934!2d-46.65598182483318!3d-23.580060762529333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d90bfa9eab%3A0x25d9f0b23e9996cf!2sAv.%20das%20Na%C3%A7%C3%B5es%20Unidas%2C%20123%20-%20S%C3%A3o%20Paulo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1716139390000!5m2!1spt-BR!2sbr',
+      'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15691.85101352536!2d-38.514045!3d-13.000364!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716038fb5e8e7e1%3A0xe6ac1722857e2e88!2sHub%20Salvador!5e0!3m2!1sen!2sbr!4v1716216900000!5m2!1sen!2sbr',
     phone: 'Phone',
-    phoneText: '+55 (71) 993305723',
+    phoneText: '+55 (71) 99330-5723',
     phoneLink: 'https://wa.me/5571993305723',
     emailContact: 'Email',
     emailText: 'contact@africa360.org',
     emailLink: 'mailto:contact@africa360.org'
   }
 };
+
 
   const t = content[language as keyof typeof content];
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import { AtSign, Phone, MapPin } from 'lucide-react';
-import imagemdela from '../assets/imagemdela.jpg';
+import imagemdela from '../assets/asminascontent 11.jpg';
 
 interface DelaProps {
   language: 'pt' | 'en';
@@ -17,12 +16,6 @@ const Dela: React.FC<DelaProps> = ({ language }) => {
       vision: 'Acreditamos que internacionalizar um negócio é também internacionalizar uma narrativa. Por isso, a DeLá constrói pontes de acesso, diálogo e crescimento, reconhecendo o lugar do afroempreendedor no centro da mudança.',
       project: 'O Africa 360, projeto estruturado pela DeLá, é uma das principais ações desse compromisso — um programa que conecta, forma e inspira afroempreendedores a expandirem seus negócios em conexão com o continente africano e a diáspora.',
       conclusion: 'Com estratégia, afeto e visão de futuro, a DeLá transforma trajetórias negras em referências globais.',
-      contact: {
-        title: 'Entre em contato',
-        email: 'dela@africatrip.com',
-        phone: '+254 123 456 789',
-        address: 'Nairobi, Quênia'
-      }
     },
     en: {
       title: 'DeLá',
@@ -33,12 +26,6 @@ const Dela: React.FC<DelaProps> = ({ language }) => {
       vision: 'We believe that internationalizing a business also means internationalizing a narrative. That’s why DeLá builds bridges of access, dialogue, and growth, placing Afro-entrepreneurs at the center of change.',
       project: 'Africa 360, a program structured by DeLá, is one of the main initiatives of this commitment — a project that connects, trains, and inspires Afro-entrepreneurs to expand their businesses in connection with the African continent and the diaspora.',
       conclusion: 'With strategy, care, and a future-focused vision, DeLá turns Black trajectories into global references.',
-      contact: {
-        title: 'Get in touch',
-        email: 'dela@africatrip.com',
-        phone: '+254 123 456 789',
-        address: 'Nairobi, Kenya'
-      }
     }
   };
 
@@ -80,30 +67,12 @@ const Dela: React.FC<DelaProps> = ({ language }) => {
           </div>
 
           <div>
-            <div className="rounded-xl overflow-hidden shadow-lg mb-8">
+            <div className="rounded-xl overflow-hidden shadow-lg">
               <img 
                 src={imagemdela} 
                 alt="African women artisans" 
                 className="w-full h-auto"
               />
-            </div>
-
-            <div className="mt-8 bg-orange-500 rounded-xl p-6 text-white">
-              <h3 className="text-xl font-bold mb-4">{t.contact.title}</h3>
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <AtSign className="w-5 h-5 mr-3" />
-                  <p>{t.contact.email}</p>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3" />
-                  <p>{t.contact.phone}</p>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3" />
-                  <p>{t.contact.address}</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

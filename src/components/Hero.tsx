@@ -11,7 +11,6 @@ import backgroundImage from '../assets/Background.png';
 import favela from '../assets/FavelaTech-Logotipo-Negativo.png';
 import dela from '../assets/Delaaa.png';
 import pais from '../assets/Paises.png';
-import ELAsemfundo from '../assets/Elasemfund.png';
 
 interface HeroProps {
   language: 'en' | 'pt';
@@ -42,8 +41,8 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: '#3b1d10',
-        backgroundBlendMode: 'overlay',
+        backgroundColor: '#8a5a3a', // cor mais clara
+        backgroundBlendMode: 'soft-light', // blend mais suave
       }}
     >
       {/* Menu de idioma e redes sociais */}
@@ -78,7 +77,7 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
         <img
           src={logo}
           alt="África 360"
-           className="mx-auto w-64 sm:w-72 md:w-80 animate-pulse mb-6"
+          className="mx-auto w-64 sm:w-72 md:w-80 animate-pulse mb-6"
         />
 
         <p className="text-base sm:text-xl text-white/90 px-2 animate-fadeIn delay-100 mb-4">
@@ -102,14 +101,7 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
       <img
         src={favela}
         alt="Favela Tech"
-        className="absolute top-4 left-4 w-24 sm:w-28 animate-bounce"
-      />
-
-      {/* Imagem da mulher reposicionada para evitar sobreposição */}
-      <img
-        src={ELAsemfundo}
-        alt="Imagem mulher"
-        className="absolute bottom-0 right-[-40px] translate-x-[10%] max-h-[90%] w-auto object-contain pointer-events-none select-none z-0"
+        className="absolute bottom-4 right-4 w-24 sm:w-28 animate-bounce"
       />
     </section>
   );
