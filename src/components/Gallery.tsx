@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-import Mulher1 from '../assets/imagem1.jpg';
-import Homem1 from '../assets/HOmem1.jpg';
-import Sindi from '../assets/Sindi.jpg';
+import Mulher1 from '../assets/choro.jpg';
+import Homem1 from '../assets/aula.jpg';
 import Bonde from '../assets/bonde.jpg';
 import Galera from '../assets/bonde2.jpg';
 import aula from '../assets/aulaaa2.jpg';
+import galeria1 from '../assets/galeria1.jpg';
+import galeria2 from '../assets/ABRACOGALERIA2.jpg';
+import galeria3 from '../assets/GALERIA3.jpg';
 
 interface GalleryProps {
   language: string;
@@ -30,7 +32,18 @@ const Gallery: React.FC<GalleryProps> = ({ language }) => {
   };
 
   const t = content[language as keyof typeof content];
-  const images = [Mulher1, Homem1, Sindi, Bonde, Galera, aula];
+const images = [
+  Galera,
+  Bonde,
+  aula,
+  Homem1,
+  galeria2,
+  galeria3,
+  Mulher1,
+  galeria1,
+  
+];
+
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const handleNext = () => {

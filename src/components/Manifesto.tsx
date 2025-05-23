@@ -30,7 +30,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
 
   const content = {
     pt: {
-      title: "Manifesto Africa 360",
+      title: "Mánifesto Africa 360",
       subtitle: "Por Inteiro. Por Inteiros.",
       introduction:
         "Somos filhos da diáspora, netos de reis e rainhas, herdeiros de civilizações que construíram ciência, arte, espiritualidade e resistência.",
