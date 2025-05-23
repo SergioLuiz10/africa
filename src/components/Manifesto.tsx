@@ -150,7 +150,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
                 />
                 <div className="bg-[#4a2c1a] py-4 text-center">
                   <h3 className="text-white text-2xl font-semibold animate-fade-in">
-                    Turma Mario Nelson Carvalho
+                    Turma Mário Nelson Carvalho
                   </h3>
                 </div>
               </div>
