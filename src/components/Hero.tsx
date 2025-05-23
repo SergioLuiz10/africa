@@ -10,7 +10,7 @@ import logo from '../assets/Africa360-Logotipo-Negativo.png';
 import backgroundImage from '../assets/Background.png';
 import favela from '../assets/FavelaTech-Logotipo-Negativo.png';
 import dela from '../assets/Delaaa.png';
-import pais from '../assets/BANDEIRAS.png';
+import pais from '../assets/BANDEIRAS_separado.png';
 
 interface HeroProps {
   language: 'en' | 'pt';
