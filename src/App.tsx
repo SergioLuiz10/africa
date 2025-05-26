@@ -16,8 +16,7 @@ import Favela from './components/Favela';
 import CGBN from './components/CGBN';
 import KindeziBAL from './components/KindeziBAL';
 import Clipping from './components/Clipping';
-import Sponsorship from './components/Sponsorship';
-
+import Dijara from './components/dijara';
 import marca from './assets/imagem1.jpg';
 
 function App() {
@@ -55,6 +54,7 @@ function App() {
         </section>
         <section id="manifesto"><Manifesto language={language} /></section>
         <section id="about"><About language={language} /></section>
+        <section id="dijara"><Dijara language={language} /></section>
         <section id="project"><Project language={language} /></section>
         <section id="impact"><Impact language={language} /></section>
         <section id="mentorship"><Mentorship language={language} /></section>
@@ -67,6 +67,8 @@ function App() {
         <section id="clipping"><Clipping language={language} /></section>
         <section id="gallery"><Gallery language={language} /></section>
         <section id="contact"><Contact language={language} /></section>
+
+      
         <Footer language={language} />
       </main>
     </div>

@@ -30,7 +30,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
 
   const content = {
     pt: {
-      title: "Mánifesto Africa 360",
+      title: "Manifesto Africa 360",
       subtitle: "Por Inteiro. Por Inteiros.",
       introduction:
         "Somos filhos da diáspora, netos de reis e rainhas, herdeiros de civilizações que construíram ciência, arte, espiritualidade e resistência.",
@@ -43,7 +43,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
         {
           title: "Visão Circular",
           content:
-            "Somos uma plataforma de visão circular: olhamos para o passado com respeito, para o presente com coragem e para o futuro com estratégia.",
+            "Somos uma plataforma de visão circular: olhamos para o passado com respeito, para o presente com coragem e para o futuro com estratégia. Queremos o todo. Queremos por inteiro.",
         },
         {
           title: "Cultura Viva",
@@ -74,7 +74,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
         {
           title: "Circular Vision",
           content:
-            "We are a platform with a circular vision: we look to the past with respect, to the present with courage, and to the future with strategy.",
+            "We are a platform with a circular vision: we look to the past with respect, to the present with courage, and to the future with strategy. We want it all. We want it wholly.",
         },
         {
           title: "Living Culture",
@@ -142,17 +142,15 @@ const Manifesto: React.FC<ManifestoProps> = ({ language }) => {
             </div>
 
             <div className="rounded-xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
-              <div className="rounded-xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
-                <img
-                  src={imagemManifesto}
-                  alt="African landscape"
-                  className="w-full h-auto"
-                />
-                <div className="bg-[#4a2c1a] py-4 text-center">
-                  <h3 className="text-white text-2xl font-semibold animate-fade-in">
-                    Turma Mário Nelson Carvalho
-                  </h3>
-                </div>
+              <img
+                src={imagemManifesto}
+                alt="African landscape"
+                className="w-full h-auto"
+              />
+              <div className="bg-[#4a2c1a] py-4 text-center">
+                <h3 className="text-white text-2xl font-semibold animate-fade-in">
+                  Turma Mário Nelson Carvalho
+                </h3>
               </div>
             </div>
           </div>

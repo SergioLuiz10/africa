@@ -1,11 +1,5 @@
-import React from 'react';
-import {
-  Target,
-  Flag,
-  Lightbulb,
-  MapPin,
-  Link2
-} from 'lucide-react';
+import React from "react";
+import { Target, Flag, Lightbulb, MapPin, Link2 } from "lucide-react";
 
 interface ProjectProps {
   language: string;
@@ -86,7 +80,6 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
 
   return (
     <>
-      {/* Seção marrom escuro com cards brancos */}
       <section id="project" className="py-20 bg-amber-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -115,13 +108,11 @@ const Project: React.FC<ProjectProps> = ({ language }) => {
         </div>
       </section>
 
-      {/* Linha do tempo: fundo branco com cards marrons */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl font-bold text-center mb-12 text-gray-900">{t.timelineTitle}</h3>
           <div className="relative">
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-orange-500"></div>
-
             {timeline.map((item, index) => (
               <div
                 key={index}

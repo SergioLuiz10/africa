@@ -44,6 +44,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         { label: 'CGBW', href: '#cgbn' },
         { label: 'Kindezi BAL', href: '#kindezi' },
         { label: 'Clipping', href: '#clipping' },
+        { label: 'Dijara', href: '#dijara' },
         { label: 'Patrocínio', href: '#sponsorship' }
       ],
       privacy: 'Política de Privacidade',
@@ -65,6 +66,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
         { label: 'CGBW', href: '#cgbn' },
         { label: 'Kindezi BAL', href: '#kindezi' },
         { label: 'Clipping', href: '#clipping' },
+        { label: 'Dijara', href: '#dijara' },
         { label: 'Sponsorship', href: '#sponsorship' }
       ],
       privacy: 'Privacy Policy',

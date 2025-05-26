@@ -15,6 +15,7 @@ const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
       menuItems: [
         { id: 'manifesto', label: 'Manifesto' },
         { id: 'about', label: 'Quem Somos' },
+         { id: 'dijara', label: 'Dijara' } ,
         { id: 'project', label: 'Projeto' },
         { id: 'impact', label: 'Impacto' },
         { id: 'mentorship', label: 'Mentorias' },
@@ -25,13 +26,15 @@ const Sidebar: React.FC<SidebarProps> = ({ language, isOpen, onClose }) => {
         { id: 'kindezi', label: 'Kindezi BAL' },
         { id: 'cgbn', label: 'CGBW' },
         { id: 'clipping', label: 'Clipping' },
-        { id: 'contact', label: 'Contato' }
+        { id: 'contact', label: 'Contato' },
+          
       ]
     },
     en: {
       menuItems: [
         { id: 'manifesto', label: 'Manifest' },
         { id: 'about', label: 'About Us' },
+       { id: 'dijara', label: 'Dijara' } ,
         { id: 'project', label: 'Project' },
         { id: 'impact', label: 'Impact' },
         { id: 'mentorship', label: 'Mentorships' },
