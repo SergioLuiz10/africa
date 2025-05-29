@@ -80,4 +80,4 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
   );
 };
 
-export default KindeziBAL;
+export default KindeziBAL  ;
