@@ -1,4 +1,3 @@
-// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -38,11 +37,16 @@ export default {
       },
       animation: {
         titlePop: 'popFade 2s ease-in-out infinite',
+        loopScroll: 'loopScroll 40s linear infinite',
       },
       keyframes: {
         popFade: {
           '0%, 100%': { transform: 'scale(1)', opacity: 1 },
           '50%': { transform: 'scale(1.08)', opacity: 0.92 },
+        },
+        loopScroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
     },
