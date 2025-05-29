@@ -8,6 +8,12 @@ import aula from '../assets/aulaaa2.jpg';
 import galeria1 from '../assets/galeria1.jpg';
 import galeria2 from '../assets/ABRACOGALERIA2.jpg';
 import galeria3 from '../assets/GALERIA3.jpg';
+import galeriaimg1 from '../assets/galeriaimg1.jpg'
+import galeriaimg2 from '..//assets/galeriaimg2.jpg'
+import galeriaimg3 from '..//assets/galeriaimg3.jpg'
+import galeriaimg4 from '..//assets/galeriaimg4.jpg'
+import galeriaimg5 from '..//assets/galeriaimg5.jpg'
+import galeriaimg6 from '..//assets/galeriaimg6.jpg'
 
 interface GalleryProps {
   language: string;
@@ -41,6 +47,9 @@ const images = [
   galeria3,
   Mulher1,
   galeria1,
+  galeriaimg1,
+  galeriaimg2,
+  galeriaimg6
   
 ];
 
