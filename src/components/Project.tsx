@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import imagemAfrica from "../assets/Movvvlogo.png"; // Ex: MOV
-import imagemCuriosidades from "../assets/Movvvlogo.png"; // Ex: MOV
 
 interface SouthAfricaProps {
   language: string;
@@ -62,11 +60,7 @@ const SouthAfricaSection: React.FC<SouthAfricaProps> = ({ language }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <img
-              src={imagemAfrica}
-              alt="África do Sul"
-              className="w-full h-52 object-cover"
-            />
+           
             <div className="p-6">
               <h3 className="text-xl font-bold text-orange-700 mb-3">
                 {language === "pt"
@@ -87,11 +81,7 @@ const SouthAfricaSection: React.FC<SouthAfricaProps> = ({ language }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <img
-              src={imagemCuriosidades}
-              alt="Curiosidades da África do Sul"
-              className="w-full h-52 object-cover"
-            />
+          
             <div className="p-6">
               <h3 className="text-xl font-bold text-orange-700 mb-3">
                 {t.factsTitle}
