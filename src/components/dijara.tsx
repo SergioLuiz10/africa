@@ -1,5 +1,5 @@
 import React from "react";
-import dijaraImage from "../assets/DijaraaaaSem.png"; // Verifique se este caminho está correto
+import dijaraImage from "../assets/DijaraaaaSem.png";
 import { motion } from "framer-motion";
 
 interface Dijara {
@@ -9,7 +9,8 @@ interface Dijara {
 const DijaraSection: React.FC<Dijara> = ({ language }) => {
   const content = {
     pt: {
-      title: "Dijara Santos – Liderança Negra em Movimento Global",
+      name: "Dijara Santos",
+      subtitle: "Liderança Negra em Movimento Global",
       paragraphs: [
         "Dijara Santos é uma mulher negra, mãe solo, médica veterinária formada pela Universidade do Estado da Bahia e CEO do projeto Africa 360, uma das iniciativas mais potentes de internacionalização de afroempreendedores no Brasil. Dijara construiu sua trajetória com coragem, visão estratégica e um propósito claro: abrir caminhos para que mais pessoas negras possam acessar oportunidades globais de negócios.",
         "Com mais de 12 anos de experiência como empreendedora e formadora de profissionais, atua na criação de soluções em educação, inovação e mercado para jovens periféricos e afroempreendedores. Sua atuação vai além do território nacional: hoje, está presente em quatro países africanos (África do Sul, Lesotho, Angola e Moçambique). Em 2024, foi nomeada pela primeira-dama do Reino de Lesotho, Sindiswa Mzamo, como Presidenta do Circle Global Business Women (CGBW) no Brasil – uma rede internacional de mulheres de negócios que conecta líderes do continente africano à diáspora, fomentando parcerias econômicas, culturais e sociais.",
@@ -18,7 +19,8 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
       ],
     },
     en: {
-      title: "Dijara Santos – Black Leadership in Global Movement",
+      name: "Dijara Santos",
+      subtitle: "Black Leadership in Global Movement",
       paragraphs: [
         "Dijara Santos is a Black woman, single mother, veterinarian graduated from the State University of Bahia and CEO of the Africa 360 project, one of the most powerful initiatives for the internationalization of Black entrepreneurs in Brazil. Dijara built her path with courage, strategic vision, and a clear purpose: to open pathways for more Black people to access global business opportunities.",
         "With over 12 years of experience as an entrepreneur and educator, she develops solutions in education, innovation, and market access for marginalized youth and Black entrepreneurs. Her impact extends beyond national borders — today, she is active in four African countries (South Africa, Lesotho, Angola, and Mozambique). In 2024, she was appointed by the First Lady of the Kingdom of Lesotho, Sindiswa Mzamo, as President of the Circle Global Business Women (CGBW) in Brazil — an international network of businesswomen connecting African leaders to the diaspora and fostering economic, cultural, and social partnerships.",
@@ -31,15 +33,15 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
   const t = content[language];
 
   return (
-    // Alterado o background da seção para um tom de marrom do site
-    // e ajustada a cor do texto do título para branco para melhor contraste.
-    <section className="bg-[#603e2e] py-1 md:py-0.8" id="dijara">
+    <section className="bg-[#603e2e] py-6 md:py-10" id="dijara">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          {/* Alterada a cor do texto do título para branco */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-2">
-            {t.title}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-white">
+            {t.name}
           </h2>
+          <p className="mt-3 text-sm md:text-base text-gray-300">
+            {t.subtitle}
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -53,10 +55,7 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
             <img
               src={dijaraImage}
               alt="Dijara Santos"
-              // className foi mantido como "" conforme o último código fornecido.
-              // Se precisar de estilos como borda arredondada, sombra, etc., adicione classes aqui.
-              // Ex: "rounded-2xl shadow-lg w-full max-w-md md:max-w-lg lg:max-w-xl"
-              className=""
+              className="w-[85%] max-w-sm border-4 border-orange-400 rounded-xl shadow-lg"
             />
           </motion.div>
 
