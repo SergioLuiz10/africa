@@ -27,7 +27,7 @@ const Partners: React.FC<PartnersProps> = ({ language }) => {
         "We are proud to work with partners committed to the sustainable development of Africa.",
       joinTitle: "Become a Partner",
       joinText: "Join us on this journey of impact and transformation.",
-      joinButton: "Get in Touch",
+      joinButton: "Get in Touch" ,
     },
   };
 
