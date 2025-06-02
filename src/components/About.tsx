@@ -32,13 +32,17 @@ const About: React.FC<AboutProps> = ({ language }) => {
       style={{ backgroundImage: `url(${leoaMulher})` }}
     >
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl text-left mb-12 bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-md">
-            {t.title}
-          </h2>
-          <p className="text-xl text-white whitespace-pre-line drop-shadow-md">
-            {t.description}
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="hidden md:block"></div>{" "}
+          {/* espaço vazio no lado esquerdo */}
+          <div className="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg animate-fade-in ml-auto max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-md">
+              {t.title}
+            </h2>
+            <p className="text-xl text-white whitespace-pre-line drop-shadow-md">
+              {t.description}
+            </p>
+          </div>
         </div>
       </div>
     </section>

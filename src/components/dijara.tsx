@@ -1,5 +1,5 @@
 import React from "react";
-import dijaraImage from "../assets/Dijara sem fundo.png"; // Verifique se este caminho está correto
+import dijaraImage from "../assets/dij.jpg";
 import { motion } from "framer-motion";
 
 interface Dijara {
@@ -53,10 +53,7 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
             <img
               src={dijaraImage}
               alt="Dijara Santos"
-              // className foi mantido como "" conforme o último código fornecido.
-              // Se precisar de estilos como borda arredondada, sombra, etc., adicione classes aqui.
-              // Ex: "rounded-2xl shadow-lg w-full max-w-md md:max-w-lg lg:max-w-xl"
-              className=""
+              className="rounded-2xl shadow-lg w-full max-w-md md:max-w-lg lg:max-w-xl border border-orange-300"
             />
           </motion.div>
 

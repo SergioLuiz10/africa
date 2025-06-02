@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
 interface SouthAfricaProps {
@@ -36,9 +36,20 @@ const SouthAfricaSection: React.FC<SouthAfricaProps> = ({ language }) => {
   };
 
   const t = content[language as "pt" | "en"];
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (carouselRef.current) {
+      const scrollAmount = 350;
+      carouselRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
-    <section className="py-20 bg-amber-900">
+    <section className="py-20 bg-amber-900 relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -52,9 +63,19 @@ const SouthAfricaSection: React.FC<SouthAfricaProps> = ({ language }) => {
           </h2>
         </motion.div>
 
-        {/* Carrossel */}
-        <div className="overflow-x-auto">
-          <div className="flex gap-6 snap-x snap-mandatory overflow-x-scroll px-2 pb-4 scroll-smooth">
+        {/* Carrossel com setas */}
+        <div className="relative">
+          {/* Botões de navegação */}
+          <button
+            onClick={() => scroll("left")}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#7c4c1e] hover:bg-[#5c3716] text-white p-3 rounded-full shadow-md"
+          >
+            ←
+          </button>
+          <div
+            ref={carouselRef}
+            className="flex gap-6 snap-x snap-mandatory overflow-x-auto px-14 pb-4 scroll-smooth"
+          >
             {t.reasonParagraphs.map((paragraph, index) => (
               <motion.div
                 key={index}
@@ -70,6 +91,12 @@ const SouthAfricaSection: React.FC<SouthAfricaProps> = ({ language }) => {
               </motion.div>
             ))}
           </div>
+          <button
+            onClick={() => scroll("right")}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#7c4c1e] hover:bg-[#5c3716] text-white p-3 rounded-full shadow-md"
+          >
+            →
+          </button>
         </div>
       </div>
     </section>
