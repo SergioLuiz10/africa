@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 interface KindeziBALProps {
   language: string;
@@ -30,52 +30,65 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
     },
   };
 
-  const t = content[language as keyof typeof content];
+  const t = content[language as "pt" | "en"];
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (carouselRef.current) {
+      const scrollAmount = 350;
+      carouselRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <section
       id="kindezi"
-      className="py-20 bg-[#8a3d14] relative overflow-hidden min-h-[720px]"
+      className="py-32 bg-[#8a3d14] relative overflow-hidden"
     >
-      <div className="container mx-auto px-4 max-w-7xl h-full relative z-10">
-        <div className="text-center mb-12">
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
+        {/* Título centralizado */}
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">{t.title}</h2>
           <p className="text-lg text-white">{t.subtitle}</p>
         </div>
 
-        {/* Carrossel de Texto com fade nas bordas e mais margem */}
-        <div className="relative w-full mt-20">
-          {/* Fade lateral esquerdo */}
-          <div className="absolute top-0 left-0 h-full w-12 bg-gradient-to-r from-[#8a3d14] to-transparent z-20 pointer-events-none"></div>
-          {/* Fade lateral direito */}
-          <div className="absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-[#8a3d14] to-transparent z-20 pointer-events-none"></div>
+        {/* Carrossel manual com cards alinhados à esquerda */}
+        <div className="relative flex items-center justify-start ml-0 md:ml-8">
+          {/* Botão Esquerdo */}
+          <button
+            onClick={() => scroll("left")}
+            className="z-20 absolute left-0 bg-[#6d2b0c] hover:bg-[#5a230a] text-white p-3 rounded-full shadow-lg"
+          >
+            ←
+          </button>
 
           {/* Carrossel */}
-          <div className="overflow-hidden">
-            <div className="flex w-max animate-marquee space-x-8">
-              {[...t.paragraphs, ...t.paragraphs].map((paragraph, index) => (
-                <div
-                  key={index}
-                  className="min-w-[300px] max-w-lg bg-white text-[#4a2c1a] border-l-4 border-orange-500 rounded-2xl p-6 text-lg shadow-md"
-                >
-                  {paragraph}
-                </div>
-              ))}
-            </div>
+          <div
+            ref={carouselRef}
+            className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-16 md:px-24 py-4 ml-12"
+          >
+            {t.paragraphs.map((paragraph, index) => (
+              <div
+                key={index}
+                className="min-w-[300px] max-w-[50%] md:min-w-[400px] bg-white text-[#4a2c1a] border-l-4 border-orange-500 rounded-2xl p-6 text-sm md:text-base snap-center shadow-md"
+              >
+                {paragraph}
+              </div>
+            ))}
           </div>
+
+          {/* Botão Direito */}
+          <button
+            onClick={() => scroll("right")}
+            className="z-20 absolute right-0 bg-[#6d2b0c] hover:bg-[#5a230a] text-white p-3 rounded-full shadow-lg"
+          >
+            →
+          </button>
         </div>
       </div>
-
-      {/* Tailwind custom animation */}
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
-        } 
-      `}</style>
     </section>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
-import leoaMulher from "../assets/Leao.jpg";
-import leaomobile from "../assets/LEAOMOBILE.png";
+import leoaMulher from "../assets/africasul.png";
 
 interface AboutProps {
   language: string;
