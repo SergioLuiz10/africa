@@ -36,10 +36,12 @@ const About: React.FC<AboutProps> = ({ language }) => {
           <div className="hidden md:block"></div>{" "}
           {/* espaço vazio no lado esquerdo */}
           <div className="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg animate-fade-in ml-auto max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-md">
+            {/* ALTERADO: text-white para text-stone-900 para melhor contraste */}
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-stone-900 drop-shadow-md">
               {t.title}
             </h2>
-            <p className="text-xl text-white whitespace-pre-line drop-shadow-md">
+            {/* ALTERADO: text-white para text-stone-700 para melhor contraste */}
+            <p className="text-xl text-stone-700 whitespace-pre-line drop-shadow-md">
               {t.description}
             </p>
           </div>

@@ -1,4 +1,6 @@
-import React, { useRef } from "react";
+import React, { useState } from "react"; // Adicionado useState
+import { motion, AnimatePresence } from "framer-motion"; // Adicionado motion e AnimatePresence
+import { Globe2 } from "lucide-react"; // Importar Globe2 para o ícone
 
 interface KindeziBALProps {
   language: string;
@@ -31,16 +33,40 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
   };
 
   const t = content[language as "pt" | "en"];
-  const carouselRef = useRef<HTMLDivElement>(null);
+  
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
 
-  const scroll = (direction: "left" | "right") => {
-    if (carouselRef.current) {
-      const scrollAmount = 350;
-      carouselRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
+  const slideVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 50 : -50,
+      opacity: 0,
+      scale: 0.8,
+    }),
+    center: {
+      x: 0, 
+      opacity: 1,
+      scale: 1,
+    },
+    exit: (direction: number) => ({
+      x: direction < 0 ? 50 : -50,
+      opacity: 0,
+      scale: 0.8,
+    }),
+  };
+
+  const handleNext = () => {
+    setDirection(1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === t.paragraphs.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrevious = () => {
+    setDirection(-1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? t.paragraphs.length - 1 : prevIndex - 1
+    );
   };
 
   return (
@@ -55,38 +81,68 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
           <p className="text-lg text-white">{t.subtitle}</p>
         </div>
 
-        {/* Carrossel manual com cards alinhados à esquerda */}
-        <div className="relative flex items-center justify-start ml-0 md:ml-8">
-          {/* Botão Esquerdo */}
+        {/* ALTERADO: Layout para carrossel de item único */}
+        <div className="relative flex flex-col items-center justify-center bg-transparent max-w-6xl mx-auto">
+          {/* Botão ANTERIOR */}
           <button
-            onClick={() => scroll("left")}
-            className="z-20 absolute left-0 bg-[#6d2b0c] hover:bg-[#5a230a] text-white p-3 rounded-full shadow-lg"
+            onClick={handlePrevious}
+            className="absolute left-4 sm:left-8 md:left-16 top-1/2 -translate-y-1/2 z-10 bg-[#6d2b0c] hover:bg-[#5a230a] text-white p-3 rounded-full shadow-lg"
           >
             ←
           </button>
 
-          {/* Carrossel */}
-          <div
-            ref={carouselRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-16 md:px-24 py-4 ml-12"
-          >
-            {t.paragraphs.map((paragraph, index) => (
-              <div
-                key={index}
-                className="min-w-[300px] max-w-[50%] md:min-w-[400px] bg-white text-[#4a2c1a] border-l-4 border-orange-500 rounded-2xl p-6 text-sm md:text-base snap-center shadow-md"
+          {/* Container do Slide (ÁREA ONDE O TEXTO APARECE) */}
+          <div className="w-full max-w-4xl h-[450px] flex items-center justify-center relative">
+            <AnimatePresence initial={false} custom={direction}>
+              <motion.div
+                key={currentIndex}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.5 },
+                  scale: { duration: 0.5 }
+                }}
+                className="absolute inset-0 w-full h-full p-8 flex flex-col justify-center items-center mx-auto bg-white border border-white/50 rounded-2xl shadow-sm" // ESTILO DO CARD
               >
-                {paragraph}
-              </div>
-            ))}
+                {/* Ícone no topo do card */}
+                <div className="mb-4 flex justify-center">
+                  <Globe2 className="w-12 h-12 text-orange-600" /> {/* Ajuste cor se precisar */}
+                </div>
+                {/* Texto do parágrafo original */}
+                <p className="text-gray-700 text-xl leading-relaxed text-center break-words max-w-2xl mx-auto">
+                  {t.paragraphs[currentIndex]}
+                </p>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          {/* Botão Direito */}
+          {/* Botão PRÓXIMO */}
           <button
-            onClick={() => scroll("right")}
-            className="z-20 absolute right-0 bg-[#6d2b0c] hover:bg-[#5a230a] text-white p-3 rounded-full shadow-lg"
+            onClick={handleNext}
+            className="absolute right-4 sm:right-8 md:right-16 top-1/2 -translate-y-1/2 z-10 bg-[#6d2b0c] hover:bg-[#5a230a] text-white p-3 rounded-full shadow-lg"
           >
             →
           </button>
+
+          {/* Indicadores de slide (pontinhos) */}
+          <div className="flex justify-center mt-4 space-x-2">
+            {t.paragraphs.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => {
+                  setDirection(idx > currentIndex ? 1 : -1);
+                  setCurrentIndex(idx);
+                }}
+                className={`h-2 w-2 rounded-full ${
+                  idx === currentIndex ? 'bg-white' : 'bg-white/50'
+                } transition-colors duration-200`}
+              ></button>
+            ))}
+          </div>
         </div>
       </div>
     </section>
