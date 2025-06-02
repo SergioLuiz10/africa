@@ -1,5 +1,5 @@
 import React from "react";
-import dijaraImage from "../assets/dij.jpg";
+import dijaraImage from "../assets/Dijara sem fundo.png"; // Verifique se este caminho está correto
 import { motion } from "framer-motion";
 
 interface Dijara {
@@ -31,10 +31,13 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
   const t = content[language];
 
   return (
-    <section className="bg-white py-16 md:py-20" id="dijara">
+    // Alterado o background da seção para um tom de marrom do site
+    // e ajustada a cor do texto do título para branco para melhor contraste.
+    <section className="bg-[#603e2e] py-16 md:py-20" id="dijara">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#78350f] mb-2">
+          {/* Alterada a cor do texto do título para branco */}
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-2">
             {t.title}
           </h2>
         </div>
@@ -50,7 +53,10 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
             <img
               src={dijaraImage}
               alt="Dijara Santos"
-              className="rounded-2xl shadow-lg w-full max-w-md md:max-w-lg lg:max-w-xl border border-orange-300"
+              // className foi mantido como "" conforme o último código fornecido.
+              // Se precisar de estilos como borda arredondada, sombra, etc., adicione classes aqui.
+              // Ex: "rounded-2xl shadow-lg w-full max-w-md md:max-w-lg lg:max-w-xl"
+              className=""
             />
           </motion.div>
 
