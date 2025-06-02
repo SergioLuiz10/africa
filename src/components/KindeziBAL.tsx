@@ -10,20 +10,22 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
       title: "Kindezi BAL",
       subtitle: "Empoderar é cuidar. Cuidar é revolucionar.",
       paragraphs: [
-        "Em Salvador, onde pulsa o coração negro do Brasil, acontecerá o Kindezi BAL, um movimento que vai além da formação em tecnologia...",
-        "Inspirado na filosofia africana do Kindezi — o ato comunitário de cuidar, ensinar e guiar as novas gerações...",
-        "É aqui, nas quebradas de Salvador, que começará essa revolução tecnológica potente...",
-        "Formaremos as primeiras dez. Depois, serão cem. Mil. E incontáveis. Seremos muitas...",
+        "Kindezi é um programa de formação que visa capacitar mulheres na área de tecnologia, inspirado no conceito africano de cuidado comunitário.",
+        "Este projeto constrói uma comunidade de aprendizagem solidária e inspiradora para que mulheres prosperem na indústria tech, ainda dominada por homens.",
+        "Com o apoio do Mwika Social Innovation Hub, a iniciativa impulsiona o protagonismo feminino e o impacto social nas periferias.",
+        "Serão formadas inicialmente 10 mulheres de Salvador, com aulas de programação pela LillilT e desenvolvimento de habilidades pela Stroud Leadership Academy.",
+        "Apoiado por Serena Williams, Kindezi mostra que inovação também nasce na quebrada e que, com cuidado e oportunidade, transformamos territórios inteiros.",
       ],
     },
     en: {
       title: "Kindezi BAL",
       subtitle: "Empowering is caring. Caring is revolution.",
       paragraphs: [
-        "In Salvador, where the Black heart of Brazil beats, Kindezi BAL will take place...",
-        "Inspired by the African philosophy of Kindezi — the communal act of caring for, teaching, and guiding...",
-        "Here, in the outskirts of Salvador, this powerful tech revolution begins...",
-        "We’ll form the first ten. Then a hundred. A thousand. Countless. We’ll be many...",
+        "Kindezi is a training program designed to empower women in technology, inspired by the African concept of communal care.",
+        "The project builds a supportive learning community where women can thrive in the tech industry — still largely male-dominated.",
+        "With support from the Mwika Social Innovation Hub, it promotes female leadership and social impact in underserved areas.",
+        "Initially, 10 women from Salvador will be trained in coding by LillilT and in problem-solving by Stroud Leadership Academy.",
+        "Backed by Serena Williams, Kindezi proves that innovation rises from the margins — and with care and opportunity, entire communities are transformed.",
       ],
     },
   };
@@ -64,8 +66,6 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
         </div>
       </div>
 
-
-
       {/* Tailwind custom animation */}
       <style>{`
         @keyframes marquee {
@@ -74,10 +74,10 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
         }
         .animate-marquee {
           animation: marquee 30s linear infinite;
-        }
+        } 
       `}</style>
     </section>
   );
 };
 
-export default KindeziBAL  ;
+export default KindeziBAL;

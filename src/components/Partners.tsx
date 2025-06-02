@@ -4,7 +4,7 @@ import parceiro2 from "../assets/ParceiroTwo.png"; // Ex: King Levi
 import parceiro3 from "../assets/Movvvlogo.png"; // Ex: MOV
 import parceiro4 from "../assets/LogoOo.png"; // Ex: Logo O
 import parceiro5 from "../assets/Logo1.png"; // Ex: Logo 1
-
+import parceiro6 from "../assets/LOGOUNILAB.jpg"; // Ex: Logo 2
 interface PartnersProps {
   language: string;
 }
@@ -39,6 +39,7 @@ const Partners: React.FC<PartnersProps> = ({ language }) => {
     { name: "King Levi", image: parceiro2 },
     { name: "Logo O", image: parceiro4 },
     { name: "Logo 1", image: parceiro5 },
+    { name: "Logo 2", image: parceiro6 },
   ];
 
   // Duplicado para efeito contínuo (manter se quiser loop)
