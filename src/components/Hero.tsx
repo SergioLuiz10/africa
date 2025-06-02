@@ -20,14 +20,14 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
   const content = {
     pt: {
-      description: 'Reconexão Ancestral, Inovação e Internacionalização de Negócios',
+      description: 'Reconexão Ancestral, Inovação e Internacionalização de Negócios',
     },
     en: {
       description: 'Ancestral Reconnection, Innovation and Internationalization of Business',
     },
   };
 
-  const t = content[language];
+  const t = content[language]; // Acessa o conteúdo baseado no idioma atual
 
   const handleLanguageToggle = () => {
     if (onLanguageChange) {
@@ -52,22 +52,22 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
           className="text-orange-400 hover:text-orange-300 transition-colors flex items-center gap-1"
           title={language === 'pt' ? 'Switch to English' : 'Mudar para Português'}
         >
-          <Globe size={20} />
-          <span className="text-sm font-medium">{language.toUpperCase()}</span>
+          <Globe size={22} /> {/* Tamanho aumentado */}
+          <span className="text-md font-medium">{language.toUpperCase()}</span> {/* Tamanho aumentado */}
         </button>
 
         <div className="flex gap-3">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 transition-colors">
-            <Facebook size={20} />
+            <Facebook size={22} /> {/* Tamanho aumentado */}
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 transition-colors">
-            <Twitter size={20} />
+            <Twitter size={22} /> {/* Tamanho aumentado */}
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 transition-colors">
-            <Instagram size={20} />
+            <Instagram size={22} /> {/* Tamanho aumentado */}
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 transition-colors">
-            <Linkedin size={20} />
+            <Linkedin size={22} /> {/* Tamanho aumentado */}
           </a>
         </div>
       </div>
@@ -77,17 +77,17 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
         <img
           src={logo}
           alt="África 360"
-          className="mx-auto w-64 sm:w-72 md:w-80 animate-pulse mb-6"
+          className="mx-auto w-72 sm:w-80 md:w-96 animate-pulse mb-8" // Tamanhos e margem aumentados
         />
 
-        <p className="text-base sm:text-xl text-white/90 px-2 animate-fadeIn delay-100 mb-4">
+        <p className="text-lg sm:text-2xl text-white/90 px-4 animate-fadeIn delay-100 mb-6"> {/* Tamanhos e preenchimento/margem aumentados */}
           {t.description}
         </p>
 
         <img
           src={pais}
           alt="Países"
-          className="mx-auto w-72 sm:w-80 md:w-[360px] animate-float"
+          className="mx-auto w-80 sm:w-96 md:w-[400px] animate-float" // Tamanhos aumentados
         />
       </div>
 
@@ -95,13 +95,13 @@ const Hero: React.FC<HeroProps> = ({ language, onLanguageChange }) => {
       <img
         src={dela}
         alt="De Lá"
-        className="absolute bottom-4 left-4 w-24 sm:w-28 animate-bounce"
+        className="absolute bottom-6 left-6 w-28 sm:w-32 animate-bounce" // Tamanhos e posição aumentados
       />
 
       <img
         src={favela}
         alt="Favela Tech"
-        className="absolute bottom-4 right-4 w-24 sm:w-28 animate-bounce"
+        className="absolute bottom-6 right-6 w-28 sm:w-32 animate-bounce" // Tamanhos e posição aumentados
       />
     </section>
   );
