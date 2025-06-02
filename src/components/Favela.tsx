@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import imagemLOGo from "../assets/favela.png.jpg";
-import { Lightbulb, Rocket, Users, Brain } from "lucide-react";
+import imagemLOGo1 from "../assets/favelatech1 - Copia.jpg";
+import imagemLOGo2 from "../assets/favelatech2 - Copia.jpg";
+import imagemLOGo3 from "../assets/favelatech3.jpg";
+import imagemLOGo4 from "../assets/favelatech4.jpg";
+import imagemLOGo5 from "../assets/favelatech5.jpg";
+
+import {
+  Lightbulb,
+  Rocket,
+  Users,
+  Brain,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 interface FavelaProps {
@@ -65,6 +78,30 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
 
   const t = content[language as keyof typeof content];
 
+  const images = [
+    imagemLOGo,
+    imagemLOGo1,
+    imagemLOGo2,
+    imagemLOGo3,
+    imagemLOGo4,
+    imagemLOGo5,
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="favela" className="py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -99,19 +136,25 @@ const Favela: React.FC<FavelaProps> = ({ language }) => {
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden shadow-xl border border-orange-300"
-          >
+          <div className="relative w-full h-80 overflow-hidden rounded-2xl shadow-xl border border-orange-300">
             <img
-              src={imagemLOGo}
-              alt="Favela Tech"
-              className="w-full h-auto object-cover"
+              src={images[currentIndex]}
+              alt={`Favela Tech ${currentIndex + 1}`}
+              className="w-full h-full object-cover transition-all duration-700 ease-in-out"
             />
-          </motion.div>
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-orange-100"
+            >
+              <ChevronLeft className="text-orange-700" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-orange-100"
+            >
+              <ChevronRight className="text-orange-700" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
