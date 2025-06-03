@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import leoaMulher from "../assets/africasul.png";
 
 interface AboutProps {
@@ -33,18 +34,22 @@ const About: React.FC<AboutProps> = ({ language }) => {
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-          <div className="hidden md:block"></div>{" "}
-          {/* espaço vazio no lado esquerdo */}
-          <div className="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg animate-fade-in ml-auto max-w-2xl">
-            {/* ALTERADO: text-white para text-stone-900 para melhor contraste */}
+          <div className="hidden md:block"></div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg ml-auto max-w-2xl"
+          >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-stone-900 drop-shadow-md">
               {t.title}
             </h2>
-            {/* ALTERADO: text-white para text-stone-700 para melhor contraste */}
             <p className="text-xl text-stone-700 whitespace-pre-line drop-shadow-md">
               {t.description}
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
