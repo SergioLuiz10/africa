@@ -55,7 +55,7 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
             <img
               src={dijaraImage}
               alt="Dijara Santos"
-              className="w-[85%] max-w-sm border-4 border-orange-400 rounded-xl shadow-lg"
+              className="w-[85%] max-w-sm rounded-xl shadow-lg"
             />
           </motion.div>
 
