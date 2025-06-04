@@ -1,6 +1,7 @@
-import React, { useState } from "react"; // Adicionado useState
-import { motion, AnimatePresence } from "framer-motion"; // Adicionado motion e AnimatePresence
-import { Globe2 } from "lucide-react"; // Importar Globe2 para o ícone
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Globe2 } from "lucide-react";
+import kindeziImage from "../assets/kindez.png";
 
 interface KindeziBALProps {
   language: string;
@@ -33,7 +34,6 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
   };
 
   const t = content[language as "pt" | "en"];
-  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -44,7 +44,7 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
       scale: 0.8,
     }),
     center: {
-      x: 0, 
+      x: 0,
       opacity: 1,
       scale: 1,
     },
@@ -70,66 +70,71 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
   };
 
   return (
-    <section
-      id="kindezi"
-      className="py-32 bg-[#8a3d14] relative overflow-hidden"
-    >
+    <section id="kindezi" className="py-32 relative overflow-hidden">
+      <img
+        src={kindeziImage}
+        alt="Kindezi background"
+        className="absolute inset-0 w-full h-full object-cover object-[center_top] z-0"
+      />
+
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
-        {/* Título centralizado */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">{t.title}</h2>
-          <p className="text-lg text-white">{t.subtitle}</p>
+        {/* Título e subtítulo */}
+        <div className="text-left mb-16">
+          <h2 className="text-5xl font-extrabold text-[#6d2b0c] mb-4">
+            {t.title}
+          </h2>
+          <p className="text-lg text-black">{t.subtitle}</p>
         </div>
 
-        {/* ALTERADO: Layout para carrossel de item único */}
-        <div className="relative flex flex-col items-center justify-center bg-transparent max-w-6xl mx-auto">
-          {/* Botão ANTERIOR */}
-          <button
-            onClick={handlePrevious}
-            className="absolute left-4 sm:left-8 md:left-16 top-1/2 -translate-y-1/2 z-10 bg-[#6d2b0c] hover:bg-[#5a230a] text-white p-3 rounded-full shadow-lg"
-          >
-            ←
-          </button>
-
-          {/* Container do Slide (ÁREA ONDE O TEXTO APARECE) */}
-          <div className="w-full max-w-4xl h-[450px] flex items-center justify-center relative">
-            <AnimatePresence initial={false} custom={direction}>
-              <motion.div
-                key={currentIndex}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.5 },
-                  scale: { duration: 0.5 }
-                }}
-                className="absolute inset-0 w-full h-full p-8 flex flex-col justify-center items-center mx-auto bg-white border border-white/50 rounded-2xl shadow-sm" // ESTILO DO CARD
+        {/* Carrossel */}
+        <div className="relative flex flex-col items-start justify-center bg-transparent max-w-6xl mx-auto">
+          <div className="w-full max-w-4xl h-[450px] flex items-center justify-start relative ml-4">
+            <div className="relative w-[600px] h-full">
+              {/* Botão anterior */}
+              <button
+                onClick={handlePrevious}
+                className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 bg-[#6d2b0c] hover:bg-[#5a230a] text-white p-3 rounded-full shadow-lg"
               >
-                {/* Ícone no topo do card */}
-                <div className="mb-4 flex justify-center">
-                  <Globe2 className="w-12 h-12 text-orange-600" /> {/* Ajuste cor se precisar */}
-                </div>
-                {/* Texto do parágrafo original */}
-                <p className="text-gray-700 text-xl leading-relaxed text-center break-words max-w-2xl mx-auto">
-                  {t.paragraphs[currentIndex]}
-                </p>
-              </motion.div>
-            </AnimatePresence>
+                ←
+              </button>
+
+              {/* Card */}
+              <AnimatePresence initial={false} custom={direction}>
+                <motion.div
+                  key={currentIndex}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.5 },
+                    scale: { duration: 0.5 },
+                  }}
+                  className="relative z-10 w-full h-full p-8 flex flex-col justify-center items-center bg-white border border-white/50 rounded-2xl shadow-sm"
+                >
+                  <div className="mb-4 flex justify-center">
+                    <Globe2 className="w-12 h-12 text-orange-600" />
+                  </div>
+                  <p className="text-gray-700 text-xl leading-relaxed text-center break-words">
+                    {t.paragraphs[currentIndex]}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Botão próximo */}
+              <button
+                onClick={handleNext}
+                className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 bg-[#6d2b0c] hover:bg-[#5a230a] text-white p-3 rounded-full shadow-lg"
+              >
+                →
+              </button>
+            </div>
           </div>
 
-          {/* Botão PRÓXIMO */}
-          <button
-            onClick={handleNext}
-            className="absolute right-4 sm:right-8 md:right-16 top-1/2 -translate-y-1/2 z-10 bg-[#6d2b0c] hover:bg-[#5a230a] text-white p-3 rounded-full shadow-lg"
-          >
-            →
-          </button>
-
-          {/* Indicadores de slide (pontinhos) */}
-          <div className="flex justify-center mt-4 space-x-2">
+          {/* Indicadores */}
+          <div className="flex justify-start mt-4 ml-4 space-x-2">
             {t.paragraphs.map((_, idx) => (
               <button
                 key={idx}
@@ -138,7 +143,7 @@ const KindeziBAL: React.FC<KindeziBALProps> = ({ language }) => {
                   setCurrentIndex(idx);
                 }}
                 className={`h-2 w-2 rounded-full ${
-                  idx === currentIndex ? 'bg-white' : 'bg-white/50'
+                  idx === currentIndex ? "bg-white" : "bg-white/50"
                 } transition-colors duration-200`}
               ></button>
             ))}
