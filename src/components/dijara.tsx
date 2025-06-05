@@ -18,23 +18,19 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
       slides: [
         {
           img: dijara1,
-          text:
-            "Dijara Santos é uma mulher negra, mãe solo, médica veterinária formada pela Universidade do Estado da Bahia e CEO do projeto Africa 360...",
+          text: `Dijara Santos é uma mulher negra, mãe solo, médica veterinária formada pela Universidade do Estado da Bahia e CEO do projeto Africa 360, uma das iniciativas mais potentes de internacionalização de afroempreendedores no Brasil. Dijara construiu sua trajetória com coragem, visão estratégica e um propósito claro: abrir caminhos para que mais pessoas negras possam acessar oportunidades globais de negócios.`,
         },
         {
           img: dijara2,
-          text:
-            "Com mais de 12 anos de experiência como empreendedora e formadora de profissionais, atua na criação de soluções em educação...",
+          text: `Com mais de 12 anos de experiência como empreendedora e formadora de profissionais, atua na criação de soluções em educação, inovação e mercado para jovens periféricos e afroempreendedores. Sua atuação vai além do território nacional: hoje, está presente em quatro países africanos (África do Sul, Lesotho, Angola e Moçambique). Em 2024, foi nomeada pela primeira-dama do Reino de Lesotho, Sindiswa Mzamo, como Presidenta do Circle Global Business Women (CGBW) no Brasil – uma rede internacional de mulheres de negócios que conecta líderes do continente africano à diáspora, fomentando parcerias econômicas, culturais e sociais.`,
         },
         {
           img: dijara3,
-          text:
-            "Além disso, é realizadora do Fancy Africa Brasil, um evento de moda internacional que celebra o luxo, a identidade e o empreendedorismo afrocentrado...",
+          text: `Além disso, é realizadora do Fancy Africa Brasil, um evento de moda internacional em parceria com o estilista e líder cultural King Levi, que celebra o luxo, a identidade e o empreendedorismo afrocentrado por meio da moda. O evento, que une passarelas, negócios e ancestralidade, tem como missão valorizar criadores negros e promover a circulação de marcas afro em um circuito global.`,
         },
         {
           img: dijara4,
-          text:
-            "Através do Africa 360, Dijara visa se consolidar como referência na internacionalização de afroempreendedores...",
+          text: `Através do Africa 360, Dijara visa se consolidar como referência na internacionalização de afroempreendedores, posicionando o Brasil como elo estratégico entre inovação, cultura e economia negra global. Sua liderança é uma combinação rara de sensibilidade, potência e estratégia — e está redesenhando o futuro de forma coletiva, inclusiva e afrocentrada.`,
         },
       ],
     },
@@ -44,23 +40,19 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
       slides: [
         {
           img: dijara1,
-          text:
-            "Dijara Santos is a Black woman, single mother, veterinarian graduated from the State University of Bahia and CEO of the Africa 360 project...",
+          text: `Dijara Santos is a Black woman, single mother, veterinarian graduated from the State University of Bahia and CEO of the Africa 360 project, one of the most powerful initiatives for the internationalization of Black entrepreneurs in Brazil. She built her path with courage, strategic vision, and a clear purpose: to open doors for more Black people to access global business opportunities.`,
         },
         {
           img: dijara2,
-          text:
-            "With over 12 years of experience as an entrepreneur and educator, she develops solutions in education, innovation, and market access...",
+          text: `With over 12 years of experience as an entrepreneur and professional trainer, she creates solutions in education, innovation, and market access for youth from the outskirts and Black entrepreneurs. Her work goes beyond Brazil — she's active in four African countries (South Africa, Lesotho, Angola, and Mozambique). In 2024, she was appointed by the First Lady of the Kingdom of Lesotho, Sindiswa Mzamo, as President of the Circle Global Business Women (CGBW) in Brazil — a global network of businesswomen connecting African leaders to the diaspora, fostering economic, cultural, and social partnerships.`,
         },
         {
           img: dijara3,
-          text:
-            "She is also the founder of Fancy Africa Brasil, an international fashion event celebrating luxury, identity, and Afrocentric entrepreneurship...",
+          text: `She is also the creator of Fancy Africa Brasil, an international fashion event in partnership with cultural leader and stylist King Levi, celebrating luxury, identity, and Afrocentric entrepreneurship through fashion. The event brings together runways, business, and ancestry with the mission of valuing Black creators and promoting the circulation of Afro brands in a global circuit.`,
         },
         {
           img: dijara4,
-          text:
-            "Through Africa 360, Dijara aims to become a reference in the internationalization of Black entrepreneurship...",
+          text: `Through Africa 360, Dijara aims to become a reference in the internationalization of Black entrepreneurs, positioning Brazil as a strategic link between innovation, culture, and the global Black economy. Her leadership is a rare combination of sensitivity, power, and strategy — reshaping the future collectively, inclusively, and with an Afrocentric lens.`,
         },
       ],
     },
@@ -100,7 +92,7 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
                 alt="Dijara"
                 className="w-full max-w-sm mx-auto rounded-xl shadow-md"
               />
-              <p className="text-white text-sm md:text-base leading-relaxed text-orange-100">
+              <p className="text-white text-sm md:text-base leading-relaxed text-orange-100 whitespace-pre-line">
                 {t.slides[current].text}
               </p>
             </motion.div>
