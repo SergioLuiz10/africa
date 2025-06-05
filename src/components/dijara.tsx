@@ -14,7 +14,7 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
   const content = {
     pt: {
       name: "Dijara Santos",
-      subtitle: "Liderança Negra em Movimento Global",
+      subtitle: "CEO - África 360",
       slides: [
         {
           img: dijara1,
@@ -36,7 +36,7 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
     },
     en: {
       name: "Dijara Santos",
-      subtitle: "Black Leadership in Global Movement",
+      subtitle: "CEO - África 360",
       slides: [
         {
           img: dijara1,
@@ -78,25 +78,28 @@ const DijaraSection: React.FC<Dijara> = ({ language }) => {
             <ArrowLeft className="text-white w-8 h-8" />
           </button>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-              className="grid md:grid-cols-2 gap-10 items-center bg-[#78350f] p-6 rounded-xl shadow-lg border-l-4 border-orange-400 max-w-5xl w-full"
-            >
-              <img
-                src={t.slides[current].img}
-                alt="Dijara"
-                className="w-full max-w-sm mx-auto rounded-xl shadow-md"
-              />
-              <p className="text-white text-sm md:text-base leading-relaxed text-orange-100 whitespace-pre-line">
-                {t.slides[current].text}
-              </p>
-            </motion.div>
-          </AnimatePresence>
+          <div className="relative max-w-5xl w-full flex justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                layout
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+                className="grid md:grid-cols-2 gap-10 items-center bg-[#78350f] p-6 rounded-xl shadow-lg border-l-4 border-orange-400 w-full"
+              >
+                <img
+                  src={t.slides[current].img}
+                  alt="Dijara"
+                  className="w-full max-w-sm mx-auto rounded-xl shadow-md"
+                />
+                <p className="text-white text-sm md:text-base leading-relaxed text-orange-100 whitespace-pre-line">
+                  {t.slides[current].text}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
           <button onClick={nextSlide} className="absolute right-0 p-2">
             <ArrowRight className="text-white w-8 h-8" />
