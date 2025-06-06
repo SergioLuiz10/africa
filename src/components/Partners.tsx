@@ -3,8 +3,13 @@ import parceiro1 from "../assets/ParceiroOne.png"; // Ex: Global Logo
 import parceiro2 from "../assets/ParceiroTwo.png"; // Ex: King Levi
 import parceiro3 from "../assets/Movvvlogo.png"; // Ex: MOV
 import parceiro4 from "../assets/LogoOo.png"; // Ex: Logo O
-import parceiro5 from "../assets/Logo1.png"; // Ex: Logo 1
 import parceiro6 from "../assets/LOGOUNILAB.jpg"; // Ex: Logo 2
+import parceiro7 from "../assets/LOGOHUB.jpg"; // Ex: Logo 3
+import parceiro8 from "../assets/LOGOBLACK.jpg"; // Ex: Logo 1
+import parceiro9 from "../assets/LOGOWIKA.jpg"; // Ex: Logo 4
+import parceiro10 from "../assets/LOGOIMPACFIT.jpg"; // Ex: Logo Wika
+
+
 interface PartnersProps {
   language: string;
 }
@@ -38,8 +43,13 @@ const Partners: React.FC<PartnersProps> = ({ language }) => {
     { name: "Global Logo", image: parceiro1 },
     { name: "King Levi", image: parceiro2 },
     { name: "Logo O", image: parceiro4 },
-    { name: "Logo 1", image: parceiro5 },
+    { name: "Logo 1", image: parceiro8 },
     { name: "Logo 2", image: parceiro6 },
+    { name: "Logo 3", image: parceiro7 },
+    { name: "Logo 4", image: parceiro8 },
+    { name: "Logo Wika", image: parceiro9 },
+    { name: "Logo Impacfit", image: parceiro10 },
+
   ];
 
   // Duplicado para efeito contínuo (manter se quiser loop)
